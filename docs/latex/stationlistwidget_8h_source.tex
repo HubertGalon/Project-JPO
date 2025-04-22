@@ -1,0 +1,66 @@
+\doxysection{stationlistwidget.\+h}
+\hypertarget{stationlistwidget_8h_source}{}\label{stationlistwidget_8h_source}\mbox{\hyperlink{stationlistwidget_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ STATIONLISTWIDGET\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ STATIONLISTWIDGET\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <QWidget>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <QListWidget>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <QLineEdit>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <QPushButton>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <QLabel>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <QComboBox>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <QVector>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <QProgressDialog>}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{station_8h}{station.h}}"{}}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{geocoder_8h}{geocoder.h}}"{}}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_ui}{Ui}}\ \{}
+\DoxyCodeLine{00017\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_ui_1_1_station_list_widget}{StationListWidget}};}
+\DoxyCodeLine{00018\ \}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_station_list_widget_aadd9bed26b094577f9affdd5b3fb3881}{StationListWidget}}\ :\ \textcolor{keyword}{public}\ QWidget}
+\DoxyCodeLine{00021\ \{}
+\DoxyCodeLine{00022\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{class_station_list_widget_aadd9bed26b094577f9affdd5b3fb3881}{StationListWidget}}(QWidget\ *parent\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00026\ \ \ \ \ \mbox{\hyperlink{class_station_list_widget_ab2d065f860e15a52f13ac3bf3a5538ed}{\string~StationListWidget}}();}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_station_list_widget_ae03dd0d1dc3f7d2f038473536ce6a463}{setStations}}(\textcolor{keyword}{const}\ QVector<Station>\&\ stations);}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ signals:}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_station_list_widget_a7ad6f09779c3f958ef1d75199030f87d}{stationSelected}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_station}{Station}}\&\ station);}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \textcolor{keyword}{private}\ slots:}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{void}\ onStationItemClicked(QListWidgetItem*\ item);}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{void}\ onSearchButtonClicked();}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{void}\ onFilterComboChanged(\textcolor{keywordtype}{int}\ index);}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{void}\ onGeolocationButtonClicked();}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{comment}{//\ Nowe\ sloty\ dla\ geocodera}}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{void}\ onGeocodingFinished(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_geocoding_result}{GeocodingResult}}\&\ result);}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{void}\ onGeocodingError(\textcolor{keyword}{const}\ QString\&\ errorMessage);}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00044\ \ \ \ \ \mbox{\hyperlink{class_ui_1_1_station_list_widget}{Ui::StationListWidget}}\ *ui;}
+\DoxyCodeLine{00045\ \ \ \ \ QVector<Station>\ stations;}
+\DoxyCodeLine{00046\ \ \ \ \ \mbox{\hyperlink{class_geocoder}{Geocoder}}*\ geocoder;}
+\DoxyCodeLine{00047\ \ \ \ \ QProgressDialog*\ progressDialog;}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{double}\ searchRadiusKm;\ \textcolor{comment}{//\ Promień\ wyszukiwania\ w\ km}}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{comment}{//\ Wypełnianie\ listy\ stacji}}
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordtype}{void}\ populateStationList(\textcolor{keyword}{const}\ QVector<Station>\&\ stationsToShow);}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{comment}{//\ Metody\ wyszukiwania}}
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordtype}{void}\ searchByCity();}
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordtype}{void}\ searchByAddress(\textcolor{keyword}{const}\ QString\&\ address);}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{comment}{//\ Dane\ aktualnie\ wyświetlanych\ stacji}}
+\DoxyCodeLine{00058\ \ \ \ \ QVector<Station>\ currentDisplayedStations;}
+\DoxyCodeLine{00059\ \};}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ STATIONLISTWIDGET\_H}}
+
+\end{DoxyCode}

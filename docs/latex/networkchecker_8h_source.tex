@@ -1,0 +1,41 @@
+\doxysection{networkchecker.\+h}
+\hypertarget{networkchecker_8h_source}{}\label{networkchecker_8h_source}\mbox{\hyperlink{networkchecker_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ NETWORKCHECKER\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ NETWORKCHECKER\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <QObject>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <QNetworkAccessManager>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <QNetworkRequest>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <QNetworkReply>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <QTimer>}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_network_checker_a233cdfa40771a65aa92b2448a9a76da1}{NetworkChecker}}\ :\ \textcolor{keyword}{public}\ QObject}
+\DoxyCodeLine{00011\ \{}
+\DoxyCodeLine{00012\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{class_network_checker_a233cdfa40771a65aa92b2448a9a76da1}{NetworkChecker}}(QObject*\ parent\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00016\ \ \ \ \ \mbox{\hyperlink{class_network_checker_a41c565c86bcac1359e0ac1b6d87a9b1f}{\string~NetworkChecker}}();}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_network_checker_aed13e762e62496bd3751ae73226f0617}{isNetworkAvailable}}();}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_network_checker_afd994aa954c71ec72fd8d40dc3822e4c}{startMonitoring}}(\textcolor{keywordtype}{int}\ intervalMs\ =\ 10000);}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_network_checker_aabc0c7db7b0733511d0caeb4fb2fa6ff}{stopMonitoring}}();}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ signals:}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_network_checker_a8664e663881a68fd1a3dd596eb2e57e4}{networkStatusChanged}}(\textcolor{keywordtype}{bool}\ available);}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \textcolor{keyword}{private}\ slots:}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{void}\ checkNetworkStatus();}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{void}\ onNetworkReplyFinished(QNetworkReply*\ reply);}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00030\ \ \ \ \ QNetworkAccessManager*\ networkManager;}
+\DoxyCodeLine{00031\ \ \ \ \ QTimer*\ networkCheckTimer;}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{bool}\ lastNetworkStatus;}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keyword}{const}\ QString\ testUrl\ =\ \textcolor{stringliteral}{"{}https://api.gios.gov.pl/pjp-\/api/rest/station/findAll"{}};}
+\DoxyCodeLine{00034\ \};}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ NETWORKCHECKER\_H}}
+
+\end{DoxyCode}

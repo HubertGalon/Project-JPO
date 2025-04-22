@@ -1,0 +1,52 @@
+\doxysection{datafetchworker.\+h File Reference}
+\hypertarget{datafetchworker_8h}{}\label{datafetchworker_8h}\index{datafetchworker.h@{datafetchworker.h}}
+{\ttfamily \#include $<$QObject$>$}\newline
+{\ttfamily \#include $<$QThread$>$}\newline
+{\ttfamily \#include $<$QMutex$>$}\newline
+{\ttfamily \#include $<$QWait\+Condition$>$}\newline
+{\ttfamily \#include $<$QQueue$>$}\newline
+{\ttfamily \#include $<$QJson\+Array$>$}\newline
+{\ttfamily \#include $<$QJson\+Object$>$}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_fetch_task}{Fetch\+Task}}
+\item 
+class \mbox{\hyperlink{class_data_fetch_worker}{Data\+Fetch\+Worker}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum class \mbox{\hyperlink{datafetchworker_8h_a985b26b5924fc7770990a83d75813832}{Fetch\+Task\+Type}} \{ \mbox{\hyperlink{datafetchworker_8h_a985b26b5924fc7770990a83d75813832a243f8cf41f0876733d30535ac42b9e33}{Fetch\+All\+Stations}}
+, \mbox{\hyperlink{datafetchworker_8h_a985b26b5924fc7770990a83d75813832ab619a54afec409b31f8abf80406fa9ee}{Fetch\+Sensors}}
+, \mbox{\hyperlink{datafetchworker_8h_a985b26b5924fc7770990a83d75813832ae666322f1ce88ecc6fb4c98ddd4515e8}{Fetch\+Measurements}}
+, \mbox{\hyperlink{datafetchworker_8h_a985b26b5924fc7770990a83d75813832ac4981a937037a816f01b060da5682eaa}{Fetch\+Air\+Quality\+Index}}
+ \}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Enumeration Type Documentation}
+\Hypertarget{datafetchworker_8h_a985b26b5924fc7770990a83d75813832}\index{datafetchworker.h@{datafetchworker.h}!FetchTaskType@{FetchTaskType}}
+\index{FetchTaskType@{FetchTaskType}!datafetchworker.h@{datafetchworker.h}}
+\doxysubsubsection{\texorpdfstring{FetchTaskType}{FetchTaskType}}
+{\footnotesize\ttfamily \label{datafetchworker_8h_a985b26b5924fc7770990a83d75813832} 
+enum class \mbox{\hyperlink{datafetchworker_8h_a985b26b5924fc7770990a83d75813832}{Fetch\+Task\+Type}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+\begin{DoxyEnumFields}[2]{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FetchAllStations@{FetchAllStations}!datafetchworker.h@{datafetchworker.h}}\index{datafetchworker.h@{datafetchworker.h}!FetchAllStations@{FetchAllStations}}}\Hypertarget{datafetchworker_8h_a985b26b5924fc7770990a83d75813832a243f8cf41f0876733d30535ac42b9e33}\label{datafetchworker_8h_a985b26b5924fc7770990a83d75813832a243f8cf41f0876733d30535ac42b9e33} 
+Fetch\+All\+Stations&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FetchSensors@{FetchSensors}!datafetchworker.h@{datafetchworker.h}}\index{datafetchworker.h@{datafetchworker.h}!FetchSensors@{FetchSensors}}}\Hypertarget{datafetchworker_8h_a985b26b5924fc7770990a83d75813832ab619a54afec409b31f8abf80406fa9ee}\label{datafetchworker_8h_a985b26b5924fc7770990a83d75813832ab619a54afec409b31f8abf80406fa9ee} 
+Fetch\+Sensors&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FetchMeasurements@{FetchMeasurements}!datafetchworker.h@{datafetchworker.h}}\index{datafetchworker.h@{datafetchworker.h}!FetchMeasurements@{FetchMeasurements}}}\Hypertarget{datafetchworker_8h_a985b26b5924fc7770990a83d75813832ae666322f1ce88ecc6fb4c98ddd4515e8}\label{datafetchworker_8h_a985b26b5924fc7770990a83d75813832ae666322f1ce88ecc6fb4c98ddd4515e8} 
+Fetch\+Measurements&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FetchAirQualityIndex@{FetchAirQualityIndex}!datafetchworker.h@{datafetchworker.h}}\index{datafetchworker.h@{datafetchworker.h}!FetchAirQualityIndex@{FetchAirQualityIndex}}}\Hypertarget{datafetchworker_8h_a985b26b5924fc7770990a83d75813832ac4981a937037a816f01b060da5682eaa}\label{datafetchworker_8h_a985b26b5924fc7770990a83d75813832ac4981a937037a816f01b060da5682eaa} 
+Fetch\+Air\+Quality\+Index&\\
+\hline
+
+\end{DoxyEnumFields}

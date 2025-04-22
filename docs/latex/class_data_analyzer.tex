@@ -1,0 +1,107 @@
+\doxysection{Data\+Analyzer Class Reference}
+\hypertarget{class_data_analyzer}{}\label{class_data_analyzer}\index{DataAnalyzer@{DataAnalyzer}}
+
+
+{\ttfamily \#include $<$dataanalyzer.\+h$>$}
+
+Inheritance diagram for Data\+Analyzer\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_data_analyzer}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_data_analyzer_a19332d6a19c6649ecc6e66eb52be4878}{Data\+Analyzer}} (QObject \texorpdfstring{$\ast$}{*}parent=nullptr)
+\item 
+\mbox{\hyperlink{struct_analysis_result}{Analysis\+Result}} \mbox{\hyperlink{class_data_analyzer_a9dad1c13bb35b1c3116f9d74c5ef9d6c}{analyze\+Measurements}} (const QVector$<$ \mbox{\hyperlink{class_measurement}{Measurement}} $>$ \&measurements)
+\item 
+QVector$<$ \mbox{\hyperlink{class_measurement}{Measurement}} $>$ \mbox{\hyperlink{class_data_analyzer_a6ae8d8a63f0d7cdc4eb19e11a1534128}{filter\+Measurements\+By\+Date\+Range}} (const QVector$<$ \mbox{\hyperlink{class_measurement}{Measurement}} $>$ \&measurements, const QDate\+Time \&start\+Date, const QDate\+Time \&end\+Date)
+\item 
+double \mbox{\hyperlink{class_data_analyzer_ab75729e03678cf28a5b382037e77b884}{calculate\+Trend}} (const QVector$<$ \mbox{\hyperlink{class_measurement}{Measurement}} $>$ \&measurements)
+\item 
+QString \mbox{\hyperlink{class_data_analyzer_a415d3faabdf85f60f75bd0f620337dbc}{get\+Trend\+Description}} (double trend)
+\item 
+QVector$<$ \mbox{\hyperlink{class_measurement}{Measurement}} $>$ \mbox{\hyperlink{class_data_analyzer_a14ff5e1ac59595f7894adec92f584174}{find\+Anomalies}} (const QVector$<$ \mbox{\hyperlink{class_measurement}{Measurement}} $>$ \&measurements, double z\+Threshold=2.\+0)
+\item 
+QVector$<$ \mbox{\hyperlink{struct_forecast}{Forecast}} $>$ \mbox{\hyperlink{class_data_analyzer_aca4e614ecd5bafd87df1ed87d7adfbfa}{forecast\+Values}} (const QVector$<$ \mbox{\hyperlink{class_measurement}{Measurement}} $>$ \&measurements, int days\+Ahead=3)
+\item 
+QMap$<$ QString, double $>$ \mbox{\hyperlink{class_data_analyzer_a30d7dad9bffa85580f76d1285de9af83}{calculate\+Daily\+Averages}} (const QVector$<$ \mbox{\hyperlink{class_measurement}{Measurement}} $>$ \&measurements)
+\item 
+QMap$<$ QString, double $>$ \mbox{\hyperlink{class_data_analyzer_a29607eaca4d7bbbeb2f9b98689521782}{calculate\+Hourly\+Averages}} (const QVector$<$ \mbox{\hyperlink{class_measurement}{Measurement}} $>$ \&measurements)
+\item 
+double \mbox{\hyperlink{class_data_analyzer_a0627ed812e01f60139d793c25d2d8eb7}{calculate\+Correlation}} (const QVector$<$ \mbox{\hyperlink{class_measurement}{Measurement}} $>$ \&measurements1, const QVector$<$ \mbox{\hyperlink{class_measurement}{Measurement}} $>$ \&measurements2)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_data_analyzer_a19332d6a19c6649ecc6e66eb52be4878}\index{DataAnalyzer@{DataAnalyzer}!DataAnalyzer@{DataAnalyzer}}
+\index{DataAnalyzer@{DataAnalyzer}!DataAnalyzer@{DataAnalyzer}}
+\doxysubsubsection{\texorpdfstring{DataAnalyzer()}{DataAnalyzer()}}
+{\footnotesize\ttfamily \label{class_data_analyzer_a19332d6a19c6649ecc6e66eb52be4878} 
+Data\+Analyzer\+::\+Data\+Analyzer (\begin{DoxyParamCaption}\item[{QObject \texorpdfstring{$\ast$}{*}}]{parent}{ = {\ttfamily nullptr}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_data_analyzer_a9dad1c13bb35b1c3116f9d74c5ef9d6c}\index{DataAnalyzer@{DataAnalyzer}!analyzeMeasurements@{analyzeMeasurements}}
+\index{analyzeMeasurements@{analyzeMeasurements}!DataAnalyzer@{DataAnalyzer}}
+\doxysubsubsection{\texorpdfstring{analyzeMeasurements()}{analyzeMeasurements()}}
+{\footnotesize\ttfamily \label{class_data_analyzer_a9dad1c13bb35b1c3116f9d74c5ef9d6c} 
+\mbox{\hyperlink{struct_analysis_result}{Analysis\+Result}} Data\+Analyzer\+::analyze\+Measurements (\begin{DoxyParamCaption}\item[{const QVector$<$ \mbox{\hyperlink{class_measurement}{Measurement}} $>$ \&}]{measurements}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_data_analyzer_a0627ed812e01f60139d793c25d2d8eb7}\index{DataAnalyzer@{DataAnalyzer}!calculateCorrelation@{calculateCorrelation}}
+\index{calculateCorrelation@{calculateCorrelation}!DataAnalyzer@{DataAnalyzer}}
+\doxysubsubsection{\texorpdfstring{calculateCorrelation()}{calculateCorrelation()}}
+{\footnotesize\ttfamily \label{class_data_analyzer_a0627ed812e01f60139d793c25d2d8eb7} 
+double Data\+Analyzer\+::calculate\+Correlation (\begin{DoxyParamCaption}\item[{const QVector$<$ \mbox{\hyperlink{class_measurement}{Measurement}} $>$ \&}]{measurements1}{, }\item[{const QVector$<$ \mbox{\hyperlink{class_measurement}{Measurement}} $>$ \&}]{measurements2}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_data_analyzer_a30d7dad9bffa85580f76d1285de9af83}\index{DataAnalyzer@{DataAnalyzer}!calculateDailyAverages@{calculateDailyAverages}}
+\index{calculateDailyAverages@{calculateDailyAverages}!DataAnalyzer@{DataAnalyzer}}
+\doxysubsubsection{\texorpdfstring{calculateDailyAverages()}{calculateDailyAverages()}}
+{\footnotesize\ttfamily \label{class_data_analyzer_a30d7dad9bffa85580f76d1285de9af83} 
+QMap$<$ QString, double $>$ Data\+Analyzer\+::calculate\+Daily\+Averages (\begin{DoxyParamCaption}\item[{const QVector$<$ \mbox{\hyperlink{class_measurement}{Measurement}} $>$ \&}]{measurements}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_data_analyzer_a29607eaca4d7bbbeb2f9b98689521782}\index{DataAnalyzer@{DataAnalyzer}!calculateHourlyAverages@{calculateHourlyAverages}}
+\index{calculateHourlyAverages@{calculateHourlyAverages}!DataAnalyzer@{DataAnalyzer}}
+\doxysubsubsection{\texorpdfstring{calculateHourlyAverages()}{calculateHourlyAverages()}}
+{\footnotesize\ttfamily \label{class_data_analyzer_a29607eaca4d7bbbeb2f9b98689521782} 
+QMap$<$ QString, double $>$ Data\+Analyzer\+::calculate\+Hourly\+Averages (\begin{DoxyParamCaption}\item[{const QVector$<$ \mbox{\hyperlink{class_measurement}{Measurement}} $>$ \&}]{measurements}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_data_analyzer_ab75729e03678cf28a5b382037e77b884}\index{DataAnalyzer@{DataAnalyzer}!calculateTrend@{calculateTrend}}
+\index{calculateTrend@{calculateTrend}!DataAnalyzer@{DataAnalyzer}}
+\doxysubsubsection{\texorpdfstring{calculateTrend()}{calculateTrend()}}
+{\footnotesize\ttfamily \label{class_data_analyzer_ab75729e03678cf28a5b382037e77b884} 
+double Data\+Analyzer\+::calculate\+Trend (\begin{DoxyParamCaption}\item[{const QVector$<$ \mbox{\hyperlink{class_measurement}{Measurement}} $>$ \&}]{measurements}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_data_analyzer_a6ae8d8a63f0d7cdc4eb19e11a1534128}\index{DataAnalyzer@{DataAnalyzer}!filterMeasurementsByDateRange@{filterMeasurementsByDateRange}}
+\index{filterMeasurementsByDateRange@{filterMeasurementsByDateRange}!DataAnalyzer@{DataAnalyzer}}
+\doxysubsubsection{\texorpdfstring{filterMeasurementsByDateRange()}{filterMeasurementsByDateRange()}}
+{\footnotesize\ttfamily \label{class_data_analyzer_a6ae8d8a63f0d7cdc4eb19e11a1534128} 
+QVector$<$ \mbox{\hyperlink{class_measurement}{Measurement}} $>$ Data\+Analyzer\+::filter\+Measurements\+By\+Date\+Range (\begin{DoxyParamCaption}\item[{const QVector$<$ \mbox{\hyperlink{class_measurement}{Measurement}} $>$ \&}]{measurements}{, }\item[{const QDate\+Time \&}]{start\+Date}{, }\item[{const QDate\+Time \&}]{end\+Date}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_data_analyzer_a14ff5e1ac59595f7894adec92f584174}\index{DataAnalyzer@{DataAnalyzer}!findAnomalies@{findAnomalies}}
+\index{findAnomalies@{findAnomalies}!DataAnalyzer@{DataAnalyzer}}
+\doxysubsubsection{\texorpdfstring{findAnomalies()}{findAnomalies()}}
+{\footnotesize\ttfamily \label{class_data_analyzer_a14ff5e1ac59595f7894adec92f584174} 
+QVector$<$ \mbox{\hyperlink{class_measurement}{Measurement}} $>$ Data\+Analyzer\+::find\+Anomalies (\begin{DoxyParamCaption}\item[{const QVector$<$ \mbox{\hyperlink{class_measurement}{Measurement}} $>$ \&}]{measurements}{, }\item[{double}]{z\+Threshold}{ = {\ttfamily 2.0}}\end{DoxyParamCaption})}
+
+\Hypertarget{class_data_analyzer_aca4e614ecd5bafd87df1ed87d7adfbfa}\index{DataAnalyzer@{DataAnalyzer}!forecastValues@{forecastValues}}
+\index{forecastValues@{forecastValues}!DataAnalyzer@{DataAnalyzer}}
+\doxysubsubsection{\texorpdfstring{forecastValues()}{forecastValues()}}
+{\footnotesize\ttfamily \label{class_data_analyzer_aca4e614ecd5bafd87df1ed87d7adfbfa} 
+QVector$<$ \mbox{\hyperlink{struct_forecast}{Forecast}} $>$ Data\+Analyzer\+::forecast\+Values (\begin{DoxyParamCaption}\item[{const QVector$<$ \mbox{\hyperlink{class_measurement}{Measurement}} $>$ \&}]{measurements}{, }\item[{int}]{days\+Ahead}{ = {\ttfamily 3}}\end{DoxyParamCaption})}
+
+\Hypertarget{class_data_analyzer_a415d3faabdf85f60f75bd0f620337dbc}\index{DataAnalyzer@{DataAnalyzer}!getTrendDescription@{getTrendDescription}}
+\index{getTrendDescription@{getTrendDescription}!DataAnalyzer@{DataAnalyzer}}
+\doxysubsubsection{\texorpdfstring{getTrendDescription()}{getTrendDescription()}}
+{\footnotesize\ttfamily \label{class_data_analyzer_a415d3faabdf85f60f75bd0f620337dbc} 
+QString Data\+Analyzer\+::get\+Trend\+Description (\begin{DoxyParamCaption}\item[{double}]{trend}{}\end{DoxyParamCaption})}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{dataanalyzer_8h}{dataanalyzer.\+h}}\item 
+\mbox{\hyperlink{dataanalyzer_8cpp}{dataanalyzer.\+cpp}}\end{DoxyCompactItemize}

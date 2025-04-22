@@ -1,0 +1,223 @@
+\doxysection{Data\+Manager Class Reference}
+\hypertarget{class_data_manager}{}\label{class_data_manager}\index{DataManager@{DataManager}}
+
+
+{\ttfamily \#include $<$datamanager.\+h$>$}
+
+Inheritance diagram for Data\+Manager\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_data_manager}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_data_manager_a8d1e15cedbf9999bb7b6c9a7b0128405}{stations\+Loaded}} (const QVector$<$ \mbox{\hyperlink{class_station}{Station}} $>$ \&stations)
+\item 
+void \mbox{\hyperlink{class_data_manager_ae61957ef85a9f63259a919ad245ed580}{sensors\+Loaded}} (const QVector$<$ \mbox{\hyperlink{class_sensor}{Sensor}} $>$ \&sensors)
+\item 
+void \mbox{\hyperlink{class_data_manager_a7468d1992ef102bd86125d75f964e66f}{measurements\+Loaded}} (const QVector$<$ \mbox{\hyperlink{class_measurement}{Measurement}} $>$ \&measurements)
+\item 
+void \mbox{\hyperlink{class_data_manager_a6160f94cfc47c43885424082e4b9ed15}{air\+Quality\+Index\+Loaded}} (const \mbox{\hyperlink{class_air_quality_index}{Air\+Quality\+Index}} \&index)
+\item 
+void \mbox{\hyperlink{class_data_manager_ad0653f5e46fa072f977135cf07c34976}{api\+Error}} (const QString \&error\+Message)
+\item 
+void \mbox{\hyperlink{class_data_manager_aba2c9f227c5673772417e71aaa3c3a5e}{network\+Status\+Changed}} (bool available)
+\item 
+void \mbox{\hyperlink{class_data_manager_a61bad55d64d8e055016afeb91df7e40a}{offline\+Mode\+Changed}} (bool offline)
+\item 
+void \mbox{\hyperlink{class_data_manager_a07265ce4dff7ce113ce60aa1f40e910f}{data\+Source\+Changed}} (const QString \&source)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_data_manager_affb37dc13db06ecf6853c9fa25e5ed7a}{Data\+Manager}} (QObject \texorpdfstring{$\ast$}{*}parent=nullptr)
+\item 
+\mbox{\hyperlink{class_data_manager_a291f3b4df4392598b2d7064da062705f}{\texorpdfstring{$\sim$}{\string~}\+Data\+Manager}} ()
+\item 
+void \mbox{\hyperlink{class_data_manager_a0f9fd71deed8ffdc13ebb3698d6a3b94}{get\+All\+Stations}} ()
+\item 
+void \mbox{\hyperlink{class_data_manager_a2b28a09ed99944ea5d52431be4a8e9d2}{get\+Stations\+For\+City}} (const QString \&city\+Name)
+\item 
+void \mbox{\hyperlink{class_data_manager_a6dd989ad79413fd36bce6faa14a9db3d}{get\+Stations\+Near\+Location}} (double latitude, double longitude, double radius\+In\+Km)
+\item 
+void \mbox{\hyperlink{class_data_manager_a388c5159e30817695b313414df6d3d3f}{get\+Sensors}} (int station\+Id)
+\item 
+void \mbox{\hyperlink{class_data_manager_adfabb8d048a9813ce0491bf29650abe2}{get\+Measurements}} (int sensor\+Id)
+\item 
+void \mbox{\hyperlink{class_data_manager_a17416b432825dc324295e6fede444957}{get\+Air\+Quality\+Index}} (int station\+Id)
+\item 
+QVector$<$ \mbox{\hyperlink{class_station}{Station}} $>$ \mbox{\hyperlink{class_data_manager_a3d406eba6c1e8fc3762b314053bd38a0}{find\+Stations\+By\+City}} (const QString \&city\+Name) const
+\item 
+QVector$<$ \mbox{\hyperlink{class_station}{Station}} $>$ \mbox{\hyperlink{class_data_manager_a3b57c2ac1d2cda44b16134f55c0574fd}{find\+Stations\+Near\+Location}} (double latitude, double longitude, double radius\+In\+Km) const
+\item 
+void \mbox{\hyperlink{class_data_manager_a79081f078cf8c33c8be613aa01d1b747}{save\+Measurements\+To\+Database}} (int sensor\+Id, const QVector$<$ \mbox{\hyperlink{class_measurement}{Measurement}} $>$ \&measurements)
+\item 
+QVector$<$ \mbox{\hyperlink{class_measurement}{Measurement}} $>$ \mbox{\hyperlink{class_data_manager_af2f7936c0be60c9a61d04533f43ab7b8}{load\+Measurements\+From\+Database}} (int sensor\+Id)
+\item 
+bool \mbox{\hyperlink{class_data_manager_aa0ab5411bd618e394f4dcf2acb855097}{is\+Network\+Available}} () const
+\item 
+bool \mbox{\hyperlink{class_data_manager_a9ca7f5420937ab762bd5e4e817e1dd08}{is\+Offline\+Mode}} () const
+\item 
+void \mbox{\hyperlink{class_data_manager_ac985d935db6fee0cbb3afb8c20b9cf07}{set\+Offline\+Mode}} (bool offline)
+\item 
+bool \mbox{\hyperlink{class_data_manager_ab1721c186a4eb6b8cb485a6f099d86b5}{has\+Cached\+Data}} (int sensor\+Id) const
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_data_manager_affb37dc13db06ecf6853c9fa25e5ed7a}\index{DataManager@{DataManager}!DataManager@{DataManager}}
+\index{DataManager@{DataManager}!DataManager@{DataManager}}
+\doxysubsubsection{\texorpdfstring{DataManager()}{DataManager()}}
+{\footnotesize\ttfamily \label{class_data_manager_affb37dc13db06ecf6853c9fa25e5ed7a} 
+Data\+Manager\+::\+Data\+Manager (\begin{DoxyParamCaption}\item[{QObject \texorpdfstring{$\ast$}{*}}]{parent}{ = {\ttfamily nullptr}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+\Hypertarget{class_data_manager_a291f3b4df4392598b2d7064da062705f}\index{DataManager@{DataManager}!````~DataManager@{\texorpdfstring{$\sim$}{\string~}DataManager}}
+\index{````~DataManager@{\texorpdfstring{$\sim$}{\string~}DataManager}!DataManager@{DataManager}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}DataManager()}{\string~DataManager()}}
+{\footnotesize\ttfamily \label{class_data_manager_a291f3b4df4392598b2d7064da062705f} 
+Data\+Manager\+::\texorpdfstring{$\sim$}{\string~}\+Data\+Manager (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_data_manager_a6160f94cfc47c43885424082e4b9ed15}\index{DataManager@{DataManager}!airQualityIndexLoaded@{airQualityIndexLoaded}}
+\index{airQualityIndexLoaded@{airQualityIndexLoaded}!DataManager@{DataManager}}
+\doxysubsubsection{\texorpdfstring{airQualityIndexLoaded}{airQualityIndexLoaded}}
+{\footnotesize\ttfamily \label{class_data_manager_a6160f94cfc47c43885424082e4b9ed15} 
+void Data\+Manager\+::air\+Quality\+Index\+Loaded (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_air_quality_index}{Air\+Quality\+Index}} \&}]{index}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+\Hypertarget{class_data_manager_ad0653f5e46fa072f977135cf07c34976}\index{DataManager@{DataManager}!apiError@{apiError}}
+\index{apiError@{apiError}!DataManager@{DataManager}}
+\doxysubsubsection{\texorpdfstring{apiError}{apiError}}
+{\footnotesize\ttfamily \label{class_data_manager_ad0653f5e46fa072f977135cf07c34976} 
+void Data\+Manager\+::api\+Error (\begin{DoxyParamCaption}\item[{const QString \&}]{error\+Message}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+\Hypertarget{class_data_manager_a07265ce4dff7ce113ce60aa1f40e910f}\index{DataManager@{DataManager}!dataSourceChanged@{dataSourceChanged}}
+\index{dataSourceChanged@{dataSourceChanged}!DataManager@{DataManager}}
+\doxysubsubsection{\texorpdfstring{dataSourceChanged}{dataSourceChanged}}
+{\footnotesize\ttfamily \label{class_data_manager_a07265ce4dff7ce113ce60aa1f40e910f} 
+void Data\+Manager\+::data\+Source\+Changed (\begin{DoxyParamCaption}\item[{const QString \&}]{source}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+\Hypertarget{class_data_manager_a3d406eba6c1e8fc3762b314053bd38a0}\index{DataManager@{DataManager}!findStationsByCity@{findStationsByCity}}
+\index{findStationsByCity@{findStationsByCity}!DataManager@{DataManager}}
+\doxysubsubsection{\texorpdfstring{findStationsByCity()}{findStationsByCity()}}
+{\footnotesize\ttfamily \label{class_data_manager_a3d406eba6c1e8fc3762b314053bd38a0} 
+QVector$<$ \mbox{\hyperlink{class_station}{Station}} $>$ Data\+Manager\+::find\+Stations\+By\+City (\begin{DoxyParamCaption}\item[{const QString \&}]{city\+Name}{}\end{DoxyParamCaption}) const}
+
+\Hypertarget{class_data_manager_a3b57c2ac1d2cda44b16134f55c0574fd}\index{DataManager@{DataManager}!findStationsNearLocation@{findStationsNearLocation}}
+\index{findStationsNearLocation@{findStationsNearLocation}!DataManager@{DataManager}}
+\doxysubsubsection{\texorpdfstring{findStationsNearLocation()}{findStationsNearLocation()}}
+{\footnotesize\ttfamily \label{class_data_manager_a3b57c2ac1d2cda44b16134f55c0574fd} 
+QVector$<$ \mbox{\hyperlink{class_station}{Station}} $>$ Data\+Manager\+::find\+Stations\+Near\+Location (\begin{DoxyParamCaption}\item[{double}]{latitude}{, }\item[{double}]{longitude}{, }\item[{double}]{radius\+In\+Km}{}\end{DoxyParamCaption}) const}
+
+\Hypertarget{class_data_manager_a17416b432825dc324295e6fede444957}\index{DataManager@{DataManager}!getAirQualityIndex@{getAirQualityIndex}}
+\index{getAirQualityIndex@{getAirQualityIndex}!DataManager@{DataManager}}
+\doxysubsubsection{\texorpdfstring{getAirQualityIndex()}{getAirQualityIndex()}}
+{\footnotesize\ttfamily \label{class_data_manager_a17416b432825dc324295e6fede444957} 
+void Data\+Manager\+::get\+Air\+Quality\+Index (\begin{DoxyParamCaption}\item[{int}]{station\+Id}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_data_manager_a0f9fd71deed8ffdc13ebb3698d6a3b94}\index{DataManager@{DataManager}!getAllStations@{getAllStations}}
+\index{getAllStations@{getAllStations}!DataManager@{DataManager}}
+\doxysubsubsection{\texorpdfstring{getAllStations()}{getAllStations()}}
+{\footnotesize\ttfamily \label{class_data_manager_a0f9fd71deed8ffdc13ebb3698d6a3b94} 
+void Data\+Manager\+::get\+All\+Stations (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_data_manager_adfabb8d048a9813ce0491bf29650abe2}\index{DataManager@{DataManager}!getMeasurements@{getMeasurements}}
+\index{getMeasurements@{getMeasurements}!DataManager@{DataManager}}
+\doxysubsubsection{\texorpdfstring{getMeasurements()}{getMeasurements()}}
+{\footnotesize\ttfamily \label{class_data_manager_adfabb8d048a9813ce0491bf29650abe2} 
+void Data\+Manager\+::get\+Measurements (\begin{DoxyParamCaption}\item[{int}]{sensor\+Id}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_data_manager_a388c5159e30817695b313414df6d3d3f}\index{DataManager@{DataManager}!getSensors@{getSensors}}
+\index{getSensors@{getSensors}!DataManager@{DataManager}}
+\doxysubsubsection{\texorpdfstring{getSensors()}{getSensors()}}
+{\footnotesize\ttfamily \label{class_data_manager_a388c5159e30817695b313414df6d3d3f} 
+void Data\+Manager\+::get\+Sensors (\begin{DoxyParamCaption}\item[{int}]{station\+Id}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_data_manager_a2b28a09ed99944ea5d52431be4a8e9d2}\index{DataManager@{DataManager}!getStationsForCity@{getStationsForCity}}
+\index{getStationsForCity@{getStationsForCity}!DataManager@{DataManager}}
+\doxysubsubsection{\texorpdfstring{getStationsForCity()}{getStationsForCity()}}
+{\footnotesize\ttfamily \label{class_data_manager_a2b28a09ed99944ea5d52431be4a8e9d2} 
+void Data\+Manager\+::get\+Stations\+For\+City (\begin{DoxyParamCaption}\item[{const QString \&}]{city\+Name}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_data_manager_a6dd989ad79413fd36bce6faa14a9db3d}\index{DataManager@{DataManager}!getStationsNearLocation@{getStationsNearLocation}}
+\index{getStationsNearLocation@{getStationsNearLocation}!DataManager@{DataManager}}
+\doxysubsubsection{\texorpdfstring{getStationsNearLocation()}{getStationsNearLocation()}}
+{\footnotesize\ttfamily \label{class_data_manager_a6dd989ad79413fd36bce6faa14a9db3d} 
+void Data\+Manager\+::get\+Stations\+Near\+Location (\begin{DoxyParamCaption}\item[{double}]{latitude}{, }\item[{double}]{longitude}{, }\item[{double}]{radius\+In\+Km}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_data_manager_ab1721c186a4eb6b8cb485a6f099d86b5}\index{DataManager@{DataManager}!hasCachedData@{hasCachedData}}
+\index{hasCachedData@{hasCachedData}!DataManager@{DataManager}}
+\doxysubsubsection{\texorpdfstring{hasCachedData()}{hasCachedData()}}
+{\footnotesize\ttfamily \label{class_data_manager_ab1721c186a4eb6b8cb485a6f099d86b5} 
+bool Data\+Manager\+::has\+Cached\+Data (\begin{DoxyParamCaption}\item[{int}]{sensor\+Id}{}\end{DoxyParamCaption}) const}
+
+\Hypertarget{class_data_manager_aa0ab5411bd618e394f4dcf2acb855097}\index{DataManager@{DataManager}!isNetworkAvailable@{isNetworkAvailable}}
+\index{isNetworkAvailable@{isNetworkAvailable}!DataManager@{DataManager}}
+\doxysubsubsection{\texorpdfstring{isNetworkAvailable()}{isNetworkAvailable()}}
+{\footnotesize\ttfamily \label{class_data_manager_aa0ab5411bd618e394f4dcf2acb855097} 
+bool Data\+Manager\+::is\+Network\+Available (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+\Hypertarget{class_data_manager_a9ca7f5420937ab762bd5e4e817e1dd08}\index{DataManager@{DataManager}!isOfflineMode@{isOfflineMode}}
+\index{isOfflineMode@{isOfflineMode}!DataManager@{DataManager}}
+\doxysubsubsection{\texorpdfstring{isOfflineMode()}{isOfflineMode()}}
+{\footnotesize\ttfamily \label{class_data_manager_a9ca7f5420937ab762bd5e4e817e1dd08} 
+bool Data\+Manager\+::is\+Offline\+Mode (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+\Hypertarget{class_data_manager_af2f7936c0be60c9a61d04533f43ab7b8}\index{DataManager@{DataManager}!loadMeasurementsFromDatabase@{loadMeasurementsFromDatabase}}
+\index{loadMeasurementsFromDatabase@{loadMeasurementsFromDatabase}!DataManager@{DataManager}}
+\doxysubsubsection{\texorpdfstring{loadMeasurementsFromDatabase()}{loadMeasurementsFromDatabase()}}
+{\footnotesize\ttfamily \label{class_data_manager_af2f7936c0be60c9a61d04533f43ab7b8} 
+QVector$<$ \mbox{\hyperlink{class_measurement}{Measurement}} $>$ Data\+Manager\+::load\+Measurements\+From\+Database (\begin{DoxyParamCaption}\item[{int}]{sensor\+Id}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_data_manager_a7468d1992ef102bd86125d75f964e66f}\index{DataManager@{DataManager}!measurementsLoaded@{measurementsLoaded}}
+\index{measurementsLoaded@{measurementsLoaded}!DataManager@{DataManager}}
+\doxysubsubsection{\texorpdfstring{measurementsLoaded}{measurementsLoaded}}
+{\footnotesize\ttfamily \label{class_data_manager_a7468d1992ef102bd86125d75f964e66f} 
+void Data\+Manager\+::measurements\+Loaded (\begin{DoxyParamCaption}\item[{const QVector$<$ \mbox{\hyperlink{class_measurement}{Measurement}} $>$ \&}]{measurements}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+\Hypertarget{class_data_manager_aba2c9f227c5673772417e71aaa3c3a5e}\index{DataManager@{DataManager}!networkStatusChanged@{networkStatusChanged}}
+\index{networkStatusChanged@{networkStatusChanged}!DataManager@{DataManager}}
+\doxysubsubsection{\texorpdfstring{networkStatusChanged}{networkStatusChanged}}
+{\footnotesize\ttfamily \label{class_data_manager_aba2c9f227c5673772417e71aaa3c3a5e} 
+void Data\+Manager\+::network\+Status\+Changed (\begin{DoxyParamCaption}\item[{bool}]{available}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+\Hypertarget{class_data_manager_a61bad55d64d8e055016afeb91df7e40a}\index{DataManager@{DataManager}!offlineModeChanged@{offlineModeChanged}}
+\index{offlineModeChanged@{offlineModeChanged}!DataManager@{DataManager}}
+\doxysubsubsection{\texorpdfstring{offlineModeChanged}{offlineModeChanged}}
+{\footnotesize\ttfamily \label{class_data_manager_a61bad55d64d8e055016afeb91df7e40a} 
+void Data\+Manager\+::offline\+Mode\+Changed (\begin{DoxyParamCaption}\item[{bool}]{offline}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+\Hypertarget{class_data_manager_a79081f078cf8c33c8be613aa01d1b747}\index{DataManager@{DataManager}!saveMeasurementsToDatabase@{saveMeasurementsToDatabase}}
+\index{saveMeasurementsToDatabase@{saveMeasurementsToDatabase}!DataManager@{DataManager}}
+\doxysubsubsection{\texorpdfstring{saveMeasurementsToDatabase()}{saveMeasurementsToDatabase()}}
+{\footnotesize\ttfamily \label{class_data_manager_a79081f078cf8c33c8be613aa01d1b747} 
+void Data\+Manager\+::save\+Measurements\+To\+Database (\begin{DoxyParamCaption}\item[{int}]{sensor\+Id}{, }\item[{const QVector$<$ \mbox{\hyperlink{class_measurement}{Measurement}} $>$ \&}]{measurements}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_data_manager_ae61957ef85a9f63259a919ad245ed580}\index{DataManager@{DataManager}!sensorsLoaded@{sensorsLoaded}}
+\index{sensorsLoaded@{sensorsLoaded}!DataManager@{DataManager}}
+\doxysubsubsection{\texorpdfstring{sensorsLoaded}{sensorsLoaded}}
+{\footnotesize\ttfamily \label{class_data_manager_ae61957ef85a9f63259a919ad245ed580} 
+void Data\+Manager\+::sensors\+Loaded (\begin{DoxyParamCaption}\item[{const QVector$<$ \mbox{\hyperlink{class_sensor}{Sensor}} $>$ \&}]{sensors}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+\Hypertarget{class_data_manager_ac985d935db6fee0cbb3afb8c20b9cf07}\index{DataManager@{DataManager}!setOfflineMode@{setOfflineMode}}
+\index{setOfflineMode@{setOfflineMode}!DataManager@{DataManager}}
+\doxysubsubsection{\texorpdfstring{setOfflineMode()}{setOfflineMode()}}
+{\footnotesize\ttfamily \label{class_data_manager_ac985d935db6fee0cbb3afb8c20b9cf07} 
+void Data\+Manager\+::set\+Offline\+Mode (\begin{DoxyParamCaption}\item[{bool}]{offline}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_data_manager_a8d1e15cedbf9999bb7b6c9a7b0128405}\index{DataManager@{DataManager}!stationsLoaded@{stationsLoaded}}
+\index{stationsLoaded@{stationsLoaded}!DataManager@{DataManager}}
+\doxysubsubsection{\texorpdfstring{stationsLoaded}{stationsLoaded}}
+{\footnotesize\ttfamily \label{class_data_manager_a8d1e15cedbf9999bb7b6c9a7b0128405} 
+void Data\+Manager\+::stations\+Loaded (\begin{DoxyParamCaption}\item[{const QVector$<$ \mbox{\hyperlink{class_station}{Station}} $>$ \&}]{stations}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{datamanager_8h}{datamanager.\+h}}\item 
+build/\+Desktop-\/\+Debug/debug/\mbox{\hyperlink{moc__datamanager_8cpp}{moc\+\_\+datamanager.\+cpp}}\item 
+\mbox{\hyperlink{datamanager_8cpp}{datamanager.\+cpp}}\end{DoxyCompactItemize}

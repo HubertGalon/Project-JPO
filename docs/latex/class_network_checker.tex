@@ -1,0 +1,79 @@
+\doxysection{Network\+Checker Class Reference}
+\hypertarget{class_network_checker}{}\label{class_network_checker}\index{NetworkChecker@{NetworkChecker}}
+
+
+{\ttfamily \#include $<$networkchecker.\+h$>$}
+
+Inheritance diagram for Network\+Checker\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_network_checker}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_network_checker_a8664e663881a68fd1a3dd596eb2e57e4}{network\+Status\+Changed}} (bool available)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_network_checker_a233cdfa40771a65aa92b2448a9a76da1}{Network\+Checker}} (QObject \texorpdfstring{$\ast$}{*}parent=nullptr)
+\item 
+\mbox{\hyperlink{class_network_checker_a41c565c86bcac1359e0ac1b6d87a9b1f}{\texorpdfstring{$\sim$}{\string~}\+Network\+Checker}} ()
+\item 
+bool \mbox{\hyperlink{class_network_checker_aed13e762e62496bd3751ae73226f0617}{is\+Network\+Available}} ()
+\item 
+void \mbox{\hyperlink{class_network_checker_afd994aa954c71ec72fd8d40dc3822e4c}{start\+Monitoring}} (int interval\+Ms=10000)
+\item 
+void \mbox{\hyperlink{class_network_checker_aabc0c7db7b0733511d0caeb4fb2fa6ff}{stop\+Monitoring}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_network_checker_a233cdfa40771a65aa92b2448a9a76da1}\index{NetworkChecker@{NetworkChecker}!NetworkChecker@{NetworkChecker}}
+\index{NetworkChecker@{NetworkChecker}!NetworkChecker@{NetworkChecker}}
+\doxysubsubsection{\texorpdfstring{NetworkChecker()}{NetworkChecker()}}
+{\footnotesize\ttfamily \label{class_network_checker_a233cdfa40771a65aa92b2448a9a76da1} 
+Network\+Checker\+::\+Network\+Checker (\begin{DoxyParamCaption}\item[{QObject \texorpdfstring{$\ast$}{*}}]{parent}{ = {\ttfamily nullptr}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+\Hypertarget{class_network_checker_a41c565c86bcac1359e0ac1b6d87a9b1f}\index{NetworkChecker@{NetworkChecker}!````~NetworkChecker@{\texorpdfstring{$\sim$}{\string~}NetworkChecker}}
+\index{````~NetworkChecker@{\texorpdfstring{$\sim$}{\string~}NetworkChecker}!NetworkChecker@{NetworkChecker}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}NetworkChecker()}{\string~NetworkChecker()}}
+{\footnotesize\ttfamily \label{class_network_checker_a41c565c86bcac1359e0ac1b6d87a9b1f} 
+Network\+Checker\+::\texorpdfstring{$\sim$}{\string~}\+Network\+Checker (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_network_checker_aed13e762e62496bd3751ae73226f0617}\index{NetworkChecker@{NetworkChecker}!isNetworkAvailable@{isNetworkAvailable}}
+\index{isNetworkAvailable@{isNetworkAvailable}!NetworkChecker@{NetworkChecker}}
+\doxysubsubsection{\texorpdfstring{isNetworkAvailable()}{isNetworkAvailable()}}
+{\footnotesize\ttfamily \label{class_network_checker_aed13e762e62496bd3751ae73226f0617} 
+bool Network\+Checker\+::is\+Network\+Available (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_network_checker_a8664e663881a68fd1a3dd596eb2e57e4}\index{NetworkChecker@{NetworkChecker}!networkStatusChanged@{networkStatusChanged}}
+\index{networkStatusChanged@{networkStatusChanged}!NetworkChecker@{NetworkChecker}}
+\doxysubsubsection{\texorpdfstring{networkStatusChanged}{networkStatusChanged}}
+{\footnotesize\ttfamily \label{class_network_checker_a8664e663881a68fd1a3dd596eb2e57e4} 
+void Network\+Checker\+::network\+Status\+Changed (\begin{DoxyParamCaption}\item[{bool}]{available}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+\Hypertarget{class_network_checker_afd994aa954c71ec72fd8d40dc3822e4c}\index{NetworkChecker@{NetworkChecker}!startMonitoring@{startMonitoring}}
+\index{startMonitoring@{startMonitoring}!NetworkChecker@{NetworkChecker}}
+\doxysubsubsection{\texorpdfstring{startMonitoring()}{startMonitoring()}}
+{\footnotesize\ttfamily \label{class_network_checker_afd994aa954c71ec72fd8d40dc3822e4c} 
+void Network\+Checker\+::start\+Monitoring (\begin{DoxyParamCaption}\item[{int}]{interval\+Ms}{ = {\ttfamily 10000}}\end{DoxyParamCaption})}
+
+\Hypertarget{class_network_checker_aabc0c7db7b0733511d0caeb4fb2fa6ff}\index{NetworkChecker@{NetworkChecker}!stopMonitoring@{stopMonitoring}}
+\index{stopMonitoring@{stopMonitoring}!NetworkChecker@{NetworkChecker}}
+\doxysubsubsection{\texorpdfstring{stopMonitoring()}{stopMonitoring()}}
+{\footnotesize\ttfamily \label{class_network_checker_aabc0c7db7b0733511d0caeb4fb2fa6ff} 
+void Network\+Checker\+::stop\+Monitoring (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{networkchecker_8h}{networkchecker.\+h}}\item 
+build/\+Desktop-\/\+Debug/debug/\mbox{\hyperlink{moc__networkchecker_8cpp}{moc\+\_\+networkchecker.\+cpp}}\item 
+\mbox{\hyperlink{networkchecker_8cpp}{networkchecker.\+cpp}}\end{DoxyCompactItemize}

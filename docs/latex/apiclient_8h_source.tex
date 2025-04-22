@@ -1,0 +1,58 @@
+\doxysection{apiclient.\+h}
+\hypertarget{apiclient_8h_source}{}\label{apiclient_8h_source}\mbox{\hyperlink{apiclient_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ APICLIENT\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ APICLIENT\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <QObject>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <QNetworkAccessManager>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <QNetworkReply>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <QNetworkRequest>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <QUrl>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <QString>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <QJsonDocument>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <QJsonObject>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <QJsonArray>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <QThreadPool>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <QMutex>}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <QFuture>}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_api_client_a7ac17ab761c4ee56fa63802573b343e3}{ApiClient}}\ :\ \textcolor{keyword}{public}\ QObject}
+\DoxyCodeLine{00018\ \{}
+\DoxyCodeLine{00019\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{class_api_client_a7ac17ab761c4ee56fa63802573b343e3}{ApiClient}}(QObject*\ parent\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_api_client_ab4fae42eee49854da3247d72d01c165d}{\string~ApiClient}}();}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{comment}{//\ Endpoint\ API\ GIOŚ}}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ \mbox{\hyperlink{class_api_client_a2f14b0c85e139f7980f56cf4993111be}{BASE\_URL}}\ =\ \textcolor{stringliteral}{"{}https://api.gios.gov.pl/pjp-\/api/rest"{}};}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{comment}{//\ Metody\ pobierania\ danych\ (wielowątkowe)}}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_api_client_ac54cf5bb723d03765238565bfdef065a}{getAllStations}}();}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_api_client_a4d4eb08b751ea0224e22e683221cc9a8}{getSensors}}(\textcolor{keywordtype}{int}\ stationId);}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_api_client_a32405e3c2b8d74fef5d589fe5a58dac7}{getMeasurements}}(\textcolor{keywordtype}{int}\ sensorId);}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_api_client_a81fc5010e814add4fe0156bf96c32cfa}{getAirQualityIndex}}(\textcolor{keywordtype}{int}\ stationId);}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ signals:}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_api_client_a56f03263dc23dc4dc61b6d336f13f144}{stationsReceived}}(\textcolor{keyword}{const}\ QJsonArray\&\ stationsData);}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_api_client_aaf4d07fe3bbfb65d7b39019f4435f5ee}{sensorsReceived}}(\textcolor{keyword}{const}\ QJsonArray\&\ sensorsData);}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_api_client_a4c685501166fce1012d37567ad5b95e6}{measurementsReceived}}(\textcolor{keyword}{const}\ QJsonObject\&\ measurementsData);}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_api_client_a15b94dcad1a176a11b6326607ab9c5f7}{airQualityIndexReceived}}(\textcolor{keyword}{const}\ QJsonObject\&\ indexData);}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_api_client_a33d686efdf95142035981d18c1036bf9}{errorOccurred}}(\textcolor{keyword}{const}\ QString\&\ errorMessage);}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00042\ \ \ \ \ QNetworkAccessManager*\ networkManager;}
+\DoxyCodeLine{00043\ \ \ \ \ QThreadPool*\ threadPool;}
+\DoxyCodeLine{00044\ \ \ \ \ QMutex\ mutex;\ \textcolor{comment}{//\ Do\ synchronizacji\ dostępu\ do\ współdzielonych\ zasobów}}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{comment}{//\ Metoda\ pomocnicza\ do\ wysyłania\ zapytań\ w\ osobnym\ wątku}}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{void}\ sendRequestAsync(\textcolor{keyword}{const}\ QString\&\ endpoint,\ \textcolor{keyword}{const}\ QString\&\ requestType);}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{comment}{//\ Metody\ obsługi\ odpowiedzi\ dla\ poszczególnych\ typów\ zapytań}}
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordtype}{void}\ handleResponseData(\textcolor{keyword}{const}\ QByteArray\&\ responseData,\ \textcolor{keyword}{const}\ QString\&\ requestType);}
+\DoxyCodeLine{00051\ \};}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ APICLIENT\_H}}
+
+\end{DoxyCode}

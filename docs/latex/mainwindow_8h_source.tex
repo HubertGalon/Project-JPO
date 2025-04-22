@@ -1,0 +1,77 @@
+\doxysection{mainwindow.\+h}
+\hypertarget{mainwindow_8h_source}{}\label{mainwindow_8h_source}\mbox{\hyperlink{mainwindow_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ MAINWINDOW\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ MAINWINDOW\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <QMainWindow>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <QStackedWidget>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <QLabel>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <QProgressBar>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <QComboBox>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <QPushButton>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <QStatusBar>}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{datamanager_8h}{datamanager.h}}"{}}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{stationlistwidget_8h}{stationlistwidget.h}}"{}}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{sensorlistwidget_8h}{sensorlistwidget.h}}"{}}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{chartwidget_8h}{chartwidget.h}}"{}}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ QT\_BEGIN\_NAMESPACE}
+\DoxyCodeLine{00018\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_ui}{Ui}}\ \{\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_ui_1_1_main_window}{MainWindow}};\ \}}
+\DoxyCodeLine{00019\ QT\_END\_NAMESPACE}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_main_window_a996c5a2b6f77944776856f08ec30858d}{MainWindow}}\ :\ \textcolor{keyword}{public}\ QMainWindow}
+\DoxyCodeLine{00022\ \{}
+\DoxyCodeLine{00023\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00026\ \ \ \ \ \mbox{\hyperlink{class_main_window_a996c5a2b6f77944776856f08ec30858d}{MainWindow}}(QWidget\ *parent\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00027\ \ \ \ \ \mbox{\hyperlink{class_main_window_ae98d00a93bc118200eeef9f9bba1dba7}{\string~MainWindow}}();}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{keyword}{private}\ slots:}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordtype}{void}\ handleApiError(\textcolor{keyword}{const}\ QString\&\ errorMessage);}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordtype}{void}\ loadStations();}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{void}\ onStationsLoaded(\textcolor{keyword}{const}\ QVector<Station>\&\ stations);}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{void}\ onSensorsLoaded(\textcolor{keyword}{const}\ QVector<Sensor>\&\ sensors);}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{void}\ onMeasurementsLoaded(\textcolor{keyword}{const}\ QVector<Measurement>\&\ measurements);}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{void}\ onStationSelected(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_station}{Station}}\&\ station);}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{void}\ onSensorSelected(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_sensor}{Sensor}}\&\ sensor);}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{void}\ onBackToStationList();}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordtype}{void}\ onBackToSensorList();}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{comment}{//\ Akcje\ menu}}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{void}\ refreshData();}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{void}\ showAboutDialog();}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{comment}{//\ Nowe\ sloty\ dla\ obsługi\ trybu\ offline}}
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordtype}{void}\ onNetworkStatusChanged(\textcolor{keywordtype}{bool}\ available);}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{void}\ onOfflineModeChanged(\textcolor{keywordtype}{bool}\ offline);}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{void}\ onDataSourceChanged(\textcolor{keyword}{const}\ QString\&\ source);}
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordtype}{void}\ onOfflineModeButtonToggled(\textcolor{keywordtype}{bool}\ checked);}
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordtype}{void}\ onOfflineModeActionToggled(\textcolor{keywordtype}{bool}\ checked);}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00053\ \ \ \ \ \mbox{\hyperlink{class_ui_1_1_main_window}{Ui::MainWindow}}\ *ui;}
+\DoxyCodeLine{00054\ \ \ \ \ \mbox{\hyperlink{class_data_manager}{DataManager}}\ *dataManager;}
+\DoxyCodeLine{00055\ \ \ \ \ QStackedWidget\ *centralWidget;}
+\DoxyCodeLine{00056\ \ \ \ \ \mbox{\hyperlink{class_station_list_widget}{StationListWidget}}\ *stationListWidget;}
+\DoxyCodeLine{00057\ \ \ \ \ \mbox{\hyperlink{class_sensor_list_widget}{SensorListWidget}}\ *sensorListWidget;}
+\DoxyCodeLine{00058\ \ \ \ \ \mbox{\hyperlink{class_chart_widget}{ChartWidget}}\ *chartWidget;}
+\DoxyCodeLine{00059\ \ \ \ \ QStatusBar\ *statusBar;}
+\DoxyCodeLine{00060\ \ \ \ \ QProgressBar\ *progressBar;}
+\DoxyCodeLine{00061\ \ \ \ \ QLabel\ *statusLabel;}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{comment}{//\ Nowe\ elementy\ UI}}
+\DoxyCodeLine{00064\ \ \ \ \ QLabel\ *dataSourceLabel;}
+\DoxyCodeLine{00065\ \ \ \ \ QPushButton\ *offlineModeButton;}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{comment}{//\ Zapamiętujemy\ aktualnie\ wybrane\ obiekty}}
+\DoxyCodeLine{00068\ \ \ \ \ \mbox{\hyperlink{class_station}{Station}}\ currentStation;}
+\DoxyCodeLine{00069\ \ \ \ \ \mbox{\hyperlink{class_sensor}{Sensor}}\ currentSensor;}
+\DoxyCodeLine{00070\ \};}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00072\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ MAINWINDOW\_H}}
+
+\end{DoxyCode}

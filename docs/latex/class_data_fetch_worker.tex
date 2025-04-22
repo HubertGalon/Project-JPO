@@ -1,0 +1,114 @@
+\doxysection{Data\+Fetch\+Worker Class Reference}
+\hypertarget{class_data_fetch_worker}{}\label{class_data_fetch_worker}\index{DataFetchWorker@{DataFetchWorker}}
+
+
+{\ttfamily \#include $<$datafetchworker.\+h$>$}
+
+Inheritance diagram for Data\+Fetch\+Worker\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_data_fetch_worker}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_data_fetch_worker_a194c5e05ba1ba0e707c0b5b02a551559}{process}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_data_fetch_worker_ab14d2c7c5280aeb74e2e174be6bf00d3}{stations\+Data\+Fetched}} (const QJson\+Array \&stations\+Data)
+\item 
+void \mbox{\hyperlink{class_data_fetch_worker_a606d1d8bfc0f1c3beede0ebeddcf9b66}{sensors\+Data\+Fetched}} (int station\+Id, const QJson\+Array \&sensors\+Data)
+\item 
+void \mbox{\hyperlink{class_data_fetch_worker_a52b718b37764ec6f6d6cf7aa70b9290c}{measurements\+Data\+Fetched}} (int sensor\+Id, const QJson\+Object \&measurements\+Data)
+\item 
+void \mbox{\hyperlink{class_data_fetch_worker_a815078d586d340b55adc4dfd030854c5}{air\+Quality\+Index\+Fetched}} (int station\+Id, const QJson\+Object \&index\+Data)
+\item 
+void \mbox{\hyperlink{class_data_fetch_worker_a82a61e9bbbe9f6e4d84912c9e953926f}{error\+Occurred}} (const QString \&error\+Message)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_data_fetch_worker_a9cb9bf42d446e6430b345467ad96f5e1}{Data\+Fetch\+Worker}} (QObject \texorpdfstring{$\ast$}{*}parent=nullptr)
+\item 
+\mbox{\hyperlink{class_data_fetch_worker_a2e3cefe464413fcae4a6024466289e24}{\texorpdfstring{$\sim$}{\string~}\+Data\+Fetch\+Worker}} ()
+\item 
+void \mbox{\hyperlink{class_data_fetch_worker_a8c572302915e1c881e4e8974f676a7a5}{add\+Task}} (const \mbox{\hyperlink{struct_fetch_task}{Fetch\+Task}} \&task)
+\item 
+void \mbox{\hyperlink{class_data_fetch_worker_ab80de51c3c67863a2894b53ca2628245}{stop}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_data_fetch_worker_a9cb9bf42d446e6430b345467ad96f5e1}\index{DataFetchWorker@{DataFetchWorker}!DataFetchWorker@{DataFetchWorker}}
+\index{DataFetchWorker@{DataFetchWorker}!DataFetchWorker@{DataFetchWorker}}
+\doxysubsubsection{\texorpdfstring{DataFetchWorker()}{DataFetchWorker()}}
+{\footnotesize\ttfamily \label{class_data_fetch_worker_a9cb9bf42d446e6430b345467ad96f5e1} 
+Data\+Fetch\+Worker\+::\+Data\+Fetch\+Worker (\begin{DoxyParamCaption}\item[{QObject \texorpdfstring{$\ast$}{*}}]{parent}{ = {\ttfamily nullptr}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+\Hypertarget{class_data_fetch_worker_a2e3cefe464413fcae4a6024466289e24}\index{DataFetchWorker@{DataFetchWorker}!````~DataFetchWorker@{\texorpdfstring{$\sim$}{\string~}DataFetchWorker}}
+\index{````~DataFetchWorker@{\texorpdfstring{$\sim$}{\string~}DataFetchWorker}!DataFetchWorker@{DataFetchWorker}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}DataFetchWorker()}{\string~DataFetchWorker()}}
+{\footnotesize\ttfamily \label{class_data_fetch_worker_a2e3cefe464413fcae4a6024466289e24} 
+Data\+Fetch\+Worker\+::\texorpdfstring{$\sim$}{\string~}\+Data\+Fetch\+Worker (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_data_fetch_worker_a8c572302915e1c881e4e8974f676a7a5}\index{DataFetchWorker@{DataFetchWorker}!addTask@{addTask}}
+\index{addTask@{addTask}!DataFetchWorker@{DataFetchWorker}}
+\doxysubsubsection{\texorpdfstring{addTask()}{addTask()}}
+{\footnotesize\ttfamily \label{class_data_fetch_worker_a8c572302915e1c881e4e8974f676a7a5} 
+void Data\+Fetch\+Worker\+::add\+Task (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_fetch_task}{Fetch\+Task}} \&}]{task}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_data_fetch_worker_a815078d586d340b55adc4dfd030854c5}\index{DataFetchWorker@{DataFetchWorker}!airQualityIndexFetched@{airQualityIndexFetched}}
+\index{airQualityIndexFetched@{airQualityIndexFetched}!DataFetchWorker@{DataFetchWorker}}
+\doxysubsubsection{\texorpdfstring{airQualityIndexFetched}{airQualityIndexFetched}}
+{\footnotesize\ttfamily \label{class_data_fetch_worker_a815078d586d340b55adc4dfd030854c5} 
+void Data\+Fetch\+Worker\+::air\+Quality\+Index\+Fetched (\begin{DoxyParamCaption}\item[{int}]{station\+Id}{, }\item[{const QJson\+Object \&}]{index\+Data}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+\Hypertarget{class_data_fetch_worker_a82a61e9bbbe9f6e4d84912c9e953926f}\index{DataFetchWorker@{DataFetchWorker}!errorOccurred@{errorOccurred}}
+\index{errorOccurred@{errorOccurred}!DataFetchWorker@{DataFetchWorker}}
+\doxysubsubsection{\texorpdfstring{errorOccurred}{errorOccurred}}
+{\footnotesize\ttfamily \label{class_data_fetch_worker_a82a61e9bbbe9f6e4d84912c9e953926f} 
+void Data\+Fetch\+Worker\+::error\+Occurred (\begin{DoxyParamCaption}\item[{const QString \&}]{error\+Message}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+\Hypertarget{class_data_fetch_worker_a52b718b37764ec6f6d6cf7aa70b9290c}\index{DataFetchWorker@{DataFetchWorker}!measurementsDataFetched@{measurementsDataFetched}}
+\index{measurementsDataFetched@{measurementsDataFetched}!DataFetchWorker@{DataFetchWorker}}
+\doxysubsubsection{\texorpdfstring{measurementsDataFetched}{measurementsDataFetched}}
+{\footnotesize\ttfamily \label{class_data_fetch_worker_a52b718b37764ec6f6d6cf7aa70b9290c} 
+void Data\+Fetch\+Worker\+::measurements\+Data\+Fetched (\begin{DoxyParamCaption}\item[{int}]{sensor\+Id}{, }\item[{const QJson\+Object \&}]{measurements\+Data}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+\Hypertarget{class_data_fetch_worker_a194c5e05ba1ba0e707c0b5b02a551559}\index{DataFetchWorker@{DataFetchWorker}!process@{process}}
+\index{process@{process}!DataFetchWorker@{DataFetchWorker}}
+\doxysubsubsection{\texorpdfstring{process}{process}}
+{\footnotesize\ttfamily \label{class_data_fetch_worker_a194c5e05ba1ba0e707c0b5b02a551559} 
+void Data\+Fetch\+Worker\+::process (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+\Hypertarget{class_data_fetch_worker_a606d1d8bfc0f1c3beede0ebeddcf9b66}\index{DataFetchWorker@{DataFetchWorker}!sensorsDataFetched@{sensorsDataFetched}}
+\index{sensorsDataFetched@{sensorsDataFetched}!DataFetchWorker@{DataFetchWorker}}
+\doxysubsubsection{\texorpdfstring{sensorsDataFetched}{sensorsDataFetched}}
+{\footnotesize\ttfamily \label{class_data_fetch_worker_a606d1d8bfc0f1c3beede0ebeddcf9b66} 
+void Data\+Fetch\+Worker\+::sensors\+Data\+Fetched (\begin{DoxyParamCaption}\item[{int}]{station\+Id}{, }\item[{const QJson\+Array \&}]{sensors\+Data}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+\Hypertarget{class_data_fetch_worker_ab14d2c7c5280aeb74e2e174be6bf00d3}\index{DataFetchWorker@{DataFetchWorker}!stationsDataFetched@{stationsDataFetched}}
+\index{stationsDataFetched@{stationsDataFetched}!DataFetchWorker@{DataFetchWorker}}
+\doxysubsubsection{\texorpdfstring{stationsDataFetched}{stationsDataFetched}}
+{\footnotesize\ttfamily \label{class_data_fetch_worker_ab14d2c7c5280aeb74e2e174be6bf00d3} 
+void Data\+Fetch\+Worker\+::stations\+Data\+Fetched (\begin{DoxyParamCaption}\item[{const QJson\+Array \&}]{stations\+Data}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+\Hypertarget{class_data_fetch_worker_ab80de51c3c67863a2894b53ca2628245}\index{DataFetchWorker@{DataFetchWorker}!stop@{stop}}
+\index{stop@{stop}!DataFetchWorker@{DataFetchWorker}}
+\doxysubsubsection{\texorpdfstring{stop()}{stop()}}
+{\footnotesize\ttfamily \label{class_data_fetch_worker_ab80de51c3c67863a2894b53ca2628245} 
+void Data\+Fetch\+Worker\+::stop (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{datafetchworker_8h}{datafetchworker.\+h}}\item 
+build/\+Desktop-\/\+Debug/debug/\mbox{\hyperlink{moc__datafetchworker_8cpp}{moc\+\_\+datafetchworker.\+cpp}}\item 
+\mbox{\hyperlink{datafetchworker_8cpp}{datafetchworker.\+cpp}}\end{DoxyCompactItemize}

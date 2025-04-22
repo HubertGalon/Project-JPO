@@ -1,0 +1,83 @@
+\doxysection{Mock\+Database\+Handler Class Reference}
+\hypertarget{class_mock_database_handler}{}\label{class_mock_database_handler}\index{MockDatabaseHandler@{MockDatabaseHandler}}
+Inheritance diagram for Mock\+Database\+Handler\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_mock_database_handler}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_mock_database_handler_af48c9874857e1a2f4ace8c940c7de3e9}{Mock\+Database\+Handler}} ()
+\item 
+QString \mbox{\hyperlink{class_mock_database_handler_aec79bc4bfe165f02ce7c6483a0f79863}{get\+Test\+Stations\+File\+Path}} () const
+\item 
+QString \mbox{\hyperlink{class_mock_database_handler_ab9eeccfae5ede4a6730dac17f7e104ad}{get\+Test\+Sensors\+File\+Path}} (int station\+Id) const
+\item 
+QString \mbox{\hyperlink{class_mock_database_handler_a0378e6f4f582c4f88346b64bf8ed2195}{get\+Test\+Measurements\+File\+Path}} (int sensor\+Id) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_database_handler}{Database\+Handler}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_database_handler_a11690178a7140dd8cde5d2b9ec7b90d0}{Database\+Handler}} (QObject \texorpdfstring{$\ast$}{*}parent=nullptr)
+\item 
+\mbox{\hyperlink{class_database_handler_a54cc84549167c9d6a94ba686cf64a27f}{\texorpdfstring{$\sim$}{\string~}\+Database\+Handler}} ()
+\item 
+void \mbox{\hyperlink{class_database_handler_a6908bee07730d7007611ab126010e6c7}{save\+Stations}} (const QVector$<$ \mbox{\hyperlink{class_station}{Station}} $>$ \&stations)
+\item 
+QVector$<$ \mbox{\hyperlink{class_station}{Station}} $>$ \mbox{\hyperlink{class_database_handler_a719031fb13077e303f7c0be35cdec3bb}{load\+Stations}} () const
+\item 
+void \mbox{\hyperlink{class_database_handler_a57d777e12c8691e8575c1482baf408de}{save\+Sensors}} (int station\+Id, const QVector$<$ \mbox{\hyperlink{class_sensor}{Sensor}} $>$ \&sensors)
+\item 
+QVector$<$ \mbox{\hyperlink{class_sensor}{Sensor}} $>$ \mbox{\hyperlink{class_database_handler_a9e14dd91b07fb7a51695e3379574c5cc}{load\+Sensors}} (int station\+Id) const
+\item 
+void \mbox{\hyperlink{class_database_handler_a868da946260592d233b59c69db0cbc7a}{save\+Measurements}} (int sensor\+Id, const QVector$<$ \mbox{\hyperlink{class_measurement}{Measurement}} $>$ \&measurements)
+\item 
+QVector$<$ \mbox{\hyperlink{class_measurement}{Measurement}} $>$ \mbox{\hyperlink{class_database_handler_a48b4c5e53ac67d6057727c36989d03c6}{load\+Measurements}} (int sensor\+Id) const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_database_handler}{Database\+Handler}}}
+\begin{DoxyCompactItemize}
+\item 
+QString \mbox{\hyperlink{class_database_handler_a435a55534a1924e8d6201e4a57509964}{get\+Stations\+File\+Path}} () const
+\item 
+QString \mbox{\hyperlink{class_database_handler_a6f793dea411357bd56488af2cb573850}{get\+Sensors\+File\+Path}} (int station\+Id) const
+\item 
+QString \mbox{\hyperlink{class_database_handler_a2c83ccb6fd1a0fa5c3b1841b93c0c3a3}{get\+Measurements\+File\+Path}} (int sensor\+Id) const
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_mock_database_handler_af48c9874857e1a2f4ace8c940c7de3e9}\index{MockDatabaseHandler@{MockDatabaseHandler}!MockDatabaseHandler@{MockDatabaseHandler}}
+\index{MockDatabaseHandler@{MockDatabaseHandler}!MockDatabaseHandler@{MockDatabaseHandler}}
+\doxysubsubsection{\texorpdfstring{MockDatabaseHandler()}{MockDatabaseHandler()}}
+{\footnotesize\ttfamily \label{class_mock_database_handler_af48c9874857e1a2f4ace8c940c7de3e9} 
+Mock\+Database\+Handler\+::\+Mock\+Database\+Handler (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_mock_database_handler_a0378e6f4f582c4f88346b64bf8ed2195}\index{MockDatabaseHandler@{MockDatabaseHandler}!getTestMeasurementsFilePath@{getTestMeasurementsFilePath}}
+\index{getTestMeasurementsFilePath@{getTestMeasurementsFilePath}!MockDatabaseHandler@{MockDatabaseHandler}}
+\doxysubsubsection{\texorpdfstring{getTestMeasurementsFilePath()}{getTestMeasurementsFilePath()}}
+{\footnotesize\ttfamily \label{class_mock_database_handler_a0378e6f4f582c4f88346b64bf8ed2195} 
+QString Mock\+Database\+Handler\+::get\+Test\+Measurements\+File\+Path (\begin{DoxyParamCaption}\item[{int}]{sensor\+Id}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_mock_database_handler_ab9eeccfae5ede4a6730dac17f7e104ad}\index{MockDatabaseHandler@{MockDatabaseHandler}!getTestSensorsFilePath@{getTestSensorsFilePath}}
+\index{getTestSensorsFilePath@{getTestSensorsFilePath}!MockDatabaseHandler@{MockDatabaseHandler}}
+\doxysubsubsection{\texorpdfstring{getTestSensorsFilePath()}{getTestSensorsFilePath()}}
+{\footnotesize\ttfamily \label{class_mock_database_handler_ab9eeccfae5ede4a6730dac17f7e104ad} 
+QString Mock\+Database\+Handler\+::get\+Test\+Sensors\+File\+Path (\begin{DoxyParamCaption}\item[{int}]{station\+Id}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_mock_database_handler_aec79bc4bfe165f02ce7c6483a0f79863}\index{MockDatabaseHandler@{MockDatabaseHandler}!getTestStationsFilePath@{getTestStationsFilePath}}
+\index{getTestStationsFilePath@{getTestStationsFilePath}!MockDatabaseHandler@{MockDatabaseHandler}}
+\doxysubsubsection{\texorpdfstring{getTestStationsFilePath()}{getTestStationsFilePath()}}
+{\footnotesize\ttfamily \label{class_mock_database_handler_aec79bc4bfe165f02ce7c6483a0f79863} 
+QString Mock\+Database\+Handler\+::get\+Test\+Stations\+File\+Path (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+tests/\+Database\+Handler\+Test/\mbox{\hyperlink{_database_handler_test_8cpp}{Database\+Handler\+Test.\+cpp}}\end{DoxyCompactItemize}

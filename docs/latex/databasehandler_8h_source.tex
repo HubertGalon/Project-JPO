@@ -1,0 +1,65 @@
+\doxysection{databasehandler.\+h}
+\hypertarget{databasehandler_8h_source}{}\label{databasehandler_8h_source}\mbox{\hyperlink{databasehandler_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ DATABASEHANDLER\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ DATABASEHANDLER\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <QObject>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <QVector>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <QString>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <QDir>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <QFile>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <QJsonDocument>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <QJsonObject>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <QJsonArray>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <QMutex>}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{station_8h}{station.h}}"{}}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{sensor_8h}{sensor.h}}"{}}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{measurement_8h}{measurement.h}}"{}}}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_database_handler_a11690178a7140dd8cde5d2b9ec7b90d0}{DatabaseHandler}}\ :\ \textcolor{keyword}{public}\ QObject}
+\DoxyCodeLine{00019\ \{}
+\DoxyCodeLine{00020\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{class_database_handler_a11690178a7140dd8cde5d2b9ec7b90d0}{DatabaseHandler}}(QObject\ *parent\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00024\ \ \ \ \ \mbox{\hyperlink{class_database_handler_a54cc84549167c9d6a94ba686cf64a27f}{\string~DatabaseHandler}}();}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{comment}{//\ Operacje\ na\ stacjach}}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_database_handler_a6908bee07730d7007611ab126010e6c7}{saveStations}}(\textcolor{keyword}{const}\ QVector<Station>\&\ stations);}
+\DoxyCodeLine{00028\ \ \ \ \ QVector<Station>\ \mbox{\hyperlink{class_database_handler_a719031fb13077e303f7c0be35cdec3bb}{loadStations}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{comment}{//\ Operacje\ na\ sensorach}}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_database_handler_a57d777e12c8691e8575c1482baf408de}{saveSensors}}(\textcolor{keywordtype}{int}\ stationId,\ \textcolor{keyword}{const}\ QVector<Sensor>\&\ sensors);}
+\DoxyCodeLine{00032\ \ \ \ \ QVector<Sensor>\ \mbox{\hyperlink{class_database_handler_a9e14dd91b07fb7a51695e3379574c5cc}{loadSensors}}(\textcolor{keywordtype}{int}\ stationId)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{comment}{//\ Operacje\ na\ pomiarach}}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_database_handler_a868da946260592d233b59c69db0cbc7a}{saveMeasurements}}(\textcolor{keywordtype}{int}\ sensorId,\ \textcolor{keyword}{const}\ QVector<Measurement>\&\ measurements);}
+\DoxyCodeLine{00036\ \ \ \ \ QVector<Measurement>\ \mbox{\hyperlink{class_database_handler_a48b4c5e53ac67d6057727c36989d03c6}{loadMeasurements}}(\textcolor{keywordtype}{int}\ sensorId)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00039\ \ \ \ \ QDir\ dataDir;}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keyword}{mutable}\ QMutex\ mutex;\ \textcolor{comment}{//\ Muteks\ do\ synchronizacji\ dostępu\ do\ plików}}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{comment}{//\ Inicjalizacja\ katalogu\ danych}}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{void}\ initDataDirectory();}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{comment}{//\ Metody\ obsługi\ plików\ JSON}}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{bool}\ saveJsonToFile(\textcolor{keyword}{const}\ QString\&\ filePath,\ \textcolor{keyword}{const}\ QJsonDocument\&\ jsonDoc)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00049\ \ \ \ \ QJsonDocument\ loadJsonFromFile(\textcolor{keyword}{const}\ QString\&\ filePath)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{comment}{//\ Metody\ pomocnicze}}
+\DoxyCodeLine{00053\ \ \ \ \ QString\ \mbox{\hyperlink{class_database_handler_a435a55534a1924e8d6201e4a57509964}{getStationsFilePath}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00054\ \ \ \ \ QString\ \mbox{\hyperlink{class_database_handler_a6f793dea411357bd56488af2cb573850}{getSensorsFilePath}}(\textcolor{keywordtype}{int}\ stationId)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00055\ \ \ \ \ QString\ \mbox{\hyperlink{class_database_handler_a2c83ccb6fd1a0fa5c3b1841b93c0c3a3}{getMeasurementsFilePath}}(\textcolor{keywordtype}{int}\ sensorId)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00056\ \};}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ DATABASEHANDLER\_H}}
+
+\end{DoxyCode}

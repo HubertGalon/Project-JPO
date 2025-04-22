@@ -1,0 +1,88 @@
+\doxysection{dataanalyzer.\+h}
+\hypertarget{dataanalyzer_8h_source}{}\label{dataanalyzer_8h_source}\mbox{\hyperlink{dataanalyzer_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ DATAANALYZER\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ DATAANALYZER\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <QObject>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <QVector>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <QPair>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <QDateTime>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <QMap>}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{measurement_8h}{measurement.h}}"{}}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{comment}{//\ Rozszerzona\ struktura\ wyników\ analizy}}
+\DoxyCodeLine{00013\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_analysis_result_af0fa0cc0da940870774a7e80a09c47ac}{AnalysisResult}}\ \{}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{struct_analysis_result_af0eb7730f5fa5ade70fd9d797ae2e139}{minValue}};}
+\DoxyCodeLine{00015\ \ \ \ \ QDateTime\ \mbox{\hyperlink{struct_analysis_result_a5e9fa65af7585d7400faa191df33d37a}{minDate}};}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{struct_analysis_result_afa47094e8d26b5c06ce6057890fcf9c4}{maxValue}};}
+\DoxyCodeLine{00017\ \ \ \ \ QDateTime\ \mbox{\hyperlink{struct_analysis_result_a09ca8dad770298745413603abf1857ba}{maxDate}};}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{struct_analysis_result_a056cc4165ffb857b45b66ad0ff203107}{avgValue}};}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{struct_analysis_result_ab44716e0f9daee642b0462244ba4a202}{medianValue}};}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{struct_analysis_result_a7e567ac4d29a26e944f5a645b5a58e5a}{stdDeviation}};\ \ \textcolor{comment}{//\ Odchylenie\ standardowe}}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{struct_analysis_result_ab2ee5bea9020ceb90127a833d0a3b650}{trend}};\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Współczynnik\ trendu\ (dodatni\ oznacza\ wzrost,\ ujemny\ spadek)}}
+\DoxyCodeLine{00022\ \ \ \ \ QString\ \mbox{\hyperlink{struct_analysis_result_af7445dc79635ae61a74b790a8e86005c}{trendDescription}};}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_analysis_result_a4bf871c196e7a1f063cdebb8cdda328e}{totalMeasurements}};}
+\DoxyCodeLine{00024\ \ \ \ \ QMap<QString,\ double>\ \mbox{\hyperlink{struct_analysis_result_a97284cb4ca00d0a2038f305ea7269bb3}{dailyAverages}};\ \ \textcolor{comment}{//\ Średnie\ dzienne}}
+\DoxyCodeLine{00025\ \ \ \ \ QMap<QString,\ double>\ \mbox{\hyperlink{struct_analysis_result_af6877bd31cab3e745f52cd771ccc2337}{hourlyAverages}};\ \textcolor{comment}{//\ Średnie\ godzinowe}}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{comment}{//\ Inicjalizacja\ domyślnych\ wartości}}
+\DoxyCodeLine{00028\ \ \ \ \ \mbox{\hyperlink{struct_analysis_result_af0fa0cc0da940870774a7e80a09c47ac}{AnalysisResult}}()\ :}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_analysis_result_af0eb7730f5fa5ade70fd9d797ae2e139}{minValue}}(0.0),\ \mbox{\hyperlink{struct_analysis_result_afa47094e8d26b5c06ce6057890fcf9c4}{maxValue}}(0.0),\ \mbox{\hyperlink{struct_analysis_result_a056cc4165ffb857b45b66ad0ff203107}{avgValue}}(0.0),\ \mbox{\hyperlink{struct_analysis_result_ab44716e0f9daee642b0462244ba4a202}{medianValue}}(0.0),}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_analysis_result_a7e567ac4d29a26e944f5a645b5a58e5a}{stdDeviation}}(0.0),\ \mbox{\hyperlink{struct_analysis_result_ab2ee5bea9020ceb90127a833d0a3b650}{trend}}(0.0),\ \mbox{\hyperlink{struct_analysis_result_a4bf871c196e7a1f063cdebb8cdda328e}{totalMeasurements}}(0)\ \{\}}
+\DoxyCodeLine{00031\ \};}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \textcolor{comment}{//\ Struktura\ dla\ prognoz}}
+\DoxyCodeLine{00034\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_forecast}{Forecast}}\ \{}
+\DoxyCodeLine{00035\ \ \ \ \ QDateTime\ \mbox{\hyperlink{struct_forecast_afea6b068de766ad745050c61cf3dc4fc}{date}};}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{struct_forecast_afbab4b7b07a577872770c0d97a79923e}{predictedValue}};}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{struct_forecast_aab96902de169d5e5d7756687185694e2}{confidenceLow}};\ \ \textcolor{comment}{//\ Dolna\ granica\ przedziału\ ufności}}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{struct_forecast_a4b0ebdc1b2b9d7f37e15da02b831b55e}{confidenceHigh}};\ \textcolor{comment}{//\ Górna\ granica\ przedziału\ ufności}}
+\DoxyCodeLine{00039\ \};}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_data_analyzer_a19332d6a19c6649ecc6e66eb52be4878}{DataAnalyzer}}\ :\ \textcolor{keyword}{public}\ QObject}
+\DoxyCodeLine{00042\ \{}
+\DoxyCodeLine{00043\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{class_data_analyzer_a19332d6a19c6649ecc6e66eb52be4878}{DataAnalyzer}}(QObject\ *parent\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{comment}{//\ Podstawowa\ analiza\ danych}}
+\DoxyCodeLine{00049\ \ \ \ \ \mbox{\hyperlink{struct_analysis_result}{AnalysisResult}}\ \mbox{\hyperlink{class_data_analyzer_a9dad1c13bb35b1c3116f9d74c5ef9d6c}{analyzeMeasurements}}(\textcolor{keyword}{const}\ QVector<Measurement>\&\ measurements);}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{comment}{//\ Filtrowanie\ danych}}
+\DoxyCodeLine{00052\ \ \ \ \ QVector<Measurement>\ \mbox{\hyperlink{class_data_analyzer_a6ae8d8a63f0d7cdc4eb19e11a1534128}{filterMeasurementsByDateRange}}(\textcolor{keyword}{const}\ QVector<Measurement>\&\ measurements,}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ QDateTime\&\ startDate,}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ QDateTime\&\ endDate);}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{comment}{//\ Analiza\ trendu}}
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_data_analyzer_ab75729e03678cf28a5b382037e77b884}{calculateTrend}}(\textcolor{keyword}{const}\ QVector<Measurement>\&\ measurements);}
+\DoxyCodeLine{00058\ \ \ \ \ QString\ \mbox{\hyperlink{class_data_analyzer_a415d3faabdf85f60f75bd0f620337dbc}{getTrendDescription}}(\textcolor{keywordtype}{double}\ trend);}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{comment}{//\ Wykrywanie\ anomalii}}
+\DoxyCodeLine{00061\ \ \ \ \ QVector<Measurement>\ \mbox{\hyperlink{class_data_analyzer_a14ff5e1ac59595f7894adec92f584174}{findAnomalies}}(\textcolor{keyword}{const}\ QVector<Measurement>\&\ measurements,\ \textcolor{keywordtype}{double}\ zThreshold\ =\ 2.0);}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{comment}{//\ Prognozowanie\ (proste)}}
+\DoxyCodeLine{00064\ \ \ \ \ QVector<Forecast>\ \mbox{\hyperlink{class_data_analyzer_aca4e614ecd5bafd87df1ed87d7adfbfa}{forecastValues}}(\textcolor{keyword}{const}\ QVector<Measurement>\&\ measurements,\ \textcolor{keywordtype}{int}\ daysAhead\ =\ 3);}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{comment}{//\ Statystyki\ dzienne\ i\ godzinowe}}
+\DoxyCodeLine{00067\ \ \ \ \ QMap<QString,\ double>\ \mbox{\hyperlink{class_data_analyzer_a30d7dad9bffa85580f76d1285de9af83}{calculateDailyAverages}}(\textcolor{keyword}{const}\ QVector<Measurement>\&\ measurements);}
+\DoxyCodeLine{00068\ \ \ \ \ QMap<QString,\ double>\ \mbox{\hyperlink{class_data_analyzer_a29607eaca4d7bbbeb2f9b98689521782}{calculateHourlyAverages}}(\textcolor{keyword}{const}\ QVector<Measurement>\&\ measurements);}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{comment}{//\ Korelacja\ z\ innym\ zestawem\ danych\ (np.\ korelacja\ pomiędzy\ różnymi\ parametrami)}}
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_data_analyzer_a0627ed812e01f60139d793c25d2d8eb7}{calculateCorrelation}}(\textcolor{keyword}{const}\ QVector<Measurement>\&\ measurements1,}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ QVector<Measurement>\&\ measurements2);}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00074\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{comment}{//\ Metody\ pomocnicze}}
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{keywordtype}{double}\ calculateStandardDeviation(\textcolor{keyword}{const}\ QVector<double>\&\ values,\ \textcolor{keywordtype}{double}\ mean);}
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{keywordtype}{double}\ calculateMedian(QVector<double>\ values);}
+\DoxyCodeLine{00078\ \ \ \ \ QPair<QVector<double>,\ QVector<double>>\ alignMeasurementSeries(}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ QVector<Measurement>\&\ measurements1,}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ QVector<Measurement>\&\ measurements2);}
+\DoxyCodeLine{00081\ \};}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00083\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ DATAANALYZER\_H}}
+
+\end{DoxyCode}

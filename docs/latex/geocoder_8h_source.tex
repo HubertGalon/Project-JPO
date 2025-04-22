@@ -1,0 +1,66 @@
+\doxysection{geocoder.\+h}
+\hypertarget{geocoder_8h_source}{}\label{geocoder_8h_source}\mbox{\hyperlink{geocoder_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ GEOCODER\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ GEOCODER\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <QObject>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <QNetworkAccessManager>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <QNetworkReply>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <QNetworkRequest>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <QJsonDocument>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <QJsonObject>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <QJsonArray>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <QUrlQuery>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <QPair>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <QThreadPool>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <QFuture>}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{comment}{//\ Struktura\ do\ przechowywania\ wyników\ geokodowania}}
+\DoxyCodeLine{00017\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_geocoding_result_ad4f0fd680dd32b5bdb9258fd90adc33e}{GeocodingResult}}\ \{}
+\DoxyCodeLine{00018\ \ \ \ \ QString\ \mbox{\hyperlink{struct_geocoding_result_a96b13a63b726dd67b46106ddfc342a44}{formattedAddress}};}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{struct_geocoding_result_a2d208b836d73f3cd0355f3c231125951}{latitude}};}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{struct_geocoding_result_a9794d7225a9a3ca4882e7a165fe8bb1b}{longitude}};}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{struct_geocoding_result_a0dd4e2bab9fda601ad802f4fbf3c384a}{isValid}};}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \ \ \ \ \mbox{\hyperlink{struct_geocoding_result_ad4f0fd680dd32b5bdb9258fd90adc33e}{GeocodingResult}}()\ :\ \mbox{\hyperlink{struct_geocoding_result_a2d208b836d73f3cd0355f3c231125951}{latitude}}(0.0),\ \mbox{\hyperlink{struct_geocoding_result_a9794d7225a9a3ca4882e7a165fe8bb1b}{longitude}}(0.0),\ \mbox{\hyperlink{struct_geocoding_result_a0dd4e2bab9fda601ad802f4fbf3c384a}{isValid}}(false)\ \{\}}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \ \ \mbox{\hyperlink{struct_geocoding_result_a0fd341836c1479aaf7e03e50fb471c8b}{GeocodingResult}}(\textcolor{keyword}{const}\ QString\&\ address,\ \textcolor{keywordtype}{double}\ lat,\ \textcolor{keywordtype}{double}\ lon)}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{struct_geocoding_result_a96b13a63b726dd67b46106ddfc342a44}{formattedAddress}}(address),\ \mbox{\hyperlink{struct_geocoding_result_a2d208b836d73f3cd0355f3c231125951}{latitude}}(lat),\ \mbox{\hyperlink{struct_geocoding_result_a9794d7225a9a3ca4882e7a165fe8bb1b}{longitude}}(lon),\ \mbox{\hyperlink{struct_geocoding_result_a0dd4e2bab9fda601ad802f4fbf3c384a}{isValid}}(true)\ \{\}}
+\DoxyCodeLine{00027\ \};}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_geocoder_a6caeacb583e8ba0f51052e44c89fb0d8}{Geocoder}}\ :\ \textcolor{keyword}{public}\ QObject}
+\DoxyCodeLine{00030\ \{}
+\DoxyCodeLine{00031\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{class_geocoder_a6caeacb583e8ba0f51052e44c89fb0d8}{Geocoder}}(QObject*\ parent\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00035\ \ \ \ \ \mbox{\hyperlink{class_geocoder_a9b1c333a5f403f71a07af89ea50248e2}{\string~Geocoder}}();}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{comment}{//\ Metoda\ do\ konwersji\ adresu\ na\ współrzędne\ (asynchroniczna)}}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_geocoder_ad4527b7c8558e35200bea2be4937aea6}{geocodeAddress}}(\textcolor{keyword}{const}\ QString\&\ address);}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ signals:}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{comment}{//\ Sygnał\ emitowany\ po\ zakończeniu\ geokodowania}}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_geocoder_a27e899887835a6f16e310c710ec7e658}{geocodingFinished}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_geocoding_result}{GeocodingResult}}\&\ result);}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{comment}{//\ Sygnał\ emitowany\ w\ przypadku\ błędu}}
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_geocoder_ade27a7e0a176764f20a992d97c639b02}{geocodingError}}(\textcolor{keyword}{const}\ QString\&\ errorMessage);}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00048\ \ \ \ \ QNetworkAccessManager*\ networkManager;}
+\DoxyCodeLine{00049\ \ \ \ \ QThreadPool*\ threadPool;}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{comment}{//\ Używamy\ OpenStreetMap\ Nominatim\ API\ (darmowe)}}
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keyword}{const}\ QString\ apiUrl\ =\ \textcolor{stringliteral}{"{}https://nominatim.openstreetmap.org/search"{}};}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{comment}{//\ Metoda\ do\ wykonania\ zapytania\ geokodowania\ w\ osobnym\ wątku}}
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordtype}{void}\ geocodeAddressAsync(\textcolor{keyword}{const}\ QString\&\ address);}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{comment}{//\ Metoda\ do\ przetwarzania\ odpowiedzi}}
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordtype}{void}\ handleGeocodingResponse(\textcolor{keyword}{const}\ QByteArray\&\ responseData);}
+\DoxyCodeLine{00059\ \};}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ GEOCODER\_H}}
+
+\end{DoxyCode}

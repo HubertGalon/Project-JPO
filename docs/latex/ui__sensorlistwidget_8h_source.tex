@@ -1,0 +1,102 @@
+\doxysection{ui\+\_\+sensorlistwidget.\+h}
+\hypertarget{ui__sensorlistwidget_8h_source}{}\label{ui__sensorlistwidget_8h_source}\index{build/Desktop-\/Debug/ui\_sensorlistwidget.h@{build/Desktop-\/Debug/ui\_sensorlistwidget.h}}
+\mbox{\hyperlink{ui__sensorlistwidget_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/********************************************************************************}}
+\DoxyCodeLine{00002\ \textcolor{comment}{**\ Form\ generated\ from\ reading\ UI\ file\ 'sensorlistwidget.ui'}}
+\DoxyCodeLine{00003\ \textcolor{comment}{**}}
+\DoxyCodeLine{00004\ \textcolor{comment}{**\ Created\ by:\ Qt\ User\ Interface\ Compiler\ version\ 6.8.2}}
+\DoxyCodeLine{00005\ \textcolor{comment}{**}}
+\DoxyCodeLine{00006\ \textcolor{comment}{**\ WARNING!\ All\ changes\ made\ in\ this\ file\ will\ be\ lost\ when\ recompiling\ UI\ file!}}
+\DoxyCodeLine{00007\ \textcolor{comment}{********************************************************************************/}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#ifndef\ UI\_SENSORLISTWIDGET\_H}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#define\ UI\_SENSORLISTWIDGET\_H}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <QtCore/QVariant>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <QtWidgets/QApplication>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <QtWidgets/QLabel>}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <QtWidgets/QListWidget>}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ <QtWidgets/QPushButton>}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ <QtWidgets/QVBoxLayout>}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ <QtWidgets/QWidget>}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ QT\_BEGIN\_NAMESPACE}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_ui___sensor_list_widget}{Ui\_SensorListWidget}}}
+\DoxyCodeLine{00023\ \{}
+\DoxyCodeLine{00024\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00025\ \ \ \ \ QVBoxLayout\ *\mbox{\hyperlink{class_ui___sensor_list_widget_a78b636ec0284d52ae1a901c6e0ea393c}{verticalLayout}};}
+\DoxyCodeLine{00026\ \ \ \ \ QLabel\ *\mbox{\hyperlink{class_ui___sensor_list_widget_af47c37275fe9afff503234bf56486db9}{titleLabel}};}
+\DoxyCodeLine{00027\ \ \ \ \ QLabel\ *\mbox{\hyperlink{class_ui___sensor_list_widget_af04935da060a0852caef9873d0fa35e4}{stationNameLabel}};}
+\DoxyCodeLine{00028\ \ \ \ \ QListWidget\ *\mbox{\hyperlink{class_ui___sensor_list_widget_a4a44515b6870d9e73b7cfd10e916e814}{sensorListWidget}};}
+\DoxyCodeLine{00029\ \ \ \ \ QLabel\ *\mbox{\hyperlink{class_ui___sensor_list_widget_ad72d539cf1330cef7e118c603c2647df}{sensorCountLabel}};}
+\DoxyCodeLine{00030\ \ \ \ \ QPushButton\ *\mbox{\hyperlink{class_ui___sensor_list_widget_adee73abb5cd0fff0793a96dc61d66140}{backButton}};}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_ui___sensor_list_widget_a677ab0bb7000be9e0920c160fbfe888a}{setupUi}}(QWidget\ *\mbox{\hyperlink{class_sensor_list_widget}{SensorListWidget}})}
+\DoxyCodeLine{00033\ \ \ \ \ \{}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_sensor_list_widget}{SensorListWidget}}-\/>objectName().isEmpty())}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_sensor_list_widget}{SensorListWidget}}-\/>setObjectName(\textcolor{stringliteral}{"{}SensorListWidget"{}});}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_sensor_list_widget}{SensorListWidget}}-\/>resize(600,\ 400);}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_ui___sensor_list_widget_a78b636ec0284d52ae1a901c6e0ea393c}{verticalLayout}}\ =\ \textcolor{keyword}{new}\ QVBoxLayout(\mbox{\hyperlink{class_sensor_list_widget}{SensorListWidget}});}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_ui___sensor_list_widget_a78b636ec0284d52ae1a901c6e0ea393c}{verticalLayout}}-\/>setObjectName(\textcolor{stringliteral}{"{}verticalLayout"{}});}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_ui___sensor_list_widget_af47c37275fe9afff503234bf56486db9}{titleLabel}}\ =\ \textcolor{keyword}{new}\ QLabel(\mbox{\hyperlink{class_sensor_list_widget}{SensorListWidget}});}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_ui___sensor_list_widget_af47c37275fe9afff503234bf56486db9}{titleLabel}}-\/>setObjectName(\textcolor{stringliteral}{"{}titleLabel"{}});}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ QFont\ font;}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ font.setPointSize(14);}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ font.setBold(\textcolor{keyword}{true});}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_ui___sensor_list_widget_af47c37275fe9afff503234bf56486db9}{titleLabel}}-\/>setFont(font);}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_ui___sensor_list_widget_af47c37275fe9afff503234bf56486db9}{titleLabel}}-\/>setAlignment(Qt::AlignCenter);}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_ui___sensor_list_widget_a78b636ec0284d52ae1a901c6e0ea393c}{verticalLayout}}-\/>addWidget(\mbox{\hyperlink{class_ui___sensor_list_widget_af47c37275fe9afff503234bf56486db9}{titleLabel}});}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_ui___sensor_list_widget_af04935da060a0852caef9873d0fa35e4}{stationNameLabel}}\ =\ \textcolor{keyword}{new}\ QLabel(\mbox{\hyperlink{class_sensor_list_widget}{SensorListWidget}});}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_ui___sensor_list_widget_af04935da060a0852caef9873d0fa35e4}{stationNameLabel}}-\/>setObjectName(\textcolor{stringliteral}{"{}stationNameLabel"{}});}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ QFont\ font1;}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ font1.setPointSize(12);}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_ui___sensor_list_widget_af04935da060a0852caef9873d0fa35e4}{stationNameLabel}}-\/>setFont(font1);}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_ui___sensor_list_widget_af04935da060a0852caef9873d0fa35e4}{stationNameLabel}}-\/>setAlignment(Qt::AlignCenter);}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_ui___sensor_list_widget_a78b636ec0284d52ae1a901c6e0ea393c}{verticalLayout}}-\/>addWidget(\mbox{\hyperlink{class_ui___sensor_list_widget_af04935da060a0852caef9873d0fa35e4}{stationNameLabel}});}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_ui___sensor_list_widget_a4a44515b6870d9e73b7cfd10e916e814}{sensorListWidget}}\ =\ \textcolor{keyword}{new}\ QListWidget(\mbox{\hyperlink{class_sensor_list_widget}{SensorListWidget}});}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_ui___sensor_list_widget_a4a44515b6870d9e73b7cfd10e916e814}{sensorListWidget}}-\/>setObjectName(\textcolor{stringliteral}{"{}sensorListWidget"{}});}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_ui___sensor_list_widget_a78b636ec0284d52ae1a901c6e0ea393c}{verticalLayout}}-\/>addWidget(\mbox{\hyperlink{class_ui___sensor_list_widget_a4a44515b6870d9e73b7cfd10e916e814}{sensorListWidget}});}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_ui___sensor_list_widget_ad72d539cf1330cef7e118c603c2647df}{sensorCountLabel}}\ =\ \textcolor{keyword}{new}\ QLabel(\mbox{\hyperlink{class_sensor_list_widget}{SensorListWidget}});}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_ui___sensor_list_widget_ad72d539cf1330cef7e118c603c2647df}{sensorCountLabel}}-\/>setObjectName(\textcolor{stringliteral}{"{}sensorCountLabel"{}});}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_ui___sensor_list_widget_a78b636ec0284d52ae1a901c6e0ea393c}{verticalLayout}}-\/>addWidget(\mbox{\hyperlink{class_ui___sensor_list_widget_ad72d539cf1330cef7e118c603c2647df}{sensorCountLabel}});}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_ui___sensor_list_widget_adee73abb5cd0fff0793a96dc61d66140}{backButton}}\ =\ \textcolor{keyword}{new}\ QPushButton(\mbox{\hyperlink{class_sensor_list_widget}{SensorListWidget}});}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_ui___sensor_list_widget_adee73abb5cd0fff0793a96dc61d66140}{backButton}}-\/>setObjectName(\textcolor{stringliteral}{"{}backButton"{}});}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_ui___sensor_list_widget_a78b636ec0284d52ae1a901c6e0ea393c}{verticalLayout}}-\/>addWidget(\mbox{\hyperlink{class_ui___sensor_list_widget_adee73abb5cd0fff0793a96dc61d66140}{backButton}});}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_ui___sensor_list_widget_a2ec4651436f1fb8f8cae26865117d5e0}{retranslateUi}}(\mbox{\hyperlink{class_sensor_list_widget}{SensorListWidget}});}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ QMetaObject::connectSlotsByName(\mbox{\hyperlink{class_sensor_list_widget}{SensorListWidget}});}
+\DoxyCodeLine{00077\ \ \ \ \ \}\ \textcolor{comment}{//\ setupUi}}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_ui___sensor_list_widget_a2ec4651436f1fb8f8cae26865117d5e0}{retranslateUi}}(QWidget\ *\mbox{\hyperlink{class_sensor_list_widget}{SensorListWidget}})}
+\DoxyCodeLine{00080\ \ \ \ \ \{}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_sensor_list_widget}{SensorListWidget}}-\/>setWindowTitle(QCoreApplication::translate(\textcolor{stringliteral}{"{}SensorListWidget"{}},\ \textcolor{stringliteral}{"{}Czujniki\ pomiarowe"{}},\ \textcolor{keyword}{nullptr}));}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_ui___sensor_list_widget_af47c37275fe9afff503234bf56486db9}{titleLabel}}-\/>setText(QCoreApplication::translate(\textcolor{stringliteral}{"{}SensorListWidget"{}},\ \textcolor{stringliteral}{"{}Dostepne\ czujniki\ na\ stacji"{}},\ \textcolor{keyword}{nullptr}));}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_ui___sensor_list_widget_af04935da060a0852caef9873d0fa35e4}{stationNameLabel}}-\/>setText(QCoreApplication::translate(\textcolor{stringliteral}{"{}SensorListWidget"{}},\ \textcolor{stringliteral}{"{}Nazwa\ stacji"{}},\ \textcolor{keyword}{nullptr}));}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_ui___sensor_list_widget_ad72d539cf1330cef7e118c603c2647df}{sensorCountLabel}}-\/>setText(QCoreApplication::translate(\textcolor{stringliteral}{"{}SensorListWidget"{}},\ \textcolor{stringliteral}{"{}Dostepne\ czujniki:\ 0"{}},\ \textcolor{keyword}{nullptr}));}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_ui___sensor_list_widget_adee73abb5cd0fff0793a96dc61d66140}{backButton}}-\/>setText(QCoreApplication::translate(\textcolor{stringliteral}{"{}SensorListWidget"{}},\ \textcolor{stringliteral}{"{}Powrot\ do\ listy\ stacji"{}},\ \textcolor{keyword}{nullptr}));}
+\DoxyCodeLine{00086\ \ \ \ \ \}\ \textcolor{comment}{//\ retranslateUi}}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00088\ \};}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00090\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_ui}{Ui}}\ \{}
+\DoxyCodeLine{00091\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_ui_1_1_sensor_list_widget}{SensorListWidget}}:\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_ui___sensor_list_widget}{Ui\_SensorListWidget}}\ \{\};}
+\DoxyCodeLine{00092\ \}\ \textcolor{comment}{//\ namespace\ Ui}}
+\DoxyCodeLine{00093\ }
+\DoxyCodeLine{00094\ QT\_END\_NAMESPACE}
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00096\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ UI\_SENSORLISTWIDGET\_H}}
+
+\end{DoxyCode}

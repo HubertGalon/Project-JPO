@@ -1,0 +1,20 @@
+var searchData=
+[
+  ['fetchairqualityindex_0',['FetchAirQualityIndex',['../datafetchworker_8h.html#a985b26b5924fc7770990a83d75813832ac4981a937037a816f01b060da5682eaa',1,'datafetchworker.h']]],
+  ['fetchallstations_1',['FetchAllStations',['../datafetchworker_8h.html#a985b26b5924fc7770990a83d75813832a243f8cf41f0876733d30535ac42b9e33',1,'datafetchworker.h']]],
+  ['fetchmeasurements_2',['FetchMeasurements',['../datafetchworker_8h.html#a985b26b5924fc7770990a83d75813832ae666322f1ce88ecc6fb4c98ddd4515e8',1,'datafetchworker.h']]],
+  ['fetchsensors_3',['FetchSensors',['../datafetchworker_8h.html#a985b26b5924fc7770990a83d75813832ab619a54afec409b31f8abf80406fa9ee',1,'datafetchworker.h']]],
+  ['fetchtask_4',['FetchTask',['../struct_fetch_task.html',1,'FetchTask'],['../struct_fetch_task.html#ae8c44223c3965e8f69d54e2d98d7acfe',1,'FetchTask::FetchTask()']]],
+  ['fetchtasktype_5',['FetchTaskType',['../datafetchworker_8h.html#a985b26b5924fc7770990a83d75813832',1,'datafetchworker.h']]],
+  ['filtercombobox_6',['filterComboBox',['../class_ui___station_list_widget.html#a1aefaec4ff836383182c3fe1eaf27c96',1,'Ui_StationListWidget']]],
+  ['filterlayout_7',['filterLayout',['../class_ui___chart_widget.html#aeaa1d9fe8d8e7c69e7b46157dffb2ee4',1,'Ui_ChartWidget']]],
+  ['filtermeasurementsbydaterange_8',['filterMeasurementsByDateRange',['../class_data_analyzer.html#a6ae8d8a63f0d7cdc4eb19e11a1534128',1,'DataAnalyzer']]],
+  ['findanomalies_9',['findAnomalies',['../class_data_analyzer.html#a14ff5e1ac59595f7894adec92f584174',1,'DataAnalyzer']]],
+  ['findstationsbycity_10',['findStationsByCity',['../class_data_manager.html#a3d406eba6c1e8fc3762b314053bd38a0',1,'DataManager']]],
+  ['findstationsnearlocation_11',['findStationsNearLocation',['../class_data_manager.html#a3b57c2ac1d2cda44b16134f55c0574fd',1,'DataManager']]],
+  ['forecast_12',['Forecast',['../struct_forecast.html',1,'']]],
+  ['forecastvalues_13',['forecastValues',['../class_data_analyzer.html#aca4e614ecd5bafd87df1ed87d7adfbfa',1,'DataAnalyzer']]],
+  ['formattedaddress_14',['formattedAddress',['../struct_geocoding_result.html#a96b13a63b726dd67b46106ddfc342a44',1,'GeocodingResult']]],
+  ['fromjsonarray_15',['fromJsonArray',['../class_sensor.html#a4be64c83249607fda4c28d8b7950ebb4',1,'Sensor::fromJsonArray()'],['../class_station.html#afc2c7d0683fead618bedb434fbdb4c4b',1,'Station::fromJsonArray()']]],
+  ['fromjsonobject_16',['fromJsonObject',['../class_air_quality_index.html#acb868f3885ca50bab3517d981f5fcf32',1,'AirQualityIndex::fromJsonObject()'],['../class_measurement.html#a409b3a64681a51d9e7c6f460a6434243',1,'Measurement::fromJsonObject()']]]
+];

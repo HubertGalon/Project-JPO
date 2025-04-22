@@ -1,0 +1,118 @@
+\doxysection{Database\+Handler Class Reference}
+\hypertarget{class_database_handler}{}\label{class_database_handler}\index{DatabaseHandler@{DatabaseHandler}}
+
+
+{\ttfamily \#include $<$databasehandler.\+h$>$}
+
+Inheritance diagram for Database\+Handler\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_database_handler}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_database_handler_a11690178a7140dd8cde5d2b9ec7b90d0}{Database\+Handler}} (QObject \texorpdfstring{$\ast$}{*}parent=nullptr)
+\item 
+\mbox{\hyperlink{class_database_handler_a54cc84549167c9d6a94ba686cf64a27f}{\texorpdfstring{$\sim$}{\string~}\+Database\+Handler}} ()
+\item 
+void \mbox{\hyperlink{class_database_handler_a6908bee07730d7007611ab126010e6c7}{save\+Stations}} (const QVector$<$ \mbox{\hyperlink{class_station}{Station}} $>$ \&stations)
+\item 
+QVector$<$ \mbox{\hyperlink{class_station}{Station}} $>$ \mbox{\hyperlink{class_database_handler_a719031fb13077e303f7c0be35cdec3bb}{load\+Stations}} () const
+\item 
+void \mbox{\hyperlink{class_database_handler_a57d777e12c8691e8575c1482baf408de}{save\+Sensors}} (int station\+Id, const QVector$<$ \mbox{\hyperlink{class_sensor}{Sensor}} $>$ \&sensors)
+\item 
+QVector$<$ \mbox{\hyperlink{class_sensor}{Sensor}} $>$ \mbox{\hyperlink{class_database_handler_a9e14dd91b07fb7a51695e3379574c5cc}{load\+Sensors}} (int station\+Id) const
+\item 
+void \mbox{\hyperlink{class_database_handler_a868da946260592d233b59c69db0cbc7a}{save\+Measurements}} (int sensor\+Id, const QVector$<$ \mbox{\hyperlink{class_measurement}{Measurement}} $>$ \&measurements)
+\item 
+QVector$<$ \mbox{\hyperlink{class_measurement}{Measurement}} $>$ \mbox{\hyperlink{class_database_handler_a48b4c5e53ac67d6057727c36989d03c6}{load\+Measurements}} (int sensor\+Id) const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+QString \mbox{\hyperlink{class_database_handler_a435a55534a1924e8d6201e4a57509964}{get\+Stations\+File\+Path}} () const
+\item 
+QString \mbox{\hyperlink{class_database_handler_a6f793dea411357bd56488af2cb573850}{get\+Sensors\+File\+Path}} (int station\+Id) const
+\item 
+QString \mbox{\hyperlink{class_database_handler_a2c83ccb6fd1a0fa5c3b1841b93c0c3a3}{get\+Measurements\+File\+Path}} (int sensor\+Id) const
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_database_handler_a11690178a7140dd8cde5d2b9ec7b90d0}\index{DatabaseHandler@{DatabaseHandler}!DatabaseHandler@{DatabaseHandler}}
+\index{DatabaseHandler@{DatabaseHandler}!DatabaseHandler@{DatabaseHandler}}
+\doxysubsubsection{\texorpdfstring{DatabaseHandler()}{DatabaseHandler()}}
+{\footnotesize\ttfamily \label{class_database_handler_a11690178a7140dd8cde5d2b9ec7b90d0} 
+Database\+Handler\+::\+Database\+Handler (\begin{DoxyParamCaption}\item[{QObject \texorpdfstring{$\ast$}{*}}]{parent}{ = {\ttfamily nullptr}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+\Hypertarget{class_database_handler_a54cc84549167c9d6a94ba686cf64a27f}\index{DatabaseHandler@{DatabaseHandler}!````~DatabaseHandler@{\texorpdfstring{$\sim$}{\string~}DatabaseHandler}}
+\index{````~DatabaseHandler@{\texorpdfstring{$\sim$}{\string~}DatabaseHandler}!DatabaseHandler@{DatabaseHandler}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}DatabaseHandler()}{\string~DatabaseHandler()}}
+{\footnotesize\ttfamily \label{class_database_handler_a54cc84549167c9d6a94ba686cf64a27f} 
+Database\+Handler\+::\texorpdfstring{$\sim$}{\string~}\+Database\+Handler (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_database_handler_a2c83ccb6fd1a0fa5c3b1841b93c0c3a3}\index{DatabaseHandler@{DatabaseHandler}!getMeasurementsFilePath@{getMeasurementsFilePath}}
+\index{getMeasurementsFilePath@{getMeasurementsFilePath}!DatabaseHandler@{DatabaseHandler}}
+\doxysubsubsection{\texorpdfstring{getMeasurementsFilePath()}{getMeasurementsFilePath()}}
+{\footnotesize\ttfamily \label{class_database_handler_a2c83ccb6fd1a0fa5c3b1841b93c0c3a3} 
+QString Database\+Handler\+::get\+Measurements\+File\+Path (\begin{DoxyParamCaption}\item[{int}]{sensor\+Id}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_database_handler_a6f793dea411357bd56488af2cb573850}\index{DatabaseHandler@{DatabaseHandler}!getSensorsFilePath@{getSensorsFilePath}}
+\index{getSensorsFilePath@{getSensorsFilePath}!DatabaseHandler@{DatabaseHandler}}
+\doxysubsubsection{\texorpdfstring{getSensorsFilePath()}{getSensorsFilePath()}}
+{\footnotesize\ttfamily \label{class_database_handler_a6f793dea411357bd56488af2cb573850} 
+QString Database\+Handler\+::get\+Sensors\+File\+Path (\begin{DoxyParamCaption}\item[{int}]{station\+Id}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_database_handler_a435a55534a1924e8d6201e4a57509964}\index{DatabaseHandler@{DatabaseHandler}!getStationsFilePath@{getStationsFilePath}}
+\index{getStationsFilePath@{getStationsFilePath}!DatabaseHandler@{DatabaseHandler}}
+\doxysubsubsection{\texorpdfstring{getStationsFilePath()}{getStationsFilePath()}}
+{\footnotesize\ttfamily \label{class_database_handler_a435a55534a1924e8d6201e4a57509964} 
+QString Database\+Handler\+::get\+Stations\+File\+Path (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_database_handler_a48b4c5e53ac67d6057727c36989d03c6}\index{DatabaseHandler@{DatabaseHandler}!loadMeasurements@{loadMeasurements}}
+\index{loadMeasurements@{loadMeasurements}!DatabaseHandler@{DatabaseHandler}}
+\doxysubsubsection{\texorpdfstring{loadMeasurements()}{loadMeasurements()}}
+{\footnotesize\ttfamily \label{class_database_handler_a48b4c5e53ac67d6057727c36989d03c6} 
+QVector$<$ \mbox{\hyperlink{class_measurement}{Measurement}} $>$ Database\+Handler\+::load\+Measurements (\begin{DoxyParamCaption}\item[{int}]{sensor\+Id}{}\end{DoxyParamCaption}) const}
+
+\Hypertarget{class_database_handler_a9e14dd91b07fb7a51695e3379574c5cc}\index{DatabaseHandler@{DatabaseHandler}!loadSensors@{loadSensors}}
+\index{loadSensors@{loadSensors}!DatabaseHandler@{DatabaseHandler}}
+\doxysubsubsection{\texorpdfstring{loadSensors()}{loadSensors()}}
+{\footnotesize\ttfamily \label{class_database_handler_a9e14dd91b07fb7a51695e3379574c5cc} 
+QVector$<$ \mbox{\hyperlink{class_sensor}{Sensor}} $>$ Database\+Handler\+::load\+Sensors (\begin{DoxyParamCaption}\item[{int}]{station\+Id}{}\end{DoxyParamCaption}) const}
+
+\Hypertarget{class_database_handler_a719031fb13077e303f7c0be35cdec3bb}\index{DatabaseHandler@{DatabaseHandler}!loadStations@{loadStations}}
+\index{loadStations@{loadStations}!DatabaseHandler@{DatabaseHandler}}
+\doxysubsubsection{\texorpdfstring{loadStations()}{loadStations()}}
+{\footnotesize\ttfamily \label{class_database_handler_a719031fb13077e303f7c0be35cdec3bb} 
+QVector$<$ \mbox{\hyperlink{class_station}{Station}} $>$ Database\+Handler\+::load\+Stations (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+\Hypertarget{class_database_handler_a868da946260592d233b59c69db0cbc7a}\index{DatabaseHandler@{DatabaseHandler}!saveMeasurements@{saveMeasurements}}
+\index{saveMeasurements@{saveMeasurements}!DatabaseHandler@{DatabaseHandler}}
+\doxysubsubsection{\texorpdfstring{saveMeasurements()}{saveMeasurements()}}
+{\footnotesize\ttfamily \label{class_database_handler_a868da946260592d233b59c69db0cbc7a} 
+void Database\+Handler\+::save\+Measurements (\begin{DoxyParamCaption}\item[{int}]{sensor\+Id}{, }\item[{const QVector$<$ \mbox{\hyperlink{class_measurement}{Measurement}} $>$ \&}]{measurements}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_database_handler_a57d777e12c8691e8575c1482baf408de}\index{DatabaseHandler@{DatabaseHandler}!saveSensors@{saveSensors}}
+\index{saveSensors@{saveSensors}!DatabaseHandler@{DatabaseHandler}}
+\doxysubsubsection{\texorpdfstring{saveSensors()}{saveSensors()}}
+{\footnotesize\ttfamily \label{class_database_handler_a57d777e12c8691e8575c1482baf408de} 
+void Database\+Handler\+::save\+Sensors (\begin{DoxyParamCaption}\item[{int}]{station\+Id}{, }\item[{const QVector$<$ \mbox{\hyperlink{class_sensor}{Sensor}} $>$ \&}]{sensors}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_database_handler_a6908bee07730d7007611ab126010e6c7}\index{DatabaseHandler@{DatabaseHandler}!saveStations@{saveStations}}
+\index{saveStations@{saveStations}!DatabaseHandler@{DatabaseHandler}}
+\doxysubsubsection{\texorpdfstring{saveStations()}{saveStations()}}
+{\footnotesize\ttfamily \label{class_database_handler_a6908bee07730d7007611ab126010e6c7} 
+void Database\+Handler\+::save\+Stations (\begin{DoxyParamCaption}\item[{const QVector$<$ \mbox{\hyperlink{class_station}{Station}} $>$ \&}]{stations}{}\end{DoxyParamCaption})}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{databasehandler_8h}{databasehandler.\+h}}\item 
+\mbox{\hyperlink{databasehandler_8cpp}{databasehandler.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,27 @@
+var class_data_manager =
+[
+    [ "DataManager", "class_data_manager.html#affb37dc13db06ecf6853c9fa25e5ed7a", null ],
+    [ "~DataManager", "class_data_manager.html#a291f3b4df4392598b2d7064da062705f", null ],
+    [ "airQualityIndexLoaded", "class_data_manager.html#a6160f94cfc47c43885424082e4b9ed15", null ],
+    [ "apiError", "class_data_manager.html#ad0653f5e46fa072f977135cf07c34976", null ],
+    [ "dataSourceChanged", "class_data_manager.html#a07265ce4dff7ce113ce60aa1f40e910f", null ],
+    [ "findStationsByCity", "class_data_manager.html#a3d406eba6c1e8fc3762b314053bd38a0", null ],
+    [ "findStationsNearLocation", "class_data_manager.html#a3b57c2ac1d2cda44b16134f55c0574fd", null ],
+    [ "getAirQualityIndex", "class_data_manager.html#a17416b432825dc324295e6fede444957", null ],
+    [ "getAllStations", "class_data_manager.html#a0f9fd71deed8ffdc13ebb3698d6a3b94", null ],
+    [ "getMeasurements", "class_data_manager.html#adfabb8d048a9813ce0491bf29650abe2", null ],
+    [ "getSensors", "class_data_manager.html#a388c5159e30817695b313414df6d3d3f", null ],
+    [ "getStationsForCity", "class_data_manager.html#a2b28a09ed99944ea5d52431be4a8e9d2", null ],
+    [ "getStationsNearLocation", "class_data_manager.html#a6dd989ad79413fd36bce6faa14a9db3d", null ],
+    [ "hasCachedData", "class_data_manager.html#ab1721c186a4eb6b8cb485a6f099d86b5", null ],
+    [ "isNetworkAvailable", "class_data_manager.html#aa0ab5411bd618e394f4dcf2acb855097", null ],
+    [ "isOfflineMode", "class_data_manager.html#a9ca7f5420937ab762bd5e4e817e1dd08", null ],
+    [ "loadMeasurementsFromDatabase", "class_data_manager.html#af2f7936c0be60c9a61d04533f43ab7b8", null ],
+    [ "measurementsLoaded", "class_data_manager.html#a7468d1992ef102bd86125d75f964e66f", null ],
+    [ "networkStatusChanged", "class_data_manager.html#aba2c9f227c5673772417e71aaa3c3a5e", null ],
+    [ "offlineModeChanged", "class_data_manager.html#a61bad55d64d8e055016afeb91df7e40a", null ],
+    [ "saveMeasurementsToDatabase", "class_data_manager.html#a79081f078cf8c33c8be613aa01d1b747", null ],
+    [ "sensorsLoaded", "class_data_manager.html#ae61957ef85a9f63259a919ad245ed580", null ],
+    [ "setOfflineMode", "class_data_manager.html#ac985d935db6fee0cbb3afb8c20b9cf07", null ],
+    [ "stationsLoaded", "class_data_manager.html#a8d1e15cedbf9999bb7b6c9a7b0128405", null ]
+];

@@ -1,0 +1,171 @@
+\doxysection{ui\+\_\+chartwidget.\+h}
+\hypertarget{ui__chartwidget_8h_source}{}\label{ui__chartwidget_8h_source}\index{build/Desktop-\/Debug/ui\_chartwidget.h@{build/Desktop-\/Debug/ui\_chartwidget.h}}
+\mbox{\hyperlink{ui__chartwidget_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/********************************************************************************}}
+\DoxyCodeLine{00002\ \textcolor{comment}{**\ Form\ generated\ from\ reading\ UI\ file\ 'chartwidget.ui'}}
+\DoxyCodeLine{00003\ \textcolor{comment}{**}}
+\DoxyCodeLine{00004\ \textcolor{comment}{**\ Created\ by:\ Qt\ User\ Interface\ Compiler\ version\ 6.8.2}}
+\DoxyCodeLine{00005\ \textcolor{comment}{**}}
+\DoxyCodeLine{00006\ \textcolor{comment}{**\ WARNING!\ All\ changes\ made\ in\ this\ file\ will\ be\ lost\ when\ recompiling\ UI\ file!}}
+\DoxyCodeLine{00007\ \textcolor{comment}{********************************************************************************/}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#ifndef\ UI\_CHARTWIDGET\_H}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#define\ UI\_CHARTWIDGET\_H}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <QtCore/QVariant>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <QtWidgets/QApplication>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <QtWidgets/QComboBox>}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <QtWidgets/QDateEdit>}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ <QtWidgets/QHBoxLayout>}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ <QtWidgets/QLabel>}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ <QtWidgets/QPushButton>}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#include\ <QtWidgets/QVBoxLayout>}}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#include\ <QtWidgets/QWidget>}}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ QT\_BEGIN\_NAMESPACE}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_ui___chart_widget}{Ui\_ChartWidget}}}
+\DoxyCodeLine{00025\ \{}
+\DoxyCodeLine{00026\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00027\ \ \ \ \ QVBoxLayout\ *\mbox{\hyperlink{class_ui___chart_widget_af4b6ab8559fe831ea8adf81e0dcea8e0}{verticalLayout}};}
+\DoxyCodeLine{00028\ \ \ \ \ QLabel\ *\mbox{\hyperlink{class_ui___chart_widget_ae39a954d9419d9dde8d570a3204a2c79}{titleLabel}};}
+\DoxyCodeLine{00029\ \ \ \ \ QLabel\ *\mbox{\hyperlink{class_ui___chart_widget_ae9bdd314e07ba0177bf65113784024fa}{parameterLabel}};}
+\DoxyCodeLine{00030\ \ \ \ \ QHBoxLayout\ *\mbox{\hyperlink{class_ui___chart_widget_aeaa1d9fe8d8e7c69e7b46157dffb2ee4}{filterLayout}};}
+\DoxyCodeLine{00031\ \ \ \ \ QLabel\ *\mbox{\hyperlink{class_ui___chart_widget_a8ac356166faf36e010d810494eb66b12}{timeRangeLabel}};}
+\DoxyCodeLine{00032\ \ \ \ \ QComboBox\ *\mbox{\hyperlink{class_ui___chart_widget_aae5a7626246908ebee48bdae5812b058}{timeRangeComboBox}};}
+\DoxyCodeLine{00033\ \ \ \ \ QLabel\ *\mbox{\hyperlink{class_ui___chart_widget_a1e1ec4e9a53a7922fdfbc3f55e43b0de}{startDateLabel}};}
+\DoxyCodeLine{00034\ \ \ \ \ QDateEdit\ *\mbox{\hyperlink{class_ui___chart_widget_ab357ee96d9fe3d328a45dc879abb8b4c}{startDateEdit}};}
+\DoxyCodeLine{00035\ \ \ \ \ QLabel\ *\mbox{\hyperlink{class_ui___chart_widget_ac525307420b3da9c6d1da26daccbc819}{endDateLabel}};}
+\DoxyCodeLine{00036\ \ \ \ \ QDateEdit\ *\mbox{\hyperlink{class_ui___chart_widget_a2e8d917909df2a4e6ddf57c598ff3266}{endDateEdit}};}
+\DoxyCodeLine{00037\ \ \ \ \ QVBoxLayout\ *\mbox{\hyperlink{class_ui___chart_widget_a6de4237b3ff60b59d09644935c694c58}{chartLayout}};}
+\DoxyCodeLine{00038\ \ \ \ \ QHBoxLayout\ *\mbox{\hyperlink{class_ui___chart_widget_ae068a488978a96e21a57df9fc8baa5b7}{horizontalLayout}};}
+\DoxyCodeLine{00039\ \ \ \ \ QPushButton\ *\mbox{\hyperlink{class_ui___chart_widget_a1bd2a4d3b87ca05827b4f0863efb9ef9}{analyzeButton}};}
+\DoxyCodeLine{00040\ \ \ \ \ QPushButton\ *\mbox{\hyperlink{class_ui___chart_widget_ae506bcc15397c1bd7ba177ffbf45a18a}{saveChartButton}};}
+\DoxyCodeLine{00041\ \ \ \ \ QPushButton\ *\mbox{\hyperlink{class_ui___chart_widget_a1b15c031fa89192e999daef04f33dab0}{exportDataButton}};}
+\DoxyCodeLine{00042\ \ \ \ \ QPushButton\ *\mbox{\hyperlink{class_ui___chart_widget_a7d367f24647262c3936dca3fa9c2bc1e}{backButton}};}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_ui___chart_widget_a31f4f68581c26c511da3a2b2f6eb2e89}{setupUi}}(QWidget\ *\mbox{\hyperlink{class_chart_widget}{ChartWidget}})}
+\DoxyCodeLine{00045\ \ \ \ \ \{}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_chart_widget}{ChartWidget}}-\/>objectName().isEmpty())}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_chart_widget}{ChartWidget}}-\/>setObjectName(\textcolor{stringliteral}{"{}ChartWidget"{}});}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_chart_widget}{ChartWidget}}-\/>resize(800,\ 600);}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_ui___chart_widget_af4b6ab8559fe831ea8adf81e0dcea8e0}{verticalLayout}}\ =\ \textcolor{keyword}{new}\ QVBoxLayout(\mbox{\hyperlink{class_chart_widget}{ChartWidget}});}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_ui___chart_widget_af4b6ab8559fe831ea8adf81e0dcea8e0}{verticalLayout}}-\/>setObjectName(\textcolor{stringliteral}{"{}verticalLayout"{}});}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_ui___chart_widget_ae39a954d9419d9dde8d570a3204a2c79}{titleLabel}}\ =\ \textcolor{keyword}{new}\ QLabel(\mbox{\hyperlink{class_chart_widget}{ChartWidget}});}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_ui___chart_widget_ae39a954d9419d9dde8d570a3204a2c79}{titleLabel}}-\/>setObjectName(\textcolor{stringliteral}{"{}titleLabel"{}});}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ QFont\ font;}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ font.setPointSize(14);}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ font.setBold(\textcolor{keyword}{true});}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_ui___chart_widget_ae39a954d9419d9dde8d570a3204a2c79}{titleLabel}}-\/>setFont(font);}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_ui___chart_widget_ae39a954d9419d9dde8d570a3204a2c79}{titleLabel}}-\/>setAlignment(Qt::AlignCenter);}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_ui___chart_widget_af4b6ab8559fe831ea8adf81e0dcea8e0}{verticalLayout}}-\/>addWidget(\mbox{\hyperlink{class_ui___chart_widget_ae39a954d9419d9dde8d570a3204a2c79}{titleLabel}});}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_ui___chart_widget_ae9bdd314e07ba0177bf65113784024fa}{parameterLabel}}\ =\ \textcolor{keyword}{new}\ QLabel(\mbox{\hyperlink{class_chart_widget}{ChartWidget}});}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_ui___chart_widget_ae9bdd314e07ba0177bf65113784024fa}{parameterLabel}}-\/>setObjectName(\textcolor{stringliteral}{"{}parameterLabel"{}});}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ QFont\ font1;}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ font1.setPointSize(12);}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_ui___chart_widget_ae9bdd314e07ba0177bf65113784024fa}{parameterLabel}}-\/>setFont(font1);}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_ui___chart_widget_ae9bdd314e07ba0177bf65113784024fa}{parameterLabel}}-\/>setAlignment(Qt::AlignCenter);}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_ui___chart_widget_af4b6ab8559fe831ea8adf81e0dcea8e0}{verticalLayout}}-\/>addWidget(\mbox{\hyperlink{class_ui___chart_widget_ae9bdd314e07ba0177bf65113784024fa}{parameterLabel}});}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_ui___chart_widget_aeaa1d9fe8d8e7c69e7b46157dffb2ee4}{filterLayout}}\ =\ \textcolor{keyword}{new}\ QHBoxLayout();}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_ui___chart_widget_aeaa1d9fe8d8e7c69e7b46157dffb2ee4}{filterLayout}}-\/>setObjectName(\textcolor{stringliteral}{"{}filterLayout"{}});}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_ui___chart_widget_a8ac356166faf36e010d810494eb66b12}{timeRangeLabel}}\ =\ \textcolor{keyword}{new}\ QLabel(\mbox{\hyperlink{class_chart_widget}{ChartWidget}});}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_ui___chart_widget_a8ac356166faf36e010d810494eb66b12}{timeRangeLabel}}-\/>setObjectName(\textcolor{stringliteral}{"{}timeRangeLabel"{}});}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_ui___chart_widget_aeaa1d9fe8d8e7c69e7b46157dffb2ee4}{filterLayout}}-\/>addWidget(\mbox{\hyperlink{class_ui___chart_widget_a8ac356166faf36e010d810494eb66b12}{timeRangeLabel}});}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_ui___chart_widget_aae5a7626246908ebee48bdae5812b058}{timeRangeComboBox}}\ =\ \textcolor{keyword}{new}\ QComboBox(\mbox{\hyperlink{class_chart_widget}{ChartWidget}});}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_ui___chart_widget_aae5a7626246908ebee48bdae5812b058}{timeRangeComboBox}}-\/>setObjectName(\textcolor{stringliteral}{"{}timeRangeComboBox"{}});}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_ui___chart_widget_aeaa1d9fe8d8e7c69e7b46157dffb2ee4}{filterLayout}}-\/>addWidget(\mbox{\hyperlink{class_ui___chart_widget_aae5a7626246908ebee48bdae5812b058}{timeRangeComboBox}});}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_ui___chart_widget_a1e1ec4e9a53a7922fdfbc3f55e43b0de}{startDateLabel}}\ =\ \textcolor{keyword}{new}\ QLabel(\mbox{\hyperlink{class_chart_widget}{ChartWidget}});}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_ui___chart_widget_a1e1ec4e9a53a7922fdfbc3f55e43b0de}{startDateLabel}}-\/>setObjectName(\textcolor{stringliteral}{"{}startDateLabel"{}});}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_ui___chart_widget_aeaa1d9fe8d8e7c69e7b46157dffb2ee4}{filterLayout}}-\/>addWidget(\mbox{\hyperlink{class_ui___chart_widget_a1e1ec4e9a53a7922fdfbc3f55e43b0de}{startDateLabel}});}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_ui___chart_widget_ab357ee96d9fe3d328a45dc879abb8b4c}{startDateEdit}}\ =\ \textcolor{keyword}{new}\ QDateEdit(\mbox{\hyperlink{class_chart_widget}{ChartWidget}});}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_ui___chart_widget_ab357ee96d9fe3d328a45dc879abb8b4c}{startDateEdit}}-\/>setObjectName(\textcolor{stringliteral}{"{}startDateEdit"{}});}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_ui___chart_widget_ab357ee96d9fe3d328a45dc879abb8b4c}{startDateEdit}}-\/>setCalendarPopup(\textcolor{keyword}{true});}
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_ui___chart_widget_aeaa1d9fe8d8e7c69e7b46157dffb2ee4}{filterLayout}}-\/>addWidget(\mbox{\hyperlink{class_ui___chart_widget_ab357ee96d9fe3d328a45dc879abb8b4c}{startDateEdit}});}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_ui___chart_widget_ac525307420b3da9c6d1da26daccbc819}{endDateLabel}}\ =\ \textcolor{keyword}{new}\ QLabel(\mbox{\hyperlink{class_chart_widget}{ChartWidget}});}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_ui___chart_widget_ac525307420b3da9c6d1da26daccbc819}{endDateLabel}}-\/>setObjectName(\textcolor{stringliteral}{"{}endDateLabel"{}});}
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_ui___chart_widget_aeaa1d9fe8d8e7c69e7b46157dffb2ee4}{filterLayout}}-\/>addWidget(\mbox{\hyperlink{class_ui___chart_widget_ac525307420b3da9c6d1da26daccbc819}{endDateLabel}});}
+\DoxyCodeLine{00097\ }
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_ui___chart_widget_a2e8d917909df2a4e6ddf57c598ff3266}{endDateEdit}}\ =\ \textcolor{keyword}{new}\ QDateEdit(\mbox{\hyperlink{class_chart_widget}{ChartWidget}});}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_ui___chart_widget_a2e8d917909df2a4e6ddf57c598ff3266}{endDateEdit}}-\/>setObjectName(\textcolor{stringliteral}{"{}endDateEdit"{}});}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_ui___chart_widget_a2e8d917909df2a4e6ddf57c598ff3266}{endDateEdit}}-\/>setCalendarPopup(\textcolor{keyword}{true});}
+\DoxyCodeLine{00101\ }
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_ui___chart_widget_aeaa1d9fe8d8e7c69e7b46157dffb2ee4}{filterLayout}}-\/>addWidget(\mbox{\hyperlink{class_ui___chart_widget_a2e8d917909df2a4e6ddf57c598ff3266}{endDateEdit}});}
+\DoxyCodeLine{00103\ }
+\DoxyCodeLine{00104\ }
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_ui___chart_widget_af4b6ab8559fe831ea8adf81e0dcea8e0}{verticalLayout}}-\/>addLayout(\mbox{\hyperlink{class_ui___chart_widget_aeaa1d9fe8d8e7c69e7b46157dffb2ee4}{filterLayout}});}
+\DoxyCodeLine{00106\ }
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_ui___chart_widget_a6de4237b3ff60b59d09644935c694c58}{chartLayout}}\ =\ \textcolor{keyword}{new}\ QVBoxLayout();}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_ui___chart_widget_a6de4237b3ff60b59d09644935c694c58}{chartLayout}}-\/>setObjectName(\textcolor{stringliteral}{"{}chartLayout"{}});}
+\DoxyCodeLine{00109\ }
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_ui___chart_widget_af4b6ab8559fe831ea8adf81e0dcea8e0}{verticalLayout}}-\/>addLayout(\mbox{\hyperlink{class_ui___chart_widget_a6de4237b3ff60b59d09644935c694c58}{chartLayout}});}
+\DoxyCodeLine{00111\ }
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_ui___chart_widget_ae068a488978a96e21a57df9fc8baa5b7}{horizontalLayout}}\ =\ \textcolor{keyword}{new}\ QHBoxLayout();}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_ui___chart_widget_ae068a488978a96e21a57df9fc8baa5b7}{horizontalLayout}}-\/>setObjectName(\textcolor{stringliteral}{"{}horizontalLayout"{}});}
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_ui___chart_widget_a1bd2a4d3b87ca05827b4f0863efb9ef9}{analyzeButton}}\ =\ \textcolor{keyword}{new}\ QPushButton(\mbox{\hyperlink{class_chart_widget}{ChartWidget}});}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_ui___chart_widget_a1bd2a4d3b87ca05827b4f0863efb9ef9}{analyzeButton}}-\/>setObjectName(\textcolor{stringliteral}{"{}analyzeButton"{}});}
+\DoxyCodeLine{00116\ }
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_ui___chart_widget_ae068a488978a96e21a57df9fc8baa5b7}{horizontalLayout}}-\/>addWidget(\mbox{\hyperlink{class_ui___chart_widget_a1bd2a4d3b87ca05827b4f0863efb9ef9}{analyzeButton}});}
+\DoxyCodeLine{00118\ }
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_ui___chart_widget_ae506bcc15397c1bd7ba177ffbf45a18a}{saveChartButton}}\ =\ \textcolor{keyword}{new}\ QPushButton(\mbox{\hyperlink{class_chart_widget}{ChartWidget}});}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_ui___chart_widget_ae506bcc15397c1bd7ba177ffbf45a18a}{saveChartButton}}-\/>setObjectName(\textcolor{stringliteral}{"{}saveChartButton"{}});}
+\DoxyCodeLine{00121\ }
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_ui___chart_widget_ae068a488978a96e21a57df9fc8baa5b7}{horizontalLayout}}-\/>addWidget(\mbox{\hyperlink{class_ui___chart_widget_ae506bcc15397c1bd7ba177ffbf45a18a}{saveChartButton}});}
+\DoxyCodeLine{00123\ }
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_ui___chart_widget_a1b15c031fa89192e999daef04f33dab0}{exportDataButton}}\ =\ \textcolor{keyword}{new}\ QPushButton(\mbox{\hyperlink{class_chart_widget}{ChartWidget}});}
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_ui___chart_widget_a1b15c031fa89192e999daef04f33dab0}{exportDataButton}}-\/>setObjectName(\textcolor{stringliteral}{"{}exportDataButton"{}});}
+\DoxyCodeLine{00126\ }
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_ui___chart_widget_ae068a488978a96e21a57df9fc8baa5b7}{horizontalLayout}}-\/>addWidget(\mbox{\hyperlink{class_ui___chart_widget_a1b15c031fa89192e999daef04f33dab0}{exportDataButton}});}
+\DoxyCodeLine{00128\ }
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_ui___chart_widget_a7d367f24647262c3936dca3fa9c2bc1e}{backButton}}\ =\ \textcolor{keyword}{new}\ QPushButton(\mbox{\hyperlink{class_chart_widget}{ChartWidget}});}
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_ui___chart_widget_a7d367f24647262c3936dca3fa9c2bc1e}{backButton}}-\/>setObjectName(\textcolor{stringliteral}{"{}backButton"{}});}
+\DoxyCodeLine{00131\ }
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_ui___chart_widget_ae068a488978a96e21a57df9fc8baa5b7}{horizontalLayout}}-\/>addWidget(\mbox{\hyperlink{class_ui___chart_widget_a7d367f24647262c3936dca3fa9c2bc1e}{backButton}});}
+\DoxyCodeLine{00133\ }
+\DoxyCodeLine{00134\ }
+\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_ui___chart_widget_af4b6ab8559fe831ea8adf81e0dcea8e0}{verticalLayout}}-\/>addLayout(\mbox{\hyperlink{class_ui___chart_widget_ae068a488978a96e21a57df9fc8baa5b7}{horizontalLayout}});}
+\DoxyCodeLine{00136\ }
+\DoxyCodeLine{00137\ }
+\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_ui___chart_widget_a442a1271be456c28b42091bdb38ea635}{retranslateUi}}(\mbox{\hyperlink{class_chart_widget}{ChartWidget}});}
+\DoxyCodeLine{00139\ }
+\DoxyCodeLine{00140\ \ \ \ \ \ \ \ \ QMetaObject::connectSlotsByName(\mbox{\hyperlink{class_chart_widget}{ChartWidget}});}
+\DoxyCodeLine{00141\ \ \ \ \ \}\ \textcolor{comment}{//\ setupUi}}
+\DoxyCodeLine{00142\ }
+\DoxyCodeLine{00143\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_ui___chart_widget_a442a1271be456c28b42091bdb38ea635}{retranslateUi}}(QWidget\ *\mbox{\hyperlink{class_chart_widget}{ChartWidget}})}
+\DoxyCodeLine{00144\ \ \ \ \ \{}
+\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_chart_widget}{ChartWidget}}-\/>setWindowTitle(QCoreApplication::translate(\textcolor{stringliteral}{"{}ChartWidget"{}},\ \textcolor{stringliteral}{"{}Wykres\ pomiarow"{}},\ \textcolor{keyword}{nullptr}));}
+\DoxyCodeLine{00146\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_ui___chart_widget_ae39a954d9419d9dde8d570a3204a2c79}{titleLabel}}-\/>setText(QCoreApplication::translate(\textcolor{stringliteral}{"{}ChartWidget"{}},\ \textcolor{stringliteral}{"{}Wykres\ danych\ pomiarowych"{}},\ \textcolor{keyword}{nullptr}));}
+\DoxyCodeLine{00147\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_ui___chart_widget_ae9bdd314e07ba0177bf65113784024fa}{parameterLabel}}-\/>setText(QCoreApplication::translate(\textcolor{stringliteral}{"{}ChartWidget"{}},\ \textcolor{stringliteral}{"{}Parametr:\ "{}},\ \textcolor{keyword}{nullptr}));}
+\DoxyCodeLine{00148\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_ui___chart_widget_a8ac356166faf36e010d810494eb66b12}{timeRangeLabel}}-\/>setText(QCoreApplication::translate(\textcolor{stringliteral}{"{}ChartWidget"{}},\ \textcolor{stringliteral}{"{}Zakres\ czasu:"{}},\ \textcolor{keyword}{nullptr}));}
+\DoxyCodeLine{00149\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_ui___chart_widget_a1e1ec4e9a53a7922fdfbc3f55e43b0de}{startDateLabel}}-\/>setText(QCoreApplication::translate(\textcolor{stringliteral}{"{}ChartWidget"{}},\ \textcolor{stringliteral}{"{}Data\ poczatkowa:"{}},\ \textcolor{keyword}{nullptr}));}
+\DoxyCodeLine{00150\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_ui___chart_widget_ac525307420b3da9c6d1da26daccbc819}{endDateLabel}}-\/>setText(QCoreApplication::translate(\textcolor{stringliteral}{"{}ChartWidget"{}},\ \textcolor{stringliteral}{"{}Data\ koncowa:"{}},\ \textcolor{keyword}{nullptr}));}
+\DoxyCodeLine{00151\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_ui___chart_widget_a1bd2a4d3b87ca05827b4f0863efb9ef9}{analyzeButton}}-\/>setText(QCoreApplication::translate(\textcolor{stringliteral}{"{}ChartWidget"{}},\ \textcolor{stringliteral}{"{}Analizuj\ dane"{}},\ \textcolor{keyword}{nullptr}));}
+\DoxyCodeLine{00152\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_ui___chart_widget_ae506bcc15397c1bd7ba177ffbf45a18a}{saveChartButton}}-\/>setText(QCoreApplication::translate(\textcolor{stringliteral}{"{}ChartWidget"{}},\ \textcolor{stringliteral}{"{}Zapisz\ wykres"{}},\ \textcolor{keyword}{nullptr}));}
+\DoxyCodeLine{00153\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_ui___chart_widget_a1b15c031fa89192e999daef04f33dab0}{exportDataButton}}-\/>setText(QCoreApplication::translate(\textcolor{stringliteral}{"{}ChartWidget"{}},\ \textcolor{stringliteral}{"{}Eksportuj\ dane"{}},\ \textcolor{keyword}{nullptr}));}
+\DoxyCodeLine{00154\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_ui___chart_widget_a7d367f24647262c3936dca3fa9c2bc1e}{backButton}}-\/>setText(QCoreApplication::translate(\textcolor{stringliteral}{"{}ChartWidget"{}},\ \textcolor{stringliteral}{"{}Powrot\ do\ listy\ czujnikow"{}},\ \textcolor{keyword}{nullptr}));}
+\DoxyCodeLine{00155\ \ \ \ \ \}\ \textcolor{comment}{//\ retranslateUi}}
+\DoxyCodeLine{00156\ }
+\DoxyCodeLine{00157\ \};}
+\DoxyCodeLine{00158\ }
+\DoxyCodeLine{00159\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_ui}{Ui}}\ \{}
+\DoxyCodeLine{00160\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_ui_1_1_chart_widget}{ChartWidget}}:\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_ui___chart_widget}{Ui\_ChartWidget}}\ \{\};}
+\DoxyCodeLine{00161\ \}\ \textcolor{comment}{//\ namespace\ Ui}}
+\DoxyCodeLine{00162\ }
+\DoxyCodeLine{00163\ QT\_END\_NAMESPACE}
+\DoxyCodeLine{00164\ }
+\DoxyCodeLine{00165\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ UI\_CHARTWIDGET\_H}}
+
+\end{DoxyCode}

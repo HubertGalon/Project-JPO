@@ -1,0 +1,150 @@
+\doxysection{Station Class Reference}
+\hypertarget{class_station}{}\label{class_station}\index{Station@{Station}}
+
+
+{\ttfamily \#include $<$station.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_station_a73d335726aad1d844d81cda6d9fd74e6}{Station}} ()
+\item 
+\mbox{\hyperlink{class_station_a06d1a0492b1d2f0fe605b904a2a0053c}{Station}} (const QJson\+Object \&json)
+\item 
+QString \mbox{\hyperlink{class_station_a4bb4f35004b4dcfe1b7f295f7ee40f82}{get\+Full\+Address}} () const
+\item 
+double \mbox{\hyperlink{class_station_a575264b5f3146495e0c3af419d052bdb}{calculate\+Distance}} (double target\+Lat, double target\+Lon) const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static QVector$<$ \mbox{\hyperlink{class_station}{Station}} $>$ \mbox{\hyperlink{class_station_afc2c7d0683fead618bedb434fbdb4c4b}{from\+Json\+Array}} (const QJson\+Array \&json\+Array)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_station_a4144cd1a5a69d5900f473ea9d792b3fe}{id}}
+\item 
+QString \mbox{\hyperlink{class_station_a63d71a1a5b27d56480945a37481d81c6}{station\+Name}}
+\item 
+double \mbox{\hyperlink{class_station_ab687b8be6c85c99346fa7b039e4e353e}{gegr\+Lat}}
+\item 
+double \mbox{\hyperlink{class_station_a3c2ba8f393039b0e7d1726ddc77bed38}{gegr\+Lon}}
+\item 
+int \mbox{\hyperlink{class_station_acad86ddcafd492f740ec67eec7b764a1}{city\+Id}}
+\item 
+QString \mbox{\hyperlink{class_station_af73f4a524d457b6e40184567bd2248ad}{city\+Name}}
+\item 
+QString \mbox{\hyperlink{class_station_afbeda4b23ec089405569240931fc76cd}{commune\+Name}}
+\item 
+QString \mbox{\hyperlink{class_station_aab226b1cdda46a9c10677d28ce72affc}{district\+Name}}
+\item 
+QString \mbox{\hyperlink{class_station_a473cd12acb19039f8a255cf996da6f1d}{province\+Name}}
+\item 
+QString \mbox{\hyperlink{class_station_a0de928456fdcdf106b451e516b9c6766}{address\+Street}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_station_a73d335726aad1d844d81cda6d9fd74e6}\index{Station@{Station}!Station@{Station}}
+\index{Station@{Station}!Station@{Station}}
+\doxysubsubsection{\texorpdfstring{Station()}{Station()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_station_a73d335726aad1d844d81cda6d9fd74e6} 
+Station\+::\+Station (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_station_a06d1a0492b1d2f0fe605b904a2a0053c}\index{Station@{Station}!Station@{Station}}
+\index{Station@{Station}!Station@{Station}}
+\doxysubsubsection{\texorpdfstring{Station()}{Station()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_station_a06d1a0492b1d2f0fe605b904a2a0053c} 
+Station\+::\+Station (\begin{DoxyParamCaption}\item[{const QJson\+Object \&}]{json}{}\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_station_a575264b5f3146495e0c3af419d052bdb}\index{Station@{Station}!calculateDistance@{calculateDistance}}
+\index{calculateDistance@{calculateDistance}!Station@{Station}}
+\doxysubsubsection{\texorpdfstring{calculateDistance()}{calculateDistance()}}
+{\footnotesize\ttfamily \label{class_station_a575264b5f3146495e0c3af419d052bdb} 
+double Station\+::calculate\+Distance (\begin{DoxyParamCaption}\item[{double}]{target\+Lat}{, }\item[{double}]{target\+Lon}{}\end{DoxyParamCaption}) const}
+
+\Hypertarget{class_station_afc2c7d0683fead618bedb434fbdb4c4b}\index{Station@{Station}!fromJsonArray@{fromJsonArray}}
+\index{fromJsonArray@{fromJsonArray}!Station@{Station}}
+\doxysubsubsection{\texorpdfstring{fromJsonArray()}{fromJsonArray()}}
+{\footnotesize\ttfamily \label{class_station_afc2c7d0683fead618bedb434fbdb4c4b} 
+QVector$<$ \mbox{\hyperlink{class_station}{Station}} $>$ Station\+::from\+Json\+Array (\begin{DoxyParamCaption}\item[{const QJson\+Array \&}]{json\+Array}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{class_station_a4bb4f35004b4dcfe1b7f295f7ee40f82}\index{Station@{Station}!getFullAddress@{getFullAddress}}
+\index{getFullAddress@{getFullAddress}!Station@{Station}}
+\doxysubsubsection{\texorpdfstring{getFullAddress()}{getFullAddress()}}
+{\footnotesize\ttfamily \label{class_station_a4bb4f35004b4dcfe1b7f295f7ee40f82} 
+QString Station\+::get\+Full\+Address (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_station_a0de928456fdcdf106b451e516b9c6766}\index{Station@{Station}!addressStreet@{addressStreet}}
+\index{addressStreet@{addressStreet}!Station@{Station}}
+\doxysubsubsection{\texorpdfstring{addressStreet}{addressStreet}}
+{\footnotesize\ttfamily \label{class_station_a0de928456fdcdf106b451e516b9c6766} 
+QString Station\+::address\+Street}
+
+\Hypertarget{class_station_acad86ddcafd492f740ec67eec7b764a1}\index{Station@{Station}!cityId@{cityId}}
+\index{cityId@{cityId}!Station@{Station}}
+\doxysubsubsection{\texorpdfstring{cityId}{cityId}}
+{\footnotesize\ttfamily \label{class_station_acad86ddcafd492f740ec67eec7b764a1} 
+int Station\+::city\+Id}
+
+\Hypertarget{class_station_af73f4a524d457b6e40184567bd2248ad}\index{Station@{Station}!cityName@{cityName}}
+\index{cityName@{cityName}!Station@{Station}}
+\doxysubsubsection{\texorpdfstring{cityName}{cityName}}
+{\footnotesize\ttfamily \label{class_station_af73f4a524d457b6e40184567bd2248ad} 
+QString Station\+::city\+Name}
+
+\Hypertarget{class_station_afbeda4b23ec089405569240931fc76cd}\index{Station@{Station}!communeName@{communeName}}
+\index{communeName@{communeName}!Station@{Station}}
+\doxysubsubsection{\texorpdfstring{communeName}{communeName}}
+{\footnotesize\ttfamily \label{class_station_afbeda4b23ec089405569240931fc76cd} 
+QString Station\+::commune\+Name}
+
+\Hypertarget{class_station_aab226b1cdda46a9c10677d28ce72affc}\index{Station@{Station}!districtName@{districtName}}
+\index{districtName@{districtName}!Station@{Station}}
+\doxysubsubsection{\texorpdfstring{districtName}{districtName}}
+{\footnotesize\ttfamily \label{class_station_aab226b1cdda46a9c10677d28ce72affc} 
+QString Station\+::district\+Name}
+
+\Hypertarget{class_station_ab687b8be6c85c99346fa7b039e4e353e}\index{Station@{Station}!gegrLat@{gegrLat}}
+\index{gegrLat@{gegrLat}!Station@{Station}}
+\doxysubsubsection{\texorpdfstring{gegrLat}{gegrLat}}
+{\footnotesize\ttfamily \label{class_station_ab687b8be6c85c99346fa7b039e4e353e} 
+double Station\+::gegr\+Lat}
+
+\Hypertarget{class_station_a3c2ba8f393039b0e7d1726ddc77bed38}\index{Station@{Station}!gegrLon@{gegrLon}}
+\index{gegrLon@{gegrLon}!Station@{Station}}
+\doxysubsubsection{\texorpdfstring{gegrLon}{gegrLon}}
+{\footnotesize\ttfamily \label{class_station_a3c2ba8f393039b0e7d1726ddc77bed38} 
+double Station\+::gegr\+Lon}
+
+\Hypertarget{class_station_a4144cd1a5a69d5900f473ea9d792b3fe}\index{Station@{Station}!id@{id}}
+\index{id@{id}!Station@{Station}}
+\doxysubsubsection{\texorpdfstring{id}{id}}
+{\footnotesize\ttfamily \label{class_station_a4144cd1a5a69d5900f473ea9d792b3fe} 
+int Station\+::id}
+
+\Hypertarget{class_station_a473cd12acb19039f8a255cf996da6f1d}\index{Station@{Station}!provinceName@{provinceName}}
+\index{provinceName@{provinceName}!Station@{Station}}
+\doxysubsubsection{\texorpdfstring{provinceName}{provinceName}}
+{\footnotesize\ttfamily \label{class_station_a473cd12acb19039f8a255cf996da6f1d} 
+QString Station\+::province\+Name}
+
+\Hypertarget{class_station_a63d71a1a5b27d56480945a37481d81c6}\index{Station@{Station}!stationName@{stationName}}
+\index{stationName@{stationName}!Station@{Station}}
+\doxysubsubsection{\texorpdfstring{stationName}{stationName}}
+{\footnotesize\ttfamily \label{class_station_a63d71a1a5b27d56480945a37481d81c6} 
+QString Station\+::station\+Name}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{station_8h}{station.\+h}}\item 
+\mbox{\hyperlink{station_8cpp}{station.\+cpp}}\end{DoxyCompactItemize}

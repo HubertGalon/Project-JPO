@@ -1,0 +1,133 @@
+\doxysection{Api\+Client Class Reference}
+\hypertarget{class_api_client}{}\label{class_api_client}\index{ApiClient@{ApiClient}}
+
+
+{\ttfamily \#include $<$apiclient.\+h$>$}
+
+Inheritance diagram for Api\+Client\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_api_client}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_api_client_a56f03263dc23dc4dc61b6d336f13f144}{stations\+Received}} (const QJson\+Array \&stations\+Data)
+\item 
+void \mbox{\hyperlink{class_api_client_aaf4d07fe3bbfb65d7b39019f4435f5ee}{sensors\+Received}} (const QJson\+Array \&sensors\+Data)
+\item 
+void \mbox{\hyperlink{class_api_client_a4c685501166fce1012d37567ad5b95e6}{measurements\+Received}} (const QJson\+Object \&measurements\+Data)
+\item 
+void \mbox{\hyperlink{class_api_client_a15b94dcad1a176a11b6326607ab9c5f7}{air\+Quality\+Index\+Received}} (const QJson\+Object \&index\+Data)
+\item 
+void \mbox{\hyperlink{class_api_client_a33d686efdf95142035981d18c1036bf9}{error\+Occurred}} (const QString \&error\+Message)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_api_client_a7ac17ab761c4ee56fa63802573b343e3}{Api\+Client}} (QObject \texorpdfstring{$\ast$}{*}parent=nullptr)
+\item 
+virtual \mbox{\hyperlink{class_api_client_ab4fae42eee49854da3247d72d01c165d}{\texorpdfstring{$\sim$}{\string~}\+Api\+Client}} ()
+\item 
+void \mbox{\hyperlink{class_api_client_ac54cf5bb723d03765238565bfdef065a}{get\+All\+Stations}} ()
+\item 
+void \mbox{\hyperlink{class_api_client_a4d4eb08b751ea0224e22e683221cc9a8}{get\+Sensors}} (int station\+Id)
+\item 
+void \mbox{\hyperlink{class_api_client_a32405e3c2b8d74fef5d589fe5a58dac7}{get\+Measurements}} (int sensor\+Id)
+\item 
+void \mbox{\hyperlink{class_api_client_a81fc5010e814add4fe0156bf96c32cfa}{get\+Air\+Quality\+Index}} (int station\+Id)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_api_client_a2f14b0c85e139f7980f56cf4993111be}{BASE\+\_\+\+URL}} = "{}https\+://api.\+gios.\+gov.\+pl/pjp-\/api/rest"{}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_api_client_a7ac17ab761c4ee56fa63802573b343e3}\index{ApiClient@{ApiClient}!ApiClient@{ApiClient}}
+\index{ApiClient@{ApiClient}!ApiClient@{ApiClient}}
+\doxysubsubsection{\texorpdfstring{ApiClient()}{ApiClient()}}
+{\footnotesize\ttfamily \label{class_api_client_a7ac17ab761c4ee56fa63802573b343e3} 
+Api\+Client\+::\+Api\+Client (\begin{DoxyParamCaption}\item[{QObject \texorpdfstring{$\ast$}{*}}]{parent}{ = {\ttfamily nullptr}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+\Hypertarget{class_api_client_ab4fae42eee49854da3247d72d01c165d}\index{ApiClient@{ApiClient}!````~ApiClient@{\texorpdfstring{$\sim$}{\string~}ApiClient}}
+\index{````~ApiClient@{\texorpdfstring{$\sim$}{\string~}ApiClient}!ApiClient@{ApiClient}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}ApiClient()}{\string~ApiClient()}}
+{\footnotesize\ttfamily \label{class_api_client_ab4fae42eee49854da3247d72d01c165d} 
+Api\+Client\+::\texorpdfstring{$\sim$}{\string~}\+Api\+Client (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_api_client_a15b94dcad1a176a11b6326607ab9c5f7}\index{ApiClient@{ApiClient}!airQualityIndexReceived@{airQualityIndexReceived}}
+\index{airQualityIndexReceived@{airQualityIndexReceived}!ApiClient@{ApiClient}}
+\doxysubsubsection{\texorpdfstring{airQualityIndexReceived}{airQualityIndexReceived}}
+{\footnotesize\ttfamily \label{class_api_client_a15b94dcad1a176a11b6326607ab9c5f7} 
+void Api\+Client\+::air\+Quality\+Index\+Received (\begin{DoxyParamCaption}\item[{const QJson\+Object \&}]{index\+Data}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+\Hypertarget{class_api_client_a33d686efdf95142035981d18c1036bf9}\index{ApiClient@{ApiClient}!errorOccurred@{errorOccurred}}
+\index{errorOccurred@{errorOccurred}!ApiClient@{ApiClient}}
+\doxysubsubsection{\texorpdfstring{errorOccurred}{errorOccurred}}
+{\footnotesize\ttfamily \label{class_api_client_a33d686efdf95142035981d18c1036bf9} 
+void Api\+Client\+::error\+Occurred (\begin{DoxyParamCaption}\item[{const QString \&}]{error\+Message}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+\Hypertarget{class_api_client_a81fc5010e814add4fe0156bf96c32cfa}\index{ApiClient@{ApiClient}!getAirQualityIndex@{getAirQualityIndex}}
+\index{getAirQualityIndex@{getAirQualityIndex}!ApiClient@{ApiClient}}
+\doxysubsubsection{\texorpdfstring{getAirQualityIndex()}{getAirQualityIndex()}}
+{\footnotesize\ttfamily \label{class_api_client_a81fc5010e814add4fe0156bf96c32cfa} 
+void Api\+Client\+::get\+Air\+Quality\+Index (\begin{DoxyParamCaption}\item[{int}]{station\+Id}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_api_client_ac54cf5bb723d03765238565bfdef065a}\index{ApiClient@{ApiClient}!getAllStations@{getAllStations}}
+\index{getAllStations@{getAllStations}!ApiClient@{ApiClient}}
+\doxysubsubsection{\texorpdfstring{getAllStations()}{getAllStations()}}
+{\footnotesize\ttfamily \label{class_api_client_ac54cf5bb723d03765238565bfdef065a} 
+void Api\+Client\+::get\+All\+Stations (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_api_client_a32405e3c2b8d74fef5d589fe5a58dac7}\index{ApiClient@{ApiClient}!getMeasurements@{getMeasurements}}
+\index{getMeasurements@{getMeasurements}!ApiClient@{ApiClient}}
+\doxysubsubsection{\texorpdfstring{getMeasurements()}{getMeasurements()}}
+{\footnotesize\ttfamily \label{class_api_client_a32405e3c2b8d74fef5d589fe5a58dac7} 
+void Api\+Client\+::get\+Measurements (\begin{DoxyParamCaption}\item[{int}]{sensor\+Id}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_api_client_a4d4eb08b751ea0224e22e683221cc9a8}\index{ApiClient@{ApiClient}!getSensors@{getSensors}}
+\index{getSensors@{getSensors}!ApiClient@{ApiClient}}
+\doxysubsubsection{\texorpdfstring{getSensors()}{getSensors()}}
+{\footnotesize\ttfamily \label{class_api_client_a4d4eb08b751ea0224e22e683221cc9a8} 
+void Api\+Client\+::get\+Sensors (\begin{DoxyParamCaption}\item[{int}]{station\+Id}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_api_client_a4c685501166fce1012d37567ad5b95e6}\index{ApiClient@{ApiClient}!measurementsReceived@{measurementsReceived}}
+\index{measurementsReceived@{measurementsReceived}!ApiClient@{ApiClient}}
+\doxysubsubsection{\texorpdfstring{measurementsReceived}{measurementsReceived}}
+{\footnotesize\ttfamily \label{class_api_client_a4c685501166fce1012d37567ad5b95e6} 
+void Api\+Client\+::measurements\+Received (\begin{DoxyParamCaption}\item[{const QJson\+Object \&}]{measurements\+Data}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+\Hypertarget{class_api_client_aaf4d07fe3bbfb65d7b39019f4435f5ee}\index{ApiClient@{ApiClient}!sensorsReceived@{sensorsReceived}}
+\index{sensorsReceived@{sensorsReceived}!ApiClient@{ApiClient}}
+\doxysubsubsection{\texorpdfstring{sensorsReceived}{sensorsReceived}}
+{\footnotesize\ttfamily \label{class_api_client_aaf4d07fe3bbfb65d7b39019f4435f5ee} 
+void Api\+Client\+::sensors\+Received (\begin{DoxyParamCaption}\item[{const QJson\+Array \&}]{sensors\+Data}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+\Hypertarget{class_api_client_a56f03263dc23dc4dc61b6d336f13f144}\index{ApiClient@{ApiClient}!stationsReceived@{stationsReceived}}
+\index{stationsReceived@{stationsReceived}!ApiClient@{ApiClient}}
+\doxysubsubsection{\texorpdfstring{stationsReceived}{stationsReceived}}
+{\footnotesize\ttfamily \label{class_api_client_a56f03263dc23dc4dc61b6d336f13f144} 
+void Api\+Client\+::stations\+Received (\begin{DoxyParamCaption}\item[{const QJson\+Array \&}]{stations\+Data}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_api_client_a2f14b0c85e139f7980f56cf4993111be}\index{ApiClient@{ApiClient}!BASE\_URL@{BASE\_URL}}
+\index{BASE\_URL@{BASE\_URL}!ApiClient@{ApiClient}}
+\doxysubsubsection{\texorpdfstring{BASE\_URL}{BASE\_URL}}
+{\footnotesize\ttfamily \label{class_api_client_a2f14b0c85e139f7980f56cf4993111be} 
+const char\texorpdfstring{$\ast$}{*} Api\+Client\+::\+BASE\+\_\+\+URL = "{}https\+://api.\+gios.\+gov.\+pl/pjp-\/api/rest"{}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{apiclient_8h}{apiclient.\+h}}\item 
+\mbox{\hyperlink{apiclient_8cpp}{apiclient.\+cpp}}\item 
+build/\+Desktop-\/\+Debug/debug/\mbox{\hyperlink{moc__apiclient_8cpp}{moc\+\_\+apiclient.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,110 @@
+\doxysection{datamanager.\+h}
+\hypertarget{datamanager_8h_source}{}\label{datamanager_8h_source}\mbox{\hyperlink{datamanager_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ DATAMANAGER\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ DATAMANAGER\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <QObject>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <QVector>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <QJsonArray>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <QJsonObject>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <QMutex>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <QThreadPool>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <QFuture>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <QFutureWatcher>}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{apiclient_8h}{apiclient.h}}"{}}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{databasehandler_8h}{databasehandler.h}}"{}}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{station_8h}{station.h}}"{}}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{sensor_8h}{sensor.h}}"{}}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{measurement_8h}{measurement.h}}"{}}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{airqualityindex_8h}{airqualityindex.h}}"{}}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{dataanalyzer_8h}{dataanalyzer.h}}"{}}}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{networkchecker_8h}{networkchecker.h}}"{}}}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_data_manager_affb37dc13db06ecf6853c9fa25e5ed7a}{DataManager}}\ :\ \textcolor{keyword}{public}\ QObject}
+\DoxyCodeLine{00023\ \{}
+\DoxyCodeLine{00024\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{class_data_manager_affb37dc13db06ecf6853c9fa25e5ed7a}{DataManager}}(QObject\ *parent\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00028\ \ \ \ \ \mbox{\hyperlink{class_data_manager_a291f3b4df4392598b2d7064da062705f}{\string~DataManager}}();}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{comment}{//\ Metody\ pobierania\ danych}}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_data_manager_a0f9fd71deed8ffdc13ebb3698d6a3b94}{getAllStations}}();}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_data_manager_a2b28a09ed99944ea5d52431be4a8e9d2}{getStationsForCity}}(\textcolor{keyword}{const}\ QString\&\ cityName);}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_data_manager_a6dd989ad79413fd36bce6faa14a9db3d}{getStationsNearLocation}}(\textcolor{keywordtype}{double}\ latitude,\ \textcolor{keywordtype}{double}\ longitude,\ \textcolor{keywordtype}{double}\ radiusInKm);}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_data_manager_a388c5159e30817695b313414df6d3d3f}{getSensors}}(\textcolor{keywordtype}{int}\ stationId);}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_data_manager_adfabb8d048a9813ce0491bf29650abe2}{getMeasurements}}(\textcolor{keywordtype}{int}\ sensorId);}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_data_manager_a17416b432825dc324295e6fede444957}{getAirQualityIndex}}(\textcolor{keywordtype}{int}\ stationId);}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{comment}{//\ Metody\ wyszukiwania}}
+\DoxyCodeLine{00039\ \ \ \ \ QVector<Station>\ \mbox{\hyperlink{class_data_manager_a3d406eba6c1e8fc3762b314053bd38a0}{findStationsByCity}}(\textcolor{keyword}{const}\ QString\&\ cityName)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00040\ \ \ \ \ QVector<Station>\ \mbox{\hyperlink{class_data_manager_a3b57c2ac1d2cda44b16134f55c0574fd}{findStationsNearLocation}}(\textcolor{keywordtype}{double}\ latitude,\ \textcolor{keywordtype}{double}\ longitude,\ \textcolor{keywordtype}{double}\ radiusInKm)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{comment}{//\ Metody\ zapisu\ i\ odczytu}}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_data_manager_a79081f078cf8c33c8be613aa01d1b747}{saveMeasurementsToDatabase}}(\textcolor{keywordtype}{int}\ sensorId,\ \textcolor{keyword}{const}\ QVector<Measurement>\&\ measurements);}
+\DoxyCodeLine{00044\ \ \ \ \ QVector<Measurement>\ \mbox{\hyperlink{class_data_manager_af2f7936c0be60c9a61d04533f43ab7b8}{loadMeasurementsFromDatabase}}(\textcolor{keywordtype}{int}\ sensorId);}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{comment}{//\ Metody\ dla\ obsługi\ trybu\ offline}}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_data_manager_aa0ab5411bd618e394f4dcf2acb855097}{isNetworkAvailable}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_data_manager_a9ca7f5420937ab762bd5e4e817e1dd08}{isOfflineMode}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_data_manager_ac985d935db6fee0cbb3afb8c20b9cf07}{setOfflineMode}}(\textcolor{keywordtype}{bool}\ offline);}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{comment}{//\ Metoda\ sprawdzająca\ czy\ są\ dane\ zapisane\ dla\ danego\ sensora}}
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_data_manager_ab1721c186a4eb6b8cb485a6f099d86b5}{hasCachedData}}(\textcolor{keywordtype}{int}\ sensorId)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ signals:}
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_data_manager_a8d1e15cedbf9999bb7b6c9a7b0128405}{stationsLoaded}}(\textcolor{keyword}{const}\ QVector<Station>\&\ stations);}
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_data_manager_ae61957ef85a9f63259a919ad245ed580}{sensorsLoaded}}(\textcolor{keyword}{const}\ QVector<Sensor>\&\ sensors);}
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_data_manager_a7468d1992ef102bd86125d75f964e66f}{measurementsLoaded}}(\textcolor{keyword}{const}\ QVector<Measurement>\&\ measurements);}
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_data_manager_a6160f94cfc47c43885424082e4b9ed15}{airQualityIndexLoaded}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_air_quality_index}{AirQualityIndex}}\&\ index);}
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_data_manager_ad0653f5e46fa072f977135cf07c34976}{apiError}}(\textcolor{keyword}{const}\ QString\&\ errorMessage);}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{comment}{//\ Nowe\ sygnały}}
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_data_manager_aba2c9f227c5673772417e71aaa3c3a5e}{networkStatusChanged}}(\textcolor{keywordtype}{bool}\ available);}
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_data_manager_a61bad55d64d8e055016afeb91df7e40a}{offlineModeChanged}}(\textcolor{keywordtype}{bool}\ offline);}
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_data_manager_a07265ce4dff7ce113ce60aa1f40e910f}{dataSourceChanged}}(\textcolor{keyword}{const}\ QString\&\ source);\ \textcolor{comment}{//\ "{}online"{}\ lub\ "{}offline"{}}}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ \textcolor{keyword}{private}\ slots:}
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keywordtype}{void}\ handleStationsReceived(\textcolor{keyword}{const}\ QJsonArray\&\ stationsData);}
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keywordtype}{void}\ handleSensorsReceived(\textcolor{keyword}{const}\ QJsonArray\&\ sensorsData);}
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keywordtype}{void}\ handleMeasurementsReceived(\textcolor{keyword}{const}\ QJsonObject\&\ measurementsData);}
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keywordtype}{void}\ handleAirQualityIndexReceived(\textcolor{keyword}{const}\ QJsonObject\&\ indexData);}
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keywordtype}{void}\ handleApiError(\textcolor{keyword}{const}\ QString\&\ errorMessage);}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{comment}{//\ Nowe\ sloty}}
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keywordtype}{void}\ onNetworkStatusChanged(\textcolor{keywordtype}{bool}\ available);}
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{keywordtype}{void}\ checkAndSwitchDataSource();}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00077\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00078\ \ \ \ \ \mbox{\hyperlink{class_api_client}{ApiClient}}*\ apiClient;}
+\DoxyCodeLine{00079\ \ \ \ \ \mbox{\hyperlink{class_database_handler}{DatabaseHandler}}*\ databaseHandler;}
+\DoxyCodeLine{00080\ \ \ \ \ \mbox{\hyperlink{class_data_analyzer}{DataAnalyzer}}*\ dataAnalyzer;}
+\DoxyCodeLine{00081\ \ \ \ \ \mbox{\hyperlink{class_network_checker}{NetworkChecker}}*\ networkChecker;}
+\DoxyCodeLine{00082\ \ \ \ \ QThreadPool*\ threadPool;}
+\DoxyCodeLine{00083\ \ \ \ \ \textcolor{keyword}{mutable}\ QMutex\ mutex;\ \textcolor{comment}{//\ Do\ synchronizacji\ dostępu\ do\ współdzielonych\ zasobów}}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00085\ \ \ \ \ QVector<Station>\ stations;}
+\DoxyCodeLine{00086\ \ \ \ \ QVector<Sensor>\ sensorsForCurrentStation;}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00088\ \ \ \ \ \textcolor{keywordtype}{bool}\ offlineMode;}
+\DoxyCodeLine{00089\ \ \ \ \ \textcolor{keywordtype}{bool}\ autoSwitchToOffline;}
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00091\ \ \ \ \ \textcolor{comment}{//\ Informacje\ o\ aktualnie\ wybranych\ elementach\ do\ automatycznego\ zapisu}}
+\DoxyCodeLine{00092\ \ \ \ \ \textcolor{keywordtype}{int}\ currentStationId;}
+\DoxyCodeLine{00093\ \ \ \ \ \textcolor{keywordtype}{int}\ currentSensorId;}
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00095\ \ \ \ \ \textcolor{comment}{//\ Metody\ pomocnicze}}
+\DoxyCodeLine{00096\ \ \ \ \ \textcolor{keywordtype}{void}\ saveStationsToCache(\textcolor{keyword}{const}\ QVector<Station>\&\ stations);}
+\DoxyCodeLine{00097\ \ \ \ \ QVector<Station>\ loadStationsFromCache()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00098\ }
+\DoxyCodeLine{00099\ \ \ \ \ \textcolor{comment}{//\ Metody\ do\ przetwarzania\ danych\ w\ tle}}
+\DoxyCodeLine{00100\ \ \ \ \ \textcolor{keywordtype}{void}\ processStationsDataAsync(\textcolor{keyword}{const}\ QJsonArray\&\ stationsData);}
+\DoxyCodeLine{00101\ \ \ \ \ \textcolor{keywordtype}{void}\ processSensorsDataAsync(\textcolor{keyword}{const}\ QJsonArray\&\ sensorsData);}
+\DoxyCodeLine{00102\ \ \ \ \ \textcolor{keywordtype}{void}\ processMeasurementsDataAsync(\textcolor{keyword}{const}\ QJsonObject\&\ measurementsData,\ \textcolor{keywordtype}{int}\ sensorId);}
+\DoxyCodeLine{00103\ \};}
+\DoxyCodeLine{00104\ }
+\DoxyCodeLine{00105\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ DATAMANAGER\_H}}
+
+\end{DoxyCode}

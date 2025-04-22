@@ -1,0 +1,120 @@
+\doxysection{ui\+\_\+stationlistwidget.\+h}
+\hypertarget{ui__stationlistwidget_8h_source}{}\label{ui__stationlistwidget_8h_source}\index{build/Desktop-\/Debug/ui\_stationlistwidget.h@{build/Desktop-\/Debug/ui\_stationlistwidget.h}}
+\mbox{\hyperlink{ui__stationlistwidget_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/********************************************************************************}}
+\DoxyCodeLine{00002\ \textcolor{comment}{**\ Form\ generated\ from\ reading\ UI\ file\ 'stationlistwidget.ui'}}
+\DoxyCodeLine{00003\ \textcolor{comment}{**}}
+\DoxyCodeLine{00004\ \textcolor{comment}{**\ Created\ by:\ Qt\ User\ Interface\ Compiler\ version\ 6.8.2}}
+\DoxyCodeLine{00005\ \textcolor{comment}{**}}
+\DoxyCodeLine{00006\ \textcolor{comment}{**\ WARNING!\ All\ changes\ made\ in\ this\ file\ will\ be\ lost\ when\ recompiling\ UI\ file!}}
+\DoxyCodeLine{00007\ \textcolor{comment}{********************************************************************************/}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#ifndef\ UI\_STATIONLISTWIDGET\_H}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#define\ UI\_STATIONLISTWIDGET\_H}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <QtCore/QVariant>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <QtWidgets/QApplication>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <QtWidgets/QComboBox>}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <QtWidgets/QHBoxLayout>}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ <QtWidgets/QLabel>}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ <QtWidgets/QLineEdit>}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ <QtWidgets/QListWidget>}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#include\ <QtWidgets/QPushButton>}}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#include\ <QtWidgets/QVBoxLayout>}}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#include\ <QtWidgets/QWidget>}}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ QT\_BEGIN\_NAMESPACE}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_ui___station_list_widget}{Ui\_StationListWidget}}}
+\DoxyCodeLine{00026\ \{}
+\DoxyCodeLine{00027\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00028\ \ \ \ \ QVBoxLayout\ *\mbox{\hyperlink{class_ui___station_list_widget_acc8c80cb24fcf3f36cc8abf5376c5fed}{verticalLayout}};}
+\DoxyCodeLine{00029\ \ \ \ \ QLabel\ *\mbox{\hyperlink{class_ui___station_list_widget_a0a5a2a16f44dcdc7d8bfe754abde7a7f}{titleLabel}};}
+\DoxyCodeLine{00030\ \ \ \ \ QHBoxLayout\ *\mbox{\hyperlink{class_ui___station_list_widget_a340970c06bd12db4dbe3d164d6eea7f9}{horizontalLayout}};}
+\DoxyCodeLine{00031\ \ \ \ \ QComboBox\ *\mbox{\hyperlink{class_ui___station_list_widget_a1aefaec4ff836383182c3fe1eaf27c96}{filterComboBox}};}
+\DoxyCodeLine{00032\ \ \ \ \ QLineEdit\ *\mbox{\hyperlink{class_ui___station_list_widget_a403e8c6d975818899db2dda1956a0047}{searchLineEdit}};}
+\DoxyCodeLine{00033\ \ \ \ \ QPushButton\ *\mbox{\hyperlink{class_ui___station_list_widget_af186f4755938dfe4f34088d19e99a6a2}{searchButton}};}
+\DoxyCodeLine{00034\ \ \ \ \ QPushButton\ *\mbox{\hyperlink{class_ui___station_list_widget_abee51bdbe77a9c2af4e1274dc728ed1b}{geolocateButton}};}
+\DoxyCodeLine{00035\ \ \ \ \ QListWidget\ *\mbox{\hyperlink{class_ui___station_list_widget_a1ea13e2ae1cb2c2ece3810416d77e0bd}{stationListWidget}};}
+\DoxyCodeLine{00036\ \ \ \ \ QLabel\ *\mbox{\hyperlink{class_ui___station_list_widget_a1f31a1b999d9a799b6b6cd2a448078e4}{totalStationsLabel}};}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_ui___station_list_widget_a6138b0fb88be489a61f19d673e255f77}{setupUi}}(QWidget\ *\mbox{\hyperlink{class_station_list_widget}{StationListWidget}})}
+\DoxyCodeLine{00039\ \ \ \ \ \{}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_station_list_widget}{StationListWidget}}-\/>objectName().isEmpty())}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_station_list_widget}{StationListWidget}}-\/>setObjectName(\textcolor{stringliteral}{"{}StationListWidget"{}});}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_station_list_widget}{StationListWidget}}-\/>resize(600,\ 400);}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_ui___station_list_widget_acc8c80cb24fcf3f36cc8abf5376c5fed}{verticalLayout}}\ =\ \textcolor{keyword}{new}\ QVBoxLayout(\mbox{\hyperlink{class_station_list_widget}{StationListWidget}});}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_ui___station_list_widget_acc8c80cb24fcf3f36cc8abf5376c5fed}{verticalLayout}}-\/>setObjectName(\textcolor{stringliteral}{"{}verticalLayout"{}});}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_ui___station_list_widget_a0a5a2a16f44dcdc7d8bfe754abde7a7f}{titleLabel}}\ =\ \textcolor{keyword}{new}\ QLabel(\mbox{\hyperlink{class_station_list_widget}{StationListWidget}});}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_ui___station_list_widget_a0a5a2a16f44dcdc7d8bfe754abde7a7f}{titleLabel}}-\/>setObjectName(\textcolor{stringliteral}{"{}titleLabel"{}});}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ QFont\ font;}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ font.setPointSize(14);}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ font.setBold(\textcolor{keyword}{true});}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_ui___station_list_widget_a0a5a2a16f44dcdc7d8bfe754abde7a7f}{titleLabel}}-\/>setFont(font);}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_ui___station_list_widget_a0a5a2a16f44dcdc7d8bfe754abde7a7f}{titleLabel}}-\/>setAlignment(Qt::AlignCenter);}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_ui___station_list_widget_acc8c80cb24fcf3f36cc8abf5376c5fed}{verticalLayout}}-\/>addWidget(\mbox{\hyperlink{class_ui___station_list_widget_a0a5a2a16f44dcdc7d8bfe754abde7a7f}{titleLabel}});}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_ui___station_list_widget_a340970c06bd12db4dbe3d164d6eea7f9}{horizontalLayout}}\ =\ \textcolor{keyword}{new}\ QHBoxLayout();}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_ui___station_list_widget_a340970c06bd12db4dbe3d164d6eea7f9}{horizontalLayout}}-\/>setObjectName(\textcolor{stringliteral}{"{}horizontalLayout"{}});}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_ui___station_list_widget_a1aefaec4ff836383182c3fe1eaf27c96}{filterComboBox}}\ =\ \textcolor{keyword}{new}\ QComboBox(\mbox{\hyperlink{class_station_list_widget}{StationListWidget}});}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_ui___station_list_widget_a1aefaec4ff836383182c3fe1eaf27c96}{filterComboBox}}-\/>setObjectName(\textcolor{stringliteral}{"{}filterComboBox"{}});}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_ui___station_list_widget_a340970c06bd12db4dbe3d164d6eea7f9}{horizontalLayout}}-\/>addWidget(\mbox{\hyperlink{class_ui___station_list_widget_a1aefaec4ff836383182c3fe1eaf27c96}{filterComboBox}});}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_ui___station_list_widget_a403e8c6d975818899db2dda1956a0047}{searchLineEdit}}\ =\ \textcolor{keyword}{new}\ QLineEdit(\mbox{\hyperlink{class_station_list_widget}{StationListWidget}});}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_ui___station_list_widget_a403e8c6d975818899db2dda1956a0047}{searchLineEdit}}-\/>setObjectName(\textcolor{stringliteral}{"{}searchLineEdit"{}});}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_ui___station_list_widget_a340970c06bd12db4dbe3d164d6eea7f9}{horizontalLayout}}-\/>addWidget(\mbox{\hyperlink{class_ui___station_list_widget_a403e8c6d975818899db2dda1956a0047}{searchLineEdit}});}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_ui___station_list_widget_af186f4755938dfe4f34088d19e99a6a2}{searchButton}}\ =\ \textcolor{keyword}{new}\ QPushButton(\mbox{\hyperlink{class_station_list_widget}{StationListWidget}});}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_ui___station_list_widget_af186f4755938dfe4f34088d19e99a6a2}{searchButton}}-\/>setObjectName(\textcolor{stringliteral}{"{}searchButton"{}});}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_ui___station_list_widget_a340970c06bd12db4dbe3d164d6eea7f9}{horizontalLayout}}-\/>addWidget(\mbox{\hyperlink{class_ui___station_list_widget_af186f4755938dfe4f34088d19e99a6a2}{searchButton}});}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_ui___station_list_widget_abee51bdbe77a9c2af4e1274dc728ed1b}{geolocateButton}}\ =\ \textcolor{keyword}{new}\ QPushButton(\mbox{\hyperlink{class_station_list_widget}{StationListWidget}});}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_ui___station_list_widget_abee51bdbe77a9c2af4e1274dc728ed1b}{geolocateButton}}-\/>setObjectName(\textcolor{stringliteral}{"{}geolocateButton"{}});}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_ui___station_list_widget_a340970c06bd12db4dbe3d164d6eea7f9}{horizontalLayout}}-\/>addWidget(\mbox{\hyperlink{class_ui___station_list_widget_abee51bdbe77a9c2af4e1274dc728ed1b}{geolocateButton}});}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_ui___station_list_widget_acc8c80cb24fcf3f36cc8abf5376c5fed}{verticalLayout}}-\/>addLayout(\mbox{\hyperlink{class_ui___station_list_widget_a340970c06bd12db4dbe3d164d6eea7f9}{horizontalLayout}});}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_ui___station_list_widget_a1ea13e2ae1cb2c2ece3810416d77e0bd}{stationListWidget}}\ =\ \textcolor{keyword}{new}\ QListWidget(\mbox{\hyperlink{class_station_list_widget}{StationListWidget}});}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_ui___station_list_widget_a1ea13e2ae1cb2c2ece3810416d77e0bd}{stationListWidget}}-\/>setObjectName(\textcolor{stringliteral}{"{}stationListWidget"{}});}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_ui___station_list_widget_acc8c80cb24fcf3f36cc8abf5376c5fed}{verticalLayout}}-\/>addWidget(\mbox{\hyperlink{class_ui___station_list_widget_a1ea13e2ae1cb2c2ece3810416d77e0bd}{stationListWidget}});}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_ui___station_list_widget_a1f31a1b999d9a799b6b6cd2a448078e4}{totalStationsLabel}}\ =\ \textcolor{keyword}{new}\ QLabel(\mbox{\hyperlink{class_station_list_widget}{StationListWidget}});}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_ui___station_list_widget_a1f31a1b999d9a799b6b6cd2a448078e4}{totalStationsLabel}}-\/>setObjectName(\textcolor{stringliteral}{"{}totalStationsLabel"{}});}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_ui___station_list_widget_acc8c80cb24fcf3f36cc8abf5376c5fed}{verticalLayout}}-\/>addWidget(\mbox{\hyperlink{class_ui___station_list_widget_a1f31a1b999d9a799b6b6cd2a448078e4}{totalStationsLabel}});}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_ui___station_list_widget_a49bb8629fcde7b18bb166d277ed2dffb}{retranslateUi}}(\mbox{\hyperlink{class_station_list_widget}{StationListWidget}});}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ QMetaObject::connectSlotsByName(\mbox{\hyperlink{class_station_list_widget}{StationListWidget}});}
+\DoxyCodeLine{00094\ \ \ \ \ \}\ \textcolor{comment}{//\ setupUi}}
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00096\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_ui___station_list_widget_a49bb8629fcde7b18bb166d277ed2dffb}{retranslateUi}}(QWidget\ *\mbox{\hyperlink{class_station_list_widget}{StationListWidget}})}
+\DoxyCodeLine{00097\ \ \ \ \ \{}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_station_list_widget}{StationListWidget}}-\/>setWindowTitle(QCoreApplication::translate(\textcolor{stringliteral}{"{}StationListWidget"{}},\ \textcolor{stringliteral}{"{}Stacje\ pomiarowe"{}},\ \textcolor{keyword}{nullptr}));}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_ui___station_list_widget_a0a5a2a16f44dcdc7d8bfe754abde7a7f}{titleLabel}}-\/>setText(QCoreApplication::translate(\textcolor{stringliteral}{"{}StationListWidget"{}},\ \textcolor{stringliteral}{"{}Lista\ stacji\ pomiarowych"{}},\ \textcolor{keyword}{nullptr}));}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_ui___station_list_widget_a403e8c6d975818899db2dda1956a0047}{searchLineEdit}}-\/>setPlaceholderText(QCoreApplication::translate(\textcolor{stringliteral}{"{}StationListWidget"{}},\ \textcolor{stringliteral}{"{}Wprowad\(\backslash\)305\(\backslash\)272\ kryteria\ wyszukiwania..."{}},\ \textcolor{keyword}{nullptr}));}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_ui___station_list_widget_af186f4755938dfe4f34088d19e99a6a2}{searchButton}}-\/>setText(QCoreApplication::translate(\textcolor{stringliteral}{"{}StationListWidget"{}},\ \textcolor{stringliteral}{"{}Szukaj"{}},\ \textcolor{keyword}{nullptr}));}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_ui___station_list_widget_abee51bdbe77a9c2af4e1274dc728ed1b}{geolocateButton}}-\/>setText(QCoreApplication::translate(\textcolor{stringliteral}{"{}StationListWidget"{}},\ \textcolor{stringliteral}{"{}Geolokalizacja"{}},\ \textcolor{keyword}{nullptr}));}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_ui___station_list_widget_a1f31a1b999d9a799b6b6cd2a448078e4}{totalStationsLabel}}-\/>setText(QCoreApplication::translate(\textcolor{stringliteral}{"{}StationListWidget"{}},\ \textcolor{stringliteral}{"{}\(\backslash\)305\(\backslash\)201\(\backslash\)304\(\backslash\)205czna\ liczba\ stacji:\ 0"{}},\ \textcolor{keyword}{nullptr}));}
+\DoxyCodeLine{00104\ \ \ \ \ \}\ \textcolor{comment}{//\ retranslateUi}}
+\DoxyCodeLine{00105\ }
+\DoxyCodeLine{00106\ \};}
+\DoxyCodeLine{00107\ }
+\DoxyCodeLine{00108\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_ui}{Ui}}\ \{}
+\DoxyCodeLine{00109\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_ui_1_1_station_list_widget}{StationListWidget}}:\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_ui___station_list_widget}{Ui\_StationListWidget}}\ \{\};}
+\DoxyCodeLine{00110\ \}\ \textcolor{comment}{//\ namespace\ Ui}}
+\DoxyCodeLine{00111\ }
+\DoxyCodeLine{00112\ QT\_END\_NAMESPACE}
+\DoxyCodeLine{00113\ }
+\DoxyCodeLine{00114\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ UI\_STATIONLISTWIDGET\_H}}
+
+\end{DoxyCode}

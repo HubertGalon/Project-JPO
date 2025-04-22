@@ -1,0 +1,77 @@
+\doxysection{datafetchworker.\+h}
+\hypertarget{datafetchworker_8h_source}{}\label{datafetchworker_8h_source}\mbox{\hyperlink{datafetchworker_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ DATAFETCHWORKER\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ DATAFETCHWORKER\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <QObject>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <QThread>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <QMutex>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <QWaitCondition>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <QQueue>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <QJsonArray>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <QJsonObject>}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{comment}{//\ Typ\ zadania\ do\ wykonania}}
+\DoxyCodeLine{00013\ \textcolor{keyword}{enum\ class}\ \mbox{\hyperlink{datafetchworker_8h_a985b26b5924fc7770990a83d75813832}{FetchTaskType}}\ \{}
+\DoxyCodeLine{00014\ \ \ \ \ \mbox{\hyperlink{datafetchworker_8h_a985b26b5924fc7770990a83d75813832a243f8cf41f0876733d30535ac42b9e33}{FetchAllStations}},}
+\DoxyCodeLine{00015\ \ \ \ \ \mbox{\hyperlink{datafetchworker_8h_a985b26b5924fc7770990a83d75813832ab619a54afec409b31f8abf80406fa9ee}{FetchSensors}},}
+\DoxyCodeLine{00016\ \ \ \ \ \mbox{\hyperlink{datafetchworker_8h_a985b26b5924fc7770990a83d75813832ae666322f1ce88ecc6fb4c98ddd4515e8}{FetchMeasurements}},}
+\DoxyCodeLine{00017\ \ \ \ \ \mbox{\hyperlink{datafetchworker_8h_a985b26b5924fc7770990a83d75813832ac4981a937037a816f01b060da5682eaa}{FetchAirQualityIndex}}}
+\DoxyCodeLine{00018\ \};}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{comment}{//\ Struktura\ zadania}}
+\DoxyCodeLine{00021\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_fetch_task_ae8c44223c3965e8f69d54e2d98d7acfe}{FetchTask}}\ \{}
+\DoxyCodeLine{00022\ \ \ \ \ \mbox{\hyperlink{datafetchworker_8h_a985b26b5924fc7770990a83d75813832}{FetchTaskType}}\ \mbox{\hyperlink{struct_fetch_task_ad7c6aa72b5558aa61d8e0fd3287fbb0c}{type}};}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_fetch_task_ad812d29364a84ed41aa416537b1799b6}{id}};\ \ \textcolor{comment}{//\ stationId\ lub\ sensorId}}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \ \ \mbox{\hyperlink{struct_fetch_task_ae8c44223c3965e8f69d54e2d98d7acfe}{FetchTask}}(\mbox{\hyperlink{datafetchworker_8h_a985b26b5924fc7770990a83d75813832}{FetchTaskType}}\ taskType,\ \textcolor{keywordtype}{int}\ entityId\ =\ 0)\ :\ \mbox{\hyperlink{struct_fetch_task_ad7c6aa72b5558aa61d8e0fd3287fbb0c}{type}}(taskType),\ \mbox{\hyperlink{struct_fetch_task_ad812d29364a84ed41aa416537b1799b6}{id}}(entityId)\ \{\}}
+\DoxyCodeLine{00026\ \};}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_data_fetch_worker_a9cb9bf42d446e6430b345467ad96f5e1}{DataFetchWorker}}\ :\ \textcolor{keyword}{public}\ QObject}
+\DoxyCodeLine{00029\ \{}
+\DoxyCodeLine{00030\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{class_data_fetch_worker_a9cb9bf42d446e6430b345467ad96f5e1}{DataFetchWorker}}(QObject*\ parent\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00034\ \ \ \ \ \mbox{\hyperlink{class_data_fetch_worker_a2e3cefe464413fcae4a6024466289e24}{\string~DataFetchWorker}}();}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{comment}{//\ Dodaje\ zadanie\ do\ kolejki}}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_data_fetch_worker_a8c572302915e1c881e4e8974f676a7a5}{addTask}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_fetch_task}{FetchTask}}\&\ task);}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{comment}{//\ Zatrzymuje\ wątek}}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_data_fetch_worker_ab80de51c3c67863a2894b53ca2628245}{stop}}();}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ signals:}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{comment}{//\ Sygnały\ wysyłane\ po\ zakończeniu\ zadań}}
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_data_fetch_worker_ab14d2c7c5280aeb74e2e174be6bf00d3}{stationsDataFetched}}(\textcolor{keyword}{const}\ QJsonArray\&\ stationsData);}
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_data_fetch_worker_a606d1d8bfc0f1c3beede0ebeddcf9b66}{sensorsDataFetched}}(\textcolor{keywordtype}{int}\ stationId,\ \textcolor{keyword}{const}\ QJsonArray\&\ sensorsData);}
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_data_fetch_worker_a52b718b37764ec6f6d6cf7aa70b9290c}{measurementsDataFetched}}(\textcolor{keywordtype}{int}\ sensorId,\ \textcolor{keyword}{const}\ QJsonObject\&\ measurementsData);}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_data_fetch_worker_a815078d586d340b55adc4dfd030854c5}{airQualityIndexFetched}}(\textcolor{keywordtype}{int}\ stationId,\ \textcolor{keyword}{const}\ QJsonObject\&\ indexData);}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{comment}{//\ Sygnał\ błędu}}
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_data_fetch_worker_a82a61e9bbbe9f6e4d84912c9e953926f}{errorOccurred}}(\textcolor{keyword}{const}\ QString\&\ errorMessage);}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \textcolor{keyword}{public}\ slots:}
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{comment}{//\ Główna\ metoda\ wątku}}
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_data_fetch_worker_a194c5e05ba1ba0e707c0b5b02a551559}{process}}();}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00057\ \ \ \ \ QMutex\ mutex;}
+\DoxyCodeLine{00058\ \ \ \ \ QWaitCondition\ condition;}
+\DoxyCodeLine{00059\ \ \ \ \ QQueue<FetchTask>\ taskQueue;}
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keywordtype}{bool}\ abort;}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{comment}{//\ Metody\ pobierające\ dane\ z\ API}}
+\DoxyCodeLine{00063\ \ \ \ \ QJsonArray\ fetchAllStations();}
+\DoxyCodeLine{00064\ \ \ \ \ QJsonArray\ fetchSensors(\textcolor{keywordtype}{int}\ stationId);}
+\DoxyCodeLine{00065\ \ \ \ \ QJsonObject\ fetchMeasurements(\textcolor{keywordtype}{int}\ sensorId);}
+\DoxyCodeLine{00066\ \ \ \ \ QJsonObject\ fetchAirQualityIndex(\textcolor{keywordtype}{int}\ stationId);}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{comment}{//\ Pomocnicza\ metoda\ do\ wykonywania\ zapytań\ HTTP}}
+\DoxyCodeLine{00069\ \ \ \ \ QByteArray\ performHttpRequest(\textcolor{keyword}{const}\ QString\&\ endpoint);}
+\DoxyCodeLine{00070\ \};}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00072\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ DATAFETCHWORKER\_H}}
+
+\end{DoxyCode}
