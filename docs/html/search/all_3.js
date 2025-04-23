@@ -1,19 +1,17 @@
 var searchData=
 [
-  ['calcdate_0',['calcDate',['../class_air_quality_index.html#abe53fb2a4e8563b41fc586f0bda75147',1,'AirQualityIndex']]],
-  ['calculatecorrelation_1',['calculateCorrelation',['../class_data_analyzer.html#a0627ed812e01f60139d793c25d2d8eb7',1,'DataAnalyzer']]],
-  ['calculatedailyaverages_2',['calculateDailyAverages',['../class_data_analyzer.html#a30d7dad9bffa85580f76d1285de9af83',1,'DataAnalyzer']]],
-  ['calculatedistance_3',['calculateDistance',['../class_station.html#a575264b5f3146495e0c3af419d052bdb',1,'Station']]],
-  ['calculatehourlyaverages_4',['calculateHourlyAverages',['../class_data_analyzer.html#a29607eaca4d7bbbeb2f9b98689521782',1,'DataAnalyzer']]],
-  ['calculatetrend_5',['calculateTrend',['../class_data_analyzer.html#ab75729e03678cf28a5b382037e77b884',1,'DataAnalyzer']]],
-  ['centralwidget_6',['centralwidget',['../class_ui___main_window.html#a356f1cf3ebda15f1fac59467ee081b74',1,'Ui_MainWindow']]],
-  ['chartlayout_7',['chartLayout',['../class_ui___chart_widget.html#a6de4237b3ff60b59d09644935c694c58',1,'Ui_ChartWidget']]],
-  ['chartwidget_8',['ChartWidget',['../class_chart_widget.html',1,'ChartWidget'],['../class_ui_1_1_chart_widget.html',1,'Ui::ChartWidget'],['../class_chart_widget.html#a20c5b4e6d58200307369b58997ec5593',1,'ChartWidget::ChartWidget()']]],
-  ['chartwidget_2ecpp_9',['chartwidget.cpp',['../chartwidget_8cpp.html',1,'']]],
-  ['chartwidget_2eh_10',['chartwidget.h',['../chartwidget_8h.html',1,'']]],
-  ['cityid_11',['cityId',['../class_station.html#acad86ddcafd492f740ec67eec7b764a1',1,'Station']]],
-  ['cityname_12',['cityName',['../class_station.html#af73f4a524d457b6e40184567bd2248ad',1,'Station']]],
-  ['communename_13',['communeName',['../class_station.html#afbeda4b23ec089405569240931fc76cd',1,'Station']]],
-  ['confidencehigh_14',['confidenceHigh',['../struct_forecast.html#a4b0ebdc1b2b9d7f37e15da02b831b55e',1,'Forecast']]],
-  ['confidencelow_15',['confidenceLow',['../struct_forecast.html#aab96902de169d5e5d7756687185694e2',1,'Forecast']]]
+  ['dailyaverages_0',['dailyAverages',['../struct_analysis_result.html#a97284cb4ca00d0a2038f305ea7269bb3',1,'AnalysisResult']]],
+  ['dataanalyzer_1',['DataAnalyzer',['../class_data_analyzer.html',1,'DataAnalyzer'],['../class_data_analyzer.html#a19332d6a19c6649ecc6e66eb52be4878',1,'DataAnalyzer::DataAnalyzer()']]],
+  ['dataanalyzer_2ecpp_2',['dataanalyzer.cpp',['../dataanalyzer_8cpp.html',1,'']]],
+  ['dataanalyzer_2eh_3',['dataanalyzer.h',['../dataanalyzer_8h.html',1,'']]],
+  ['databasehandler_4',['DatabaseHandler',['../class_database_handler.html',1,'DatabaseHandler'],['../class_database_handler.html#a11690178a7140dd8cde5d2b9ec7b90d0',1,'DatabaseHandler::DatabaseHandler()']]],
+  ['databasehandler_2ecpp_5',['databasehandler.cpp',['../databasehandler_8cpp.html',1,'']]],
+  ['databasehandler_2eh_6',['databasehandler.h',['../databasehandler_8h.html',1,'']]],
+  ['datamanager_7',['DataManager',['../class_data_manager.html',1,'DataManager'],['../class_data_manager.html#affb37dc13db06ecf6853c9fa25e5ed7a',1,'DataManager::DataManager()']]],
+  ['datamanager_2ecpp_8',['datamanager.cpp',['../datamanager_8cpp.html',1,'']]],
+  ['datamanager_2eh_9',['datamanager.h',['../datamanager_8h.html',1,'']]],
+  ['datasourcechanged_10',['dataSourceChanged',['../class_data_manager.html#a07265ce4dff7ce113ce60aa1f40e910f',1,'DataManager']]],
+  ['date_11',['date',['../struct_forecast.html#afea6b068de766ad745050c61cf3dc4fc',1,'Forecast::date'],['../class_measurement.html#a80103a2df03c90f32ff933fa886d90c4',1,'Measurement::date']]],
+  ['districtname_12',['districtName',['../class_station.html#aab226b1cdda46a9c10677d28ce72affc',1,'Station']]],
+  ['dokumentacji_13',['Generowanie dokumentacji',['../md__r_e_a_d_m_e.html#autotoc_md13',1,'']]]
 ];

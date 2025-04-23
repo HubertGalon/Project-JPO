@@ -1,7 +1,11 @@
 var searchData=
 [
-  ['ui_5fchartwidget_2eh_0',['ui_chartwidget.h',['../ui__chartwidget_8h.html',1,'']]],
-  ['ui_5fmainwindow_2eh_1',['ui_mainwindow.h',['../ui__mainwindow_8h.html',1,'']]],
-  ['ui_5fsensorlistwidget_2eh_2',['ui_sensorlistwidget.h',['../ui__sensorlistwidget_8h.html',1,'']]],
-  ['ui_5fstationlistwidget_2eh_3',['ui_stationlistwidget.h',['../ui__stationlistwidget_8h.html',1,'']]]
+  ['sensor_2ecpp_0',['sensor.cpp',['../sensor_8cpp.html',1,'']]],
+  ['sensor_2eh_1',['sensor.h',['../sensor_8h.html',1,'']]],
+  ['sensorlistwidget_2ecpp_2',['sensorlistwidget.cpp',['../sensorlistwidget_8cpp.html',1,'']]],
+  ['sensorlistwidget_2eh_3',['sensorlistwidget.h',['../sensorlistwidget_8h.html',1,'']]],
+  ['station_2ecpp_4',['station.cpp',['../station_8cpp.html',1,'']]],
+  ['station_2eh_5',['station.h',['../station_8h.html',1,'']]],
+  ['stationlistwidget_2ecpp_6',['stationlistwidget.cpp',['../stationlistwidget_8cpp.html',1,'']]],
+  ['stationlistwidget_2eh_7',['stationlistwidget.h',['../stationlistwidget_8h.html',1,'']]]
 ];

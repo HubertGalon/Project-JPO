@@ -1,7 +1,12 @@
 var searchData=
 [
-  ['enddateedit_0',['endDateEdit',['../class_ui___chart_widget.html#a2e8d917909df2a4e6ddf57c598ff3266',1,'Ui_ChartWidget']]],
-  ['enddatelabel_1',['endDateLabel',['../class_ui___chart_widget.html#ac525307420b3da9c6d1da26daccbc819',1,'Ui_ChartWidget']]],
-  ['erroroccurred_2',['errorOccurred',['../class_api_client.html#a33d686efdf95142035981d18c1036bf9',1,'ApiClient::errorOccurred()'],['../class_data_fetch_worker.html#a82a61e9bbbe9f6e4d84912c9e953926f',1,'DataFetchWorker::errorOccurred()']]],
-  ['exportdatabutton_3',['exportDataButton',['../class_ui___chart_widget.html#a1b15c031fa89192e999daef04f33dab0',1,'Ui_ChartWidget']]]
+  ['filtermeasurementsbydaterange_0',['filterMeasurementsByDateRange',['../class_data_analyzer.html#a6ae8d8a63f0d7cdc4eb19e11a1534128',1,'DataAnalyzer']]],
+  ['findanomalies_1',['findAnomalies',['../class_data_analyzer.html#a14ff5e1ac59595f7894adec92f584174',1,'DataAnalyzer']]],
+  ['findstationsbycity_2',['findStationsByCity',['../class_data_manager.html#a3d406eba6c1e8fc3762b314053bd38a0',1,'DataManager']]],
+  ['findstationsnearlocation_3',['findStationsNearLocation',['../class_data_manager.html#a3b57c2ac1d2cda44b16134f55c0574fd',1,'DataManager']]],
+  ['forecast_4',['Forecast',['../struct_forecast.html',1,'']]],
+  ['forecastvalues_5',['forecastValues',['../class_data_analyzer.html#aca4e614ecd5bafd87df1ed87d7adfbfa',1,'DataAnalyzer']]],
+  ['formattedaddress_6',['formattedAddress',['../struct_geocoding_result.html#a96b13a63b726dd67b46106ddfc342a44',1,'GeocodingResult']]],
+  ['fromjsonarray_7',['fromJsonArray',['../class_sensor.html#a4be64c83249607fda4c28d8b7950ebb4',1,'Sensor::fromJsonArray()'],['../class_station.html#afc2c7d0683fead618bedb434fbdb4c4b',1,'Station::fromJsonArray()']]],
+  ['fromjsonobject_8',['fromJsonObject',['../class_air_quality_index.html#acb868f3885ca50bab3517d981f5fcf32',1,'AirQualityIndex::fromJsonObject()'],['../class_measurement.html#a409b3a64681a51d9e7c6f460a6434243',1,'Measurement::fromJsonObject()']]]
 ];

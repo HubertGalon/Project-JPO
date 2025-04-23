@@ -1,5 +1,10 @@
 var searchData=
 [
-  ['value_0',['value',['../class_measurement.html#a823f1a4e614b8d87fa80b58b88207504',1,'Measurement']]],
-  ['verticallayout_1',['verticalLayout',['../class_ui___chart_widget.html#af4b6ab8559fe831ea8adf81e0dcea8e0',1,'Ui_ChartWidget::verticalLayout'],['../class_ui___sensor_list_widget.html#a78b636ec0284d52ae1a901c6e0ea393c',1,'Ui_SensorListWidget::verticalLayout'],['../class_ui___station_list_widget.html#acc8c80cb24fcf3f36cc8abf5376c5fed',1,'Ui_StationListWidget::verticalLayout']]]
+  ['ui_0',['Ui',['../namespace_ui.html',1,'']]],
+  ['updatestationinfo_1',['updateStationInfo',['../class_sensor_list_widget.html#ad400806e096238544fcc343dbd78b831',1,'SensorListWidget']]],
+  ['uruchamianie_20poszczególnych_20testów_2',['Uruchamianie poszczególnych testów',['../md__r_e_a_d_m_e.html#autotoc_md9',1,'']]],
+  ['uruchamianie_20testów_20z_20qt_20creator_3',['Uruchamianie testów z Qt Creator',['../md__r_e_a_d_m_e.html#autotoc_md10',1,'']]],
+  ['uruchomienie_20aplikacji_4',['Uruchomienie aplikacji',['../md__r_e_a_d_m_e.html#autotoc_md4',1,'']]],
+  ['uruchomienie_20testów_20jednostkowych_5',['Uruchomienie testów jednostkowych',['../md__r_e_a_d_m_e.html#autotoc_md7',1,'']]],
+  ['uruchomienie_20z_20wiersza_20poleceń_6',['Uruchomienie z wiersza poleceń',['../md__r_e_a_d_m_e.html#autotoc_md6',1,'']]]
 ];

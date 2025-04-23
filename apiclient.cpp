@@ -39,93 +39,124 @@ void ApiClient::getAirQualityIndex(int stationId)
 
 void ApiClient::sendRequestAsync(const QString& endpoint, const QString& requestType)
 {
-    QUrl url(QString("%1%2").arg(BASE_URL, endpoint));
-    qDebug() << "Wysyłanie asynchronicznego zapytania do:" << url.toString();
+    try {
+        QUrl url(QString("%1%2").arg(BASE_URL, endpoint));
+        qDebug() << "Wysyłanie asynchronicznego zapytania do:" << url.toString();
 
-    // Tworzymy kopię wskaźnika this, aby uniknąć problemów z konwersją
-    ApiClient* thisPtr = this;
+        // Tworzymy kopię wskaźnika this, aby uniknąć problemów z konwersją
+        ApiClient* thisPtr = this;
 
-    // Tworzymy funkcję lambda, która zostanie wykonana w osobnym wątku
-    auto future = QtConcurrent::run(threadPool, [thisPtr, url, requestType]() {
-        QNetworkRequest request(url);
-        request.setHeader(QNetworkRequest::ContentTypeHeader, "application/json");
+        // Tworzymy funkcję lambda, która zostanie wykonana w osobnym wątku
+        auto future = QtConcurrent::run(threadPool, [thisPtr, url, requestType]() {
+            try {
+                QNetworkRequest request(url);
+                request.setHeader(QNetworkRequest::ContentTypeHeader, "application/json");
 
-        // Tworzymy lokalny QNetworkAccessManager dla tego wątku
-        QNetworkAccessManager manager;
-        QEventLoop loop;
+                // Tworzymy lokalny QNetworkAccessManager dla tego wątku
+                QNetworkAccessManager manager;
+                QEventLoop loop;
 
-        // Łączymy sygnał finished z lokalną pętlą zdarzeń
-        QObject::connect(&manager, &QNetworkAccessManager::finished, &loop, &QEventLoop::quit);
+                // Łączymy sygnał finished z lokalną pętlą zdarzeń
+                QObject::connect(&manager, &QNetworkAccessManager::finished, &loop, &QEventLoop::quit);
 
-        // Wysyłamy zapytanie synchronicznie w tym wątku
-        QNetworkReply* reply = manager.get(request);
+                // Wysyłamy zapytanie synchronicznie w tym wątku
+                QNetworkReply* reply = manager.get(request);
 
-        // Czekamy na odpowiedź
-        loop.exec();
+                // Czekamy na odpowiedź
+                loop.exec();
 
-        // Obsługa błędów
-        if (reply->error() != QNetworkReply::NoError) {
-            QString errorString = reply->errorString();
-            qDebug() << "Błąd API:" << errorString;
+                // Obsługa błędów
+                if (reply->error() != QNetworkReply::NoError) {
+                    QString errorString = reply->errorString();
+                    qDebug() << "Błąd API:" << errorString;
 
-            // Emitujemy sygnał o błędzie w wątku głównym
-            QMetaObject::invokeMethod(thisPtr, "errorOccurred", Qt::QueuedConnection,
-                                      Q_ARG(QString, "Błąd połączenia: " + errorString));
-            reply->deleteLater();
-            return;
-        }
+                    // Emitujemy sygnał o błędzie w wątku głównym
+                    QMetaObject::invokeMethod(thisPtr, "errorOccurred", Qt::QueuedConnection,
+                                              Q_ARG(QString, "Błąd połączenia: " + errorString));
+                    reply->deleteLater();
+                    return;
+                }
 
-        // Odczytujemy dane odpowiedzi
-        QByteArray responseData = reply->readAll();
-        reply->deleteLater();
+                // Odczytujemy dane odpowiedzi
+                QByteArray responseData = reply->readAll();
+                reply->deleteLater();
 
-        // Przetwarzamy dane w wątku głównym
-        QMetaObject::invokeMethod(thisPtr, [thisPtr, responseData, requestType]() {
-            thisPtr->handleResponseData(responseData, requestType);
-        }, Qt::QueuedConnection);
-    });
+                // Przetwarzamy dane w wątku głównym
+                QMetaObject::invokeMethod(thisPtr, [thisPtr, responseData, requestType]() {
+                    try {
+                        thisPtr->handleResponseData(responseData, requestType);
+                    } catch (const std::exception& e) {
+                        emit thisPtr->errorOccurred(QString("Błąd przetwarzania danych: %1").arg(e.what()));
+                    } catch (...) {
+                        emit thisPtr->errorOccurred("Nieznany błąd przetwarzania danych");
+                    }
+                }, Qt::QueuedConnection);
+            } catch (const std::exception& e) {
+                QMetaObject::invokeMethod(thisPtr, "errorOccurred", Qt::QueuedConnection,
+                                          Q_ARG(QString, QString("Błąd zapytania: %1").arg(e.what())));
+            } catch (...) {
+                QMetaObject::invokeMethod(thisPtr, "errorOccurred", Qt::QueuedConnection,
+                                          Q_ARG(QString, "Nieznany błąd zapytania"));
+            }
+        });
+    } catch (const std::exception& e) {
+        emit errorOccurred(QString("Błąd przygotowania zapytania: %1").arg(e.what()));
+    } catch (...) {
+        emit errorOccurred("Nieznany błąd przygotowania zapytania");
+    }
 }
 
 void ApiClient::handleResponseData(const QByteArray& responseData, const QString& requestType)
 {
-    QJsonDocument jsonDoc = QJsonDocument::fromJson(responseData);
+    try {
+        QJsonParseError jsonError;
+        QJsonDocument jsonDoc = QJsonDocument::fromJson(responseData, &jsonError);
 
-    if (jsonDoc.isNull()) {
-        emit errorOccurred("Otrzymano nieprawidłowe dane JSON");
-        return;
-    }
+        if (jsonError.error != QJsonParseError::NoError) {
+            throw std::runtime_error(jsonError.errorString().toStdString());
+        }
 
-    // Obsługa różnych typów odpowiedzi
-    if (requestType == "stations") {
-        if (jsonDoc.isArray()) {
-            emit stationsReceived(jsonDoc.array());
+        if (jsonDoc.isNull()) {
+            emit errorOccurred("Otrzymano nieprawidłowe dane JSON");
+            return;
         }
-        else {
-            emit errorOccurred("Nieoczekiwany format odpowiedzi dla stacji");
+
+        // Obsługa różnych typów odpowiedzi
+        if (requestType == "stations") {
+            if (jsonDoc.isArray()) {
+                emit stationsReceived(jsonDoc.array());
+            }
+            else {
+                emit errorOccurred("Nieoczekiwany format odpowiedzi dla stacji");
+            }
         }
-    }
-    else if (requestType == "sensors") {
-        if (jsonDoc.isArray()) {
-            emit sensorsReceived(jsonDoc.array());
+        else if (requestType == "sensors") {
+            if (jsonDoc.isArray()) {
+                emit sensorsReceived(jsonDoc.array());
+            }
+            else {
+                emit errorOccurred("Nieoczekiwany format odpowiedzi dla sensorów");
+            }
         }
-        else {
-            emit errorOccurred("Nieoczekiwany format odpowiedzi dla sensorów");
+        else if (requestType == "measurements") {
+            if (jsonDoc.isObject()) {
+                emit measurementsReceived(jsonDoc.object());
+            }
+            else {
+                emit errorOccurred("Nieoczekiwany format odpowiedzi dla pomiarów");
+            }
         }
-    }
-    else if (requestType == "measurements") {
-        if (jsonDoc.isObject()) {
-            emit measurementsReceived(jsonDoc.object());
+        else if (requestType == "airQualityIndex") {
+            if (jsonDoc.isObject()) {
+                emit airQualityIndexReceived(jsonDoc.object());
+            }
+            else {
+                emit errorOccurred("Nieoczekiwany format odpowiedzi dla indeksu jakości");
+            }
         }
-        else {
-            emit errorOccurred("Nieoczekiwany format odpowiedzi dla pomiarów");
-        }
-    }
-    else if (requestType == "airQualityIndex") {
-        if (jsonDoc.isObject()) {
-            emit airQualityIndexReceived(jsonDoc.object());
-        }
-        else {
-            emit errorOccurred("Nieoczekiwany format odpowiedzi dla indeksu jakości");
-        }
+    } catch (const std::exception& e) {
+        emit errorOccurred(QString("Błąd przetwarzania odpowiedzi: %1").arg(e.what()));
+    } catch (...) {
+        emit errorOccurred("Nieznany błąd przetwarzania odpowiedzi");
     }
 }

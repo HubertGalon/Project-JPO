@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.13.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Monitor Jakosci Powietrza: geocoder.h Source File</title>
+<title>JPO-App: geocoder.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -32,7 +32,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Monitor Jakosci Powietrza
+   <div id="projectname">JPO-App
    </div>
   </td>
     <td>        <div id="MSearchBox" class="MSearchBoxInactive">
@@ -151,10 +151,10 @@ $(function(){initNavTree('geocoder_8h_source.html',''); initResizable(true); });
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>signals:</div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <span class="comment">// Sygnał emitowany po zakończeniu geokodowania</span></div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <span class="keywordtype">void</span> <a class="code hl_signal" href="class_geocoder.html#a27e899887835a6f16e310c710ec7e658">geocodingFinished</a>(<span class="keyword">const</span> <a class="code hl_struct" href="struct_geocoding_result.html">GeocodingResult</a>&amp; result);</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="class_geocoder.html#a27e899887835a6f16e310c710ec7e658">   42</a></span>    <span class="keywordtype">void</span> <a class="code hl_signal" href="class_geocoder.html#a27e899887835a6f16e310c710ec7e658">geocodingFinished</a>(<span class="keyword">const</span> <a class="code hl_struct" href="struct_geocoding_result.html">GeocodingResult</a>&amp; result);</div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <span class="comment">// Sygnał emitowany w przypadku błędu</span></div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <span class="keywordtype">void</span> <a class="code hl_signal" href="class_geocoder.html#ade27a7e0a176764f20a992d97c639b02">geocodingError</a>(<span class="keyword">const</span> QString&amp; errorMessage);</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="class_geocoder.html#ade27a7e0a176764f20a992d97c639b02">   45</a></span>    <span class="keywordtype">void</span> <a class="code hl_signal" href="class_geocoder.html#ade27a7e0a176764f20a992d97c639b02">geocodingError</a>(<span class="keyword">const</span> QString&amp; errorMessage);</div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="keyword">private</span>:</div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    QNetworkAccessManager* networkManager;</div>
@@ -172,11 +172,11 @@ $(function(){initNavTree('geocoder_8h_source.html',''); initResizable(true); });
 </div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="preprocessor">#endif </span><span class="comment">// GEOCODER_H</span></div>
-<div class="ttc" id="aclass_geocoder_html_a27e899887835a6f16e310c710ec7e658"><div class="ttname"><a href="class_geocoder.html#a27e899887835a6f16e310c710ec7e658">Geocoder::geocodingFinished</a></div><div class="ttdeci">void geocodingFinished(const GeocodingResult &amp;result)</div><div class="ttdef"><b>Definition</b> moc_geocoder.cpp:157</div></div>
+<div class="ttc" id="aclass_geocoder_html_a27e899887835a6f16e310c710ec7e658"><div class="ttname"><a href="class_geocoder.html#a27e899887835a6f16e310c710ec7e658">Geocoder::geocodingFinished</a></div><div class="ttdeci">void geocodingFinished(const GeocodingResult &amp;result)</div></div>
 <div class="ttc" id="aclass_geocoder_html_a6caeacb583e8ba0f51052e44c89fb0d8"><div class="ttname"><a href="class_geocoder.html#a6caeacb583e8ba0f51052e44c89fb0d8">Geocoder::Geocoder</a></div><div class="ttdeci">Geocoder(QObject *parent=nullptr)</div><div class="ttdef"><b>Definition</b> geocoder.cpp:11</div></div>
 <div class="ttc" id="aclass_geocoder_html_a9b1c333a5f403f71a07af89ea50248e2"><div class="ttname"><a href="class_geocoder.html#a9b1c333a5f403f71a07af89ea50248e2">Geocoder::~Geocoder</a></div><div class="ttdeci">~Geocoder()</div><div class="ttdef"><b>Definition</b> geocoder.cpp:21</div></div>
 <div class="ttc" id="aclass_geocoder_html_ad4527b7c8558e35200bea2be4937aea6"><div class="ttname"><a href="class_geocoder.html#ad4527b7c8558e35200bea2be4937aea6">Geocoder::geocodeAddress</a></div><div class="ttdeci">void geocodeAddress(const QString &amp;address)</div><div class="ttdef"><b>Definition</b> geocoder.cpp:26</div></div>
-<div class="ttc" id="aclass_geocoder_html_ade27a7e0a176764f20a992d97c639b02"><div class="ttname"><a href="class_geocoder.html#ade27a7e0a176764f20a992d97c639b02">Geocoder::geocodingError</a></div><div class="ttdeci">void geocodingError(const QString &amp;errorMessage)</div><div class="ttdef"><b>Definition</b> moc_geocoder.cpp:164</div></div>
+<div class="ttc" id="aclass_geocoder_html_ade27a7e0a176764f20a992d97c639b02"><div class="ttname"><a href="class_geocoder.html#ade27a7e0a176764f20a992d97c639b02">Geocoder::geocodingError</a></div><div class="ttdeci">void geocodingError(const QString &amp;errorMessage)</div></div>
 <div class="ttc" id="astruct_geocoding_result_html"><div class="ttname"><a href="struct_geocoding_result.html">GeocodingResult</a></div><div class="ttdef"><b>Definition</b> geocoder.h:17</div></div>
 <div class="ttc" id="astruct_geocoding_result_html_a0dd4e2bab9fda601ad802f4fbf3c384a"><div class="ttname"><a href="struct_geocoding_result.html#a0dd4e2bab9fda601ad802f4fbf3c384a">GeocodingResult::isValid</a></div><div class="ttdeci">bool isValid</div><div class="ttdef"><b>Definition</b> geocoder.h:21</div></div>
 <div class="ttc" id="astruct_geocoding_result_html_a0fd341836c1479aaf7e03e50fb471c8b"><div class="ttname"><a href="struct_geocoding_result.html#a0fd341836c1479aaf7e03e50fb471c8b">GeocodingResult::GeocodingResult</a></div><div class="ttdeci">GeocodingResult(const QString &amp;address, double lat, double lon)</div><div class="ttdef"><b>Definition</b> geocoder.h:25</div></div>

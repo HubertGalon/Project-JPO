@@ -24,7 +24,26 @@
 */
 var NAVTREE =
 [
-  [ "Monitor Jakosci Powietrza", "index.html", [
+  [ "JPO-App", "index.html", [
+    [ "Monitor Jakości Powietrza", "md__r_e_a_d_m_e.html", [
+      [ "Opis projektu", "md__r_e_a_d_m_e.html#autotoc_md1", null ],
+      [ "Wymagania", "md__r_e_a_d_m_e.html#autotoc_md2", null ],
+      [ "Struktura projektu", "md__r_e_a_d_m_e.html#autotoc_md3", null ],
+      [ "Uruchomienie aplikacji", "md__r_e_a_d_m_e.html#autotoc_md4", [
+        [ "Kompilacja", "md__r_e_a_d_m_e.html#autotoc_md5", null ],
+        [ "Uruchomienie z wiersza poleceń", "md__r_e_a_d_m_e.html#autotoc_md6", null ]
+      ] ],
+      [ "Uruchomienie testów jednostkowych", "md__r_e_a_d_m_e.html#autotoc_md7", [
+        [ "Kompilacja testów", "md__r_e_a_d_m_e.html#autotoc_md8", null ],
+        [ "Uruchamianie poszczególnych testów", "md__r_e_a_d_m_e.html#autotoc_md9", null ],
+        [ "Uruchamianie testów z Qt Creator", "md__r_e_a_d_m_e.html#autotoc_md10", null ]
+      ] ],
+      [ "Konfiguracja aplikacji", "md__r_e_a_d_m_e.html#autotoc_md11", [
+        [ "Tryb offline", "md__r_e_a_d_m_e.html#autotoc_md12", null ]
+      ] ],
+      [ "Generowanie dokumentacji", "md__r_e_a_d_m_e.html#autotoc_md13", null ],
+      [ "Autor", "md__r_e_a_d_m_e.html#autotoc_md14", null ]
+    ] ],
     [ "Namespaces", "namespaces.html", [
       [ "Namespace List", "namespaces.html", "namespaces_dup" ]
     ] ],
@@ -33,7 +52,7 @@ var NAVTREE =
       [ "Class Index", "classes.html", null ],
       [ "Class Hierarchy", "hierarchy.html", "hierarchy" ],
       [ "Class Members", "functions.html", [
-        [ "All", "functions.html", "functions_dup" ],
+        [ "All", "functions.html", null ],
         [ "Functions", "functions_func.html", null ],
         [ "Variables", "functions_vars.html", null ]
       ] ]
@@ -42,9 +61,7 @@ var NAVTREE =
       [ "File List", "files.html", "files_dup" ],
       [ "File Members", "globals.html", [
         [ "All", "globals.html", null ],
-        [ "Functions", "globals_func.html", null ],
-        [ "Enumerations", "globals_enum.html", null ],
-        [ "Macros", "globals_defs.html", null ]
+        [ "Functions", "globals_func.html", null ]
       ] ]
     ] ]
   ] ]
@@ -52,9 +69,7 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"_data_analyzer_test_8cpp.html",
-"datafetchworker_8cpp.html",
-"ui__stationlistwidget_8h_source.html"
+"airqualityindex_8cpp.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronization';

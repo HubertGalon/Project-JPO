@@ -1,7 +1,5 @@
 var files_dup =
 [
-    [ "build", "dir_4fef79e7177ba769987a8da36c892c5f.html", "dir_4fef79e7177ba769987a8da36c892c5f" ],
-    [ "tests", "dir_59425e443f801f1f2fd8bbe4959a3ccf.html", "dir_59425e443f801f1f2fd8bbe4959a3ccf" ],
     [ "airqualityindex.cpp", "airqualityindex_8cpp.html", null ],
     [ "airqualityindex.h", "airqualityindex_8h.html", "airqualityindex_8h" ],
     [ "apiclient.cpp", "apiclient_8cpp.html", null ],
@@ -12,8 +10,6 @@ var files_dup =
     [ "dataanalyzer.h", "dataanalyzer_8h.html", "dataanalyzer_8h" ],
     [ "databasehandler.cpp", "databasehandler_8cpp.html", null ],
     [ "databasehandler.h", "databasehandler_8h.html", "databasehandler_8h" ],
-    [ "datafetchworker.cpp", "datafetchworker_8cpp.html", null ],
-    [ "datafetchworker.h", "datafetchworker_8h.html", "datafetchworker_8h" ],
     [ "datamanager.cpp", "datamanager_8cpp.html", null ],
     [ "datamanager.h", "datamanager_8h.html", "datamanager_8h" ],
     [ "geocoder.cpp", "geocoder_8cpp.html", null ],

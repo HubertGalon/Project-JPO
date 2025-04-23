@@ -1,49 +1,20 @@
 var annotated_dup =
 [
-    [ "QT_WARNING_DISABLE_DEPRECATED", "namespace_q_t___w_a_r_n_i_n_g___d_i_s_a_b_l_e___d_e_p_r_e_c_a_t_e_d.html", [
-      [ "qt_meta_tag_ZN10MainWindowE_t", "struct_q_t___w_a_r_n_i_n_g___d_i_s_a_b_l_e___d_e_p_r_e_c_a_t_e_d_1_1qt__meta__tag___z_n10_main_window_e__t.html", null ],
-      [ "qt_meta_tag_ZN11ChartWidgetE_t", "struct_q_t___w_a_r_n_i_n_g___d_i_s_a_b_l_e___d_e_p_r_e_c_a_t_e_d_1_1qt__meta__tag___z_n11_chart_widget_e__t.html", null ],
-      [ "qt_meta_tag_ZN11DataManagerE_t", "struct_q_t___w_a_r_n_i_n_g___d_i_s_a_b_l_e___d_e_p_r_e_c_a_t_e_d_1_1qt__meta__tag___z_n11_data_manager_e__t.html", null ],
-      [ "qt_meta_tag_ZN12DataAnalyzerE_t", "struct_q_t___w_a_r_n_i_n_g___d_i_s_a_b_l_e___d_e_p_r_e_c_a_t_e_d_1_1qt__meta__tag___z_n12_data_analyzer_e__t.html", null ],
-      [ "qt_meta_tag_ZN14NetworkCheckerE_t", "struct_q_t___w_a_r_n_i_n_g___d_i_s_a_b_l_e___d_e_p_r_e_c_a_t_e_d_1_1qt__meta__tag___z_n14_network_checker_e__t.html", null ],
-      [ "qt_meta_tag_ZN15DatabaseHandlerE_t", "struct_q_t___w_a_r_n_i_n_g___d_i_s_a_b_l_e___d_e_p_r_e_c_a_t_e_d_1_1qt__meta__tag___z_n15_database_handler_e__t.html", null ],
-      [ "qt_meta_tag_ZN15DataFetchWorkerE_t", "struct_q_t___w_a_r_n_i_n_g___d_i_s_a_b_l_e___d_e_p_r_e_c_a_t_e_d_1_1qt__meta__tag___z_n15_data_fetch_worker_e__t.html", null ],
-      [ "qt_meta_tag_ZN16SensorListWidgetE_t", "struct_q_t___w_a_r_n_i_n_g___d_i_s_a_b_l_e___d_e_p_r_e_c_a_t_e_d_1_1qt__meta__tag___z_n16_sensor_list_widget_e__t.html", null ],
-      [ "qt_meta_tag_ZN17StationListWidgetE_t", "struct_q_t___w_a_r_n_i_n_g___d_i_s_a_b_l_e___d_e_p_r_e_c_a_t_e_d_1_1qt__meta__tag___z_n17_station_list_widget_e__t.html", null ],
-      [ "qt_meta_tag_ZN8GeocoderE_t", "struct_q_t___w_a_r_n_i_n_g___d_i_s_a_b_l_e___d_e_p_r_e_c_a_t_e_d_1_1qt__meta__tag___z_n8_geocoder_e__t.html", null ],
-      [ "qt_meta_tag_ZN9ApiClientE_t", "struct_q_t___w_a_r_n_i_n_g___d_i_s_a_b_l_e___d_e_p_r_e_c_a_t_e_d_1_1qt__meta__tag___z_n9_api_client_e__t.html", null ]
-    ] ],
-    [ "Ui", "namespace_ui.html", [
-      [ "ChartWidget", "class_ui_1_1_chart_widget.html", null ],
-      [ "MainWindow", "class_ui_1_1_main_window.html", null ],
-      [ "SensorListWidget", "class_ui_1_1_sensor_list_widget.html", null ],
-      [ "StationListWidget", "class_ui_1_1_station_list_widget.html", null ]
-    ] ],
     [ "AirQualityIndex", "class_air_quality_index.html", "class_air_quality_index" ],
     [ "AnalysisResult", "struct_analysis_result.html", "struct_analysis_result" ],
     [ "ApiClient", "class_api_client.html", "class_api_client" ],
     [ "ChartWidget", "class_chart_widget.html", "class_chart_widget" ],
     [ "DataAnalyzer", "class_data_analyzer.html", "class_data_analyzer" ],
-    [ "DataAnalyzerTest", "class_data_analyzer_test.html", null ],
     [ "DatabaseHandler", "class_database_handler.html", "class_database_handler" ],
-    [ "DatabaseHandlerTest", "class_database_handler_test.html", null ],
-    [ "DataFetchWorker", "class_data_fetch_worker.html", "class_data_fetch_worker" ],
     [ "DataManager", "class_data_manager.html", "class_data_manager" ],
-    [ "FetchTask", "struct_fetch_task.html", "struct_fetch_task" ],
     [ "Forecast", "struct_forecast.html", "struct_forecast" ],
     [ "Geocoder", "class_geocoder.html", "class_geocoder" ],
     [ "GeocodingResult", "struct_geocoding_result.html", "struct_geocoding_result" ],
     [ "MainWindow", "class_main_window.html", "class_main_window" ],
     [ "Measurement", "class_measurement.html", "class_measurement" ],
-    [ "MeasurementTest", "class_measurement_test.html", null ],
-    [ "MockDatabaseHandler", "class_mock_database_handler.html", "class_mock_database_handler" ],
     [ "NetworkChecker", "class_network_checker.html", "class_network_checker" ],
     [ "Sensor", "class_sensor.html", "class_sensor" ],
     [ "SensorListWidget", "class_sensor_list_widget.html", "class_sensor_list_widget" ],
     [ "Station", "class_station.html", "class_station" ],
-    [ "StationListWidget", "class_station_list_widget.html", "class_station_list_widget" ],
-    [ "Ui_ChartWidget", "class_ui___chart_widget.html", "class_ui___chart_widget" ],
-    [ "Ui_MainWindow", "class_ui___main_window.html", "class_ui___main_window" ],
-    [ "Ui_SensorListWidget", "class_ui___sensor_list_widget.html", "class_ui___sensor_list_widget" ],
-    [ "Ui_StationListWidget", "class_ui___station_list_widget.html", "class_ui___station_list_widget" ]
+    [ "StationListWidget", "class_station_list_widget.html", "class_station_list_widget" ]
 ];

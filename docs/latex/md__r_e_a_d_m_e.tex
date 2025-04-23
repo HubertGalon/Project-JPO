@@ -1,0 +1,136 @@
+\chapter{Monitor Jakości Powietrza}
+\hypertarget{md__r_e_a_d_m_e}{}\label{md__r_e_a_d_m_e}\index{Monitor Jakości Powietrza@{Monitor Jakości Powietrza}}
+\label{md__r_e_a_d_m_e_autotoc_md0}%
+\Hypertarget{md__r_e_a_d_m_e_autotoc_md0}%
+
+
+Aplikacja do monitorowania jakości powietrza w Polsce wykorzystująca dane z API Głównego Inspektoratu Ochrony Środowiska.\hypertarget{md__r_e_a_d_m_e_autotoc_md1}{}\doxysection{\texorpdfstring{Opis projektu}{Opis projektu}}\label{md__r_e_a_d_m_e_autotoc_md1}
+Aplikacja umożliwia\+:
+\begin{DoxyItemize}
+\item Pobieranie aktualnych danych o stacjach pomiarowych, czujnikach i pomiarach
+\item Wyszukiwanie stacji po mieście lub lokalizacji geograficznej
+\item Wyświetlanie danych pomiarowych w formie wykresów
+\item Analizowanie trendów w danych
+\item Pracę w trybie offline z wykorzystaniem zapisanych danych
+\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md2}{}\doxysection{\texorpdfstring{Wymagania}{Wymagania}}\label{md__r_e_a_d_m_e_autotoc_md2}
+
+\begin{DoxyItemize}
+\item Qt 5.\+15 lub nowszy
+\item Kompilator C++ zgodny ze standardem C++14 lub nowszym
+\item Połączenie internetowe (opcjonalne, aplikacja może działać offline)
+\item Uprawnienia do zapisu w katalogu aplikacji (dla lokalnej bazy danych)
+\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md3}{}\doxysection{\texorpdfstring{Struktura projektu}{Struktura projektu}}\label{md__r_e_a_d_m_e_autotoc_md3}
+Projekt podzielony jest na następujące moduły\+:
+\begin{DoxyItemize}
+\item API Client\+: Komunikacja z API GIOŚ
+\item Database Handler\+: Zarządzanie lokalną bazą danych
+\item Data Manager\+: Centralny komponent zarządzający przepływem danych
+\item UI Components\+: Widgety interfejsu użytkownika
+\item Data Analysis\+: Narzędzia do analizy danych pomiarowych
+\item Tests\+: Testy jednostkowe
+\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md4}{}\doxysection{\texorpdfstring{Uruchomienie aplikacji}{Uruchomienie aplikacji}}\label{md__r_e_a_d_m_e_autotoc_md4}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md5}{}\doxysubsection{\texorpdfstring{Kompilacja}{Kompilacja}}\label{md__r_e_a_d_m_e_autotoc_md5}
+
+\begin{DoxyEnumerate}
+\item Otwórz projekt w Qt Creator\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{File\ -\/>\ Open\ File\ or\ Project\ -\/>\ wybierz\ plik\ .pro}
+
+\end{DoxyCode}
+
+\item Skonfiguruj projekt wybierając odpowiedni zestaw narzędzi (kit)
+\item Kliknij przycisk "{}\+Run"{} (Ctrl+R) lub wybierz\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Build\ -\/>\ Build\ Project\ "{}Monitor\ Jakości\ Powietrza"{}}
+
+\end{DoxyCode}
+
+\item Po pomyślnej kompilacji, uruchom aplikację przyciskiem "{}\+Run"{}
+\end{DoxyEnumerate}\hypertarget{md__r_e_a_d_m_e_autotoc_md6}{}\doxysubsection{\texorpdfstring{Uruchomienie z wiersza poleceń}{Uruchomienie z wiersza poleceń}}\label{md__r_e_a_d_m_e_autotoc_md6}
+
+\begin{DoxyEnumerate}
+\item Przejdź do katalogu z plikiem wykonywalnym\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{cd\ ścieżka/do/katalogu/build}
+
+\end{DoxyCode}
+
+\item Uruchom aplikację\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{./MonitorJakosciPowietrza}
+
+\end{DoxyCode}
+
+\end{DoxyEnumerate}\hypertarget{md__r_e_a_d_m_e_autotoc_md7}{}\doxysection{\texorpdfstring{Uruchomienie testów jednostkowych}{Uruchomienie testów jednostkowych}}\label{md__r_e_a_d_m_e_autotoc_md7}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md8}{}\doxysubsection{\texorpdfstring{Kompilacja testów}{Kompilacja testów}}\label{md__r_e_a_d_m_e_autotoc_md8}
+
+\begin{DoxyEnumerate}
+\item Otwórz plik projektu testów w Qt Creator\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{File\ -\/>\ Open\ File\ or\ Project\ -\/>\ wybierz\ plik\ tests/tests.pro}
+
+\end{DoxyCode}
+
+\item Skonfiguruj projekt testów
+\item Skompiluj testy\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Build\ -\/>\ Build\ Project\ "{}tests"{}}
+
+\end{DoxyCode}
+
+\end{DoxyEnumerate}\hypertarget{md__r_e_a_d_m_e_autotoc_md9}{}\doxysubsection{\texorpdfstring{Uruchamianie poszczególnych testów}{Uruchamianie poszczególnych testów}}\label{md__r_e_a_d_m_e_autotoc_md9}
+
+\begin{DoxyEnumerate}
+\item Przejdź do katalogu z danym testem\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{cd\ ścieżka/do/katalogu/tests/MeasurementTest}
+
+\end{DoxyCode}
+
+\item Uruchom test\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{./MeasurementTest}
+
+\end{DoxyCode}
+
+\end{DoxyEnumerate}
+
+Podobnie dla pozostałych testów\+:
+\begin{DoxyItemize}
+\item Data\+Analyzer\+Test
+\item Database\+Handler\+Test
+\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md10}{}\doxysubsection{\texorpdfstring{Uruchamianie testów z Qt Creator}{Uruchamianie testów z Qt Creator}}\label{md__r_e_a_d_m_e_autotoc_md10}
+
+\begin{DoxyEnumerate}
+\item Otwórz widok "{}\+Projects"{} w Qt Creator
+\item Przejdź do zakładki "{}\+Run"{}
+\item Kliknij przycisk "{}\+Run"{} aby uruchomić aktualnie aktywny test
+\item Wyniki testu pojawią się w oknie "{}\+Application Output"{}
+\end{DoxyEnumerate}\hypertarget{md__r_e_a_d_m_e_autotoc_md11}{}\doxysection{\texorpdfstring{Konfiguracja aplikacji}{Konfiguracja aplikacji}}\label{md__r_e_a_d_m_e_autotoc_md11}
+Aplikacja automatycznie tworzy katalog danych w lokalizacji standardowej dla systemu operacyjnego (np. {\ttfamily APPDATA\%\textbackslash{}Local\textbackslash{}Air\+Quality\+Monitor} w Windows).\hypertarget{md__r_e_a_d_m_e_autotoc_md12}{}\doxysubsection{\texorpdfstring{Tryb offline}{Tryb offline}}\label{md__r_e_a_d_m_e_autotoc_md12}
+Aplikacja wykrywa dostępność połączenia internetowego i umożliwia przełączanie między trybem online i offline\+:
+\begin{DoxyItemize}
+\item W przypadku braku połączenia internetowego, aplikacja automatycznie przełącza się w tryb offline
+\item Tryb można przełączyć ręcznie za pomocą przycisku w pasku statusu
+\item W trybie offline używane są dane zapisane w lokalnej bazie
+\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md13}{}\doxysection{\texorpdfstring{Generowanie dokumentacji}{Generowanie dokumentacji}}\label{md__r_e_a_d_m_e_autotoc_md13}
+Do wygenerowania dokumentacji używamy systemu Doxygen\+:
+
+
+\begin{DoxyEnumerate}
+\item Zainstaluj Doxygen\+: \href{https://www.doxygen.nl/download.html}{\texttt{ https\+://www.\+doxygen.\+nl/download.\+html}}
+\item Uruchom program Doxywizard
+\item W zakładce "{}\+Project"{} ustaw\+:
+\begin{DoxyItemize}
+\item Project name\+: "{}\+Monitor Jakości Powietrza"{}
+\item Source code directory\+: ścieżka do katalogu projektu
+\item Destination directory\+: ścieżka/do/projektu/docs
+\end{DoxyItemize}
+\item W zakładce "{}\+Mode"{} wybierz "{}\+All Entities"{} i zaznacz "{}\+Optimize for C++ output"{}
+\item W zakładce "{}\+Output"{} wybierz format wyjściowy (np. HTML)
+\item Włącz opcję "{}\+Scan recursively"{}
+\item Kliknij "{}\+Run doxygen"{} w zakładce "{}\+Run"{}
+\end{DoxyEnumerate}
+
+Dokumentacja zostanie wygenerowana w katalogu {\ttfamily docs/html}. Otwórz plik {\ttfamily index.\+html} w przeglądarce, aby ją zobaczyć.\hypertarget{md__r_e_a_d_m_e_autotoc_md14}{}\doxysection{\texorpdfstring{Autor}{Autor}}\label{md__r_e_a_d_m_e_autotoc_md14}
+Autor\+: Hubert Galon 

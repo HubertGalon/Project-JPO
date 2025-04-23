@@ -179,32 +179,38 @@ void DataManager::getSensors(int stationId)
 
 void DataManager::getMeasurements(int sensorId)
 {
-    // Zapamiętujemy ID sensora dla automatycznego zapisu
-    currentSensorId = sensorId;
+    try {
+        // Zapamiętujemy ID sensora dla automatycznego zapisu
+        currentSensorId = sensorId;
 
-    // Sprawdzamy dostępność sieci i tryb działania
-    checkAndSwitchDataSource();
+        // Sprawdzamy dostępność sieci i tryb działania
+        checkAndSwitchDataSource();
 
-    // Próbujemy najpierw pobrać dane z bazy
-    QVector<Measurement> cachedMeasurements = loadMeasurementsFromDatabase(sensorId);
+        // Próbujemy najpierw pobrać dane z bazy
+        QVector<Measurement> cachedMeasurements = loadMeasurementsFromDatabase(sensorId);
 
-    if (!cachedMeasurements.isEmpty()) {
-        // Używamy lokalnych danych
-        emit measurementsLoaded(cachedMeasurements);
-        emit dataSourceChanged("offline");
+        if (!cachedMeasurements.isEmpty()) {
+            // Używamy lokalnych danych
+            emit measurementsLoaded(cachedMeasurements);
+            emit dataSourceChanged("offline");
 
-        // Jeśli mamy połączenie i nie jesteśmy w trybie offline, pobieramy świeże dane
-        if (!offlineMode && isNetworkAvailable()) {
-            apiClient->getMeasurements(sensorId);
-        }
-    } else {
-        // Jeśli nie mamy w cache
-        if (!offlineMode && isNetworkAvailable()) {
-            apiClient->getMeasurements(sensorId);
+            // Jeśli mamy połączenie i nie jesteśmy w trybie offline, pobieramy świeże dane
+            if (!offlineMode && isNetworkAvailable()) {
+                apiClient->getMeasurements(sensorId);
+            }
         } else {
-            // Jeśli nie ma danych w cache i nie ma internetu
-            emit apiError("Brak połączenia internetowego i brak zapisanych pomiarów");
+            // Jeśli nie mamy w cache
+            if (!offlineMode && isNetworkAvailable()) {
+                apiClient->getMeasurements(sensorId);
+            } else {
+                // Jeśli nie ma danych w cache i nie ma internetu
+                emit apiError("Brak połączenia internetowego i brak zapisanych pomiarów");
+            }
         }
+    } catch (const std::exception& e) {
+        emit apiError(QString("Błąd podczas pobierania pomiarów: %1").arg(e.what()));
+    } catch (...) {
+        emit apiError("Nieznany błąd podczas pobierania pomiarów");
     }
 }
 
@@ -344,22 +350,37 @@ void DataManager::processStationsDataAsync(const QJsonArray& stationsData)
 
     // Przetwarzamy dane stacji w osobnym wątku
     auto future = QtConcurrent::run(threadPool, [thisPtr, stationsData]() {
-        QVector<Station> parsedStations = Station::fromJsonArray(stationsData);
+        try {
+            QVector<Station> parsedStations = Station::fromJsonArray(stationsData);
 
-        // Aktualizujemy dane stacji i emitujemy sygnał w wątku głównym
-        QMetaObject::invokeMethod(thisPtr, [thisPtr, parsedStations]() {
-            {
-                QMutexLocker locker(&thisPtr->mutex);
-                thisPtr->stations = parsedStations;
-            }
-            emit thisPtr->stationsLoaded(parsedStations);
-            emit thisPtr->dataSourceChanged("online");
+            // Aktualizujemy dane stacji i emitujemy sygnał w wątku głównym
+            QMetaObject::invokeMethod(thisPtr, [thisPtr, parsedStations]() {
+                try {
+                    {
+                        QMutexLocker locker(&thisPtr->mutex);
+                        thisPtr->stations = parsedStations;
+                    }
+                    emit thisPtr->stationsLoaded(parsedStations);
+                    emit thisPtr->dataSourceChanged("online");
 
-            // Zapisujemy stacje do cache
-            thisPtr->saveStationsToCache(parsedStations);
-        }, Qt::QueuedConnection);
+                    // Zapisujemy stacje do cache
+                    thisPtr->saveStationsToCache(parsedStations);
+                } catch (const std::exception& e) {
+                    emit thisPtr->apiError(QString("Błąd aktualizacji danych stacji: %1").arg(e.what()));
+                } catch (...) {
+                    emit thisPtr->apiError("Nieznany błąd aktualizacji danych stacji");
+                }
+            }, Qt::QueuedConnection);
+        } catch (const std::exception& e) {
+            QMetaObject::invokeMethod(thisPtr, "apiError", Qt::QueuedConnection,
+                                      Q_ARG(QString, QString("Błąd przetwarzania danych stacji: %1").arg(e.what())));
+        } catch (...) {
+            QMetaObject::invokeMethod(thisPtr, "apiError", Qt::QueuedConnection,
+                                      Q_ARG(QString, "Nieznany błąd przetwarzania danych stacji"));
+        }
     });
 }
+
 
 void DataManager::processSensorsDataAsync(const QJsonArray& sensorsData)
 {

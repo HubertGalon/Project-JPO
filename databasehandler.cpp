@@ -209,35 +209,56 @@ QString DatabaseHandler::getMeasurementsFilePath(int sensorId) const
 
 bool DatabaseHandler::saveJsonToFile(const QString& filePath, const QJsonDocument& jsonDoc) const
 {
-    QFile file(filePath);
-    if (!file.open(QIODevice::WriteOnly)) {
-        qWarning() << "Nie można otworzyć pliku do zapisu:" << filePath;
+    try {
+        QFile file(filePath);
+        if (!file.open(QIODevice::WriteOnly)) {
+            qWarning() << "Nie można otworzyć pliku do zapisu:" << filePath;
+            throw std::runtime_error("Nie można otworzyć pliku do zapisu: " + filePath.toStdString());
+        }
+
+        file.write(jsonDoc.toJson());
+        file.close();
+
+        return true;
+    } catch (const std::exception& e) {
+        qWarning() << "Błąd podczas zapisu do pliku:" << e.what();
+        return false;
+    } catch (...) {
+        qWarning() << "Nieznany błąd podczas zapisu do pliku";
         return false;
     }
-
-    file.write(jsonDoc.toJson());
-    file.close();
-
-    return true;
 }
 
 QJsonDocument DatabaseHandler::loadJsonFromFile(const QString& filePath) const
 {
-    QFile file(filePath);
-    if (!file.exists() || !file.open(QIODevice::ReadOnly)) {
+    try {
+        QFile file(filePath);
+        if (!file.exists() || !file.open(QIODevice::ReadOnly)) {
+            if (!file.exists()) {
+                qWarning() << "Plik nie istnieje:" << filePath;
+            } else {
+                qWarning() << "Nie można otworzyć pliku do odczytu:" << filePath;
+            }
+            return QJsonDocument();
+        }
+
+        QByteArray jsonData = file.readAll();
+        file.close();
+
+        QJsonParseError parseError;
+        QJsonDocument jsonDoc = QJsonDocument::fromJson(jsonData, &parseError);
+
+        if (parseError.error != QJsonParseError::NoError) {
+            qWarning() << "Błąd parsowania JSON:" << parseError.errorString();
+            throw std::runtime_error("Błąd parsowania JSON: " + parseError.errorString().toStdString());
+        }
+
+        return jsonDoc;
+    } catch (const std::exception& e) {
+        qWarning() << "Błąd podczas odczytu z pliku:" << e.what();
+        return QJsonDocument();
+    } catch (...) {
+        qWarning() << "Nieznany błąd podczas odczytu z pliku";
         return QJsonDocument();
     }
-
-    QByteArray jsonData = file.readAll();
-    file.close();
-
-    QJsonParseError parseError;
-    QJsonDocument jsonDoc = QJsonDocument::fromJson(jsonData, &parseError);
-
-    if (parseError.error != QJsonParseError::NoError) {
-        qWarning() << "Błąd parsowania JSON:" << parseError.errorString();
-        return QJsonDocument();
-    }
-
-    return jsonDoc;
 }

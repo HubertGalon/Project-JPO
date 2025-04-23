@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.13.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Monitor Jakosci Powietrza: apiclient.h Source File</title>
+<title>JPO-App: apiclient.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -32,7 +32,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Monitor Jakosci Powietrza
+   <div id="projectname">JPO-App
    </div>
   </td>
     <td>        <div id="MSearchBox" class="MSearchBoxInactive">
@@ -140,11 +140,11 @@ $(function(){initNavTree('apiclient_8h_source.html',''); initResizable(true); })
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_api_client.html#a81fc5010e814add4fe0156bf96c32cfa">getAirQualityIndex</a>(<span class="keywordtype">int</span> stationId);</div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>signals:</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <span class="keywordtype">void</span> <a class="code hl_signal" href="class_api_client.html#a56f03263dc23dc4dc61b6d336f13f144">stationsReceived</a>(<span class="keyword">const</span> QJsonArray&amp; stationsData);</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <span class="keywordtype">void</span> <a class="code hl_signal" href="class_api_client.html#aaf4d07fe3bbfb65d7b39019f4435f5ee">sensorsReceived</a>(<span class="keyword">const</span> QJsonArray&amp; sensorsData);</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <span class="keywordtype">void</span> <a class="code hl_signal" href="class_api_client.html#a4c685501166fce1012d37567ad5b95e6">measurementsReceived</a>(<span class="keyword">const</span> QJsonObject&amp; measurementsData);</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="keywordtype">void</span> <a class="code hl_signal" href="class_api_client.html#a15b94dcad1a176a11b6326607ab9c5f7">airQualityIndexReceived</a>(<span class="keyword">const</span> QJsonObject&amp; indexData);</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <span class="keywordtype">void</span> <a class="code hl_signal" href="class_api_client.html#a33d686efdf95142035981d18c1036bf9">errorOccurred</a>(<span class="keyword">const</span> QString&amp; errorMessage);</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="class_api_client.html#a56f03263dc23dc4dc61b6d336f13f144">   35</a></span>    <span class="keywordtype">void</span> <a class="code hl_signal" href="class_api_client.html#a56f03263dc23dc4dc61b6d336f13f144">stationsReceived</a>(<span class="keyword">const</span> QJsonArray&amp; stationsData);</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="class_api_client.html#aaf4d07fe3bbfb65d7b39019f4435f5ee">   36</a></span>    <span class="keywordtype">void</span> <a class="code hl_signal" href="class_api_client.html#aaf4d07fe3bbfb65d7b39019f4435f5ee">sensorsReceived</a>(<span class="keyword">const</span> QJsonArray&amp; sensorsData);</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="class_api_client.html#a4c685501166fce1012d37567ad5b95e6">   37</a></span>    <span class="keywordtype">void</span> <a class="code hl_signal" href="class_api_client.html#a4c685501166fce1012d37567ad5b95e6">measurementsReceived</a>(<span class="keyword">const</span> QJsonObject&amp; measurementsData);</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="class_api_client.html#a15b94dcad1a176a11b6326607ab9c5f7">   38</a></span>    <span class="keywordtype">void</span> <a class="code hl_signal" href="class_api_client.html#a15b94dcad1a176a11b6326607ab9c5f7">airQualityIndexReceived</a>(<span class="keyword">const</span> QJsonObject&amp; indexData);</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="class_api_client.html#a33d686efdf95142035981d18c1036bf9">   39</a></span>    <span class="keywordtype">void</span> <a class="code hl_signal" href="class_api_client.html#a33d686efdf95142035981d18c1036bf9">errorOccurred</a>(<span class="keyword">const</span> QString&amp; errorMessage);</div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="keyword">private</span>:</div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    QNetworkAccessManager* networkManager;</div>
@@ -160,16 +160,16 @@ $(function(){initNavTree('apiclient_8h_source.html',''); initResizable(true); })
 </div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="preprocessor">#endif </span><span class="comment">// APICLIENT_H</span></div>
-<div class="ttc" id="aclass_api_client_html_a15b94dcad1a176a11b6326607ab9c5f7"><div class="ttname"><a href="class_api_client.html#a15b94dcad1a176a11b6326607ab9c5f7">ApiClient::airQualityIndexReceived</a></div><div class="ttdeci">void airQualityIndexReceived(const QJsonObject &amp;indexData)</div><div class="ttdef"><b>Definition</b> moc_apiclient.cpp:222</div></div>
+<div class="ttc" id="aclass_api_client_html_a15b94dcad1a176a11b6326607ab9c5f7"><div class="ttname"><a href="class_api_client.html#a15b94dcad1a176a11b6326607ab9c5f7">ApiClient::airQualityIndexReceived</a></div><div class="ttdeci">void airQualityIndexReceived(const QJsonObject &amp;indexData)</div></div>
 <div class="ttc" id="aclass_api_client_html_a2f14b0c85e139f7980f56cf4993111be"><div class="ttname"><a href="class_api_client.html#a2f14b0c85e139f7980f56cf4993111be">ApiClient::BASE_URL</a></div><div class="ttdeci">static constexpr const char * BASE_URL</div><div class="ttdef"><b>Definition</b> apiclient.h:26</div></div>
 <div class="ttc" id="aclass_api_client_html_a32405e3c2b8d74fef5d589fe5a58dac7"><div class="ttname"><a href="class_api_client.html#a32405e3c2b8d74fef5d589fe5a58dac7">ApiClient::getMeasurements</a></div><div class="ttdeci">void getMeasurements(int sensorId)</div><div class="ttdef"><b>Definition</b> apiclient.cpp:30</div></div>
-<div class="ttc" id="aclass_api_client_html_a33d686efdf95142035981d18c1036bf9"><div class="ttname"><a href="class_api_client.html#a33d686efdf95142035981d18c1036bf9">ApiClient::errorOccurred</a></div><div class="ttdeci">void errorOccurred(const QString &amp;errorMessage)</div><div class="ttdef"><b>Definition</b> moc_apiclient.cpp:229</div></div>
-<div class="ttc" id="aclass_api_client_html_a4c685501166fce1012d37567ad5b95e6"><div class="ttname"><a href="class_api_client.html#a4c685501166fce1012d37567ad5b95e6">ApiClient::measurementsReceived</a></div><div class="ttdeci">void measurementsReceived(const QJsonObject &amp;measurementsData)</div><div class="ttdef"><b>Definition</b> moc_apiclient.cpp:215</div></div>
+<div class="ttc" id="aclass_api_client_html_a33d686efdf95142035981d18c1036bf9"><div class="ttname"><a href="class_api_client.html#a33d686efdf95142035981d18c1036bf9">ApiClient::errorOccurred</a></div><div class="ttdeci">void errorOccurred(const QString &amp;errorMessage)</div></div>
+<div class="ttc" id="aclass_api_client_html_a4c685501166fce1012d37567ad5b95e6"><div class="ttname"><a href="class_api_client.html#a4c685501166fce1012d37567ad5b95e6">ApiClient::measurementsReceived</a></div><div class="ttdeci">void measurementsReceived(const QJsonObject &amp;measurementsData)</div></div>
 <div class="ttc" id="aclass_api_client_html_a4d4eb08b751ea0224e22e683221cc9a8"><div class="ttname"><a href="class_api_client.html#a4d4eb08b751ea0224e22e683221cc9a8">ApiClient::getSensors</a></div><div class="ttdeci">void getSensors(int stationId)</div><div class="ttdef"><b>Definition</b> apiclient.cpp:25</div></div>
-<div class="ttc" id="aclass_api_client_html_a56f03263dc23dc4dc61b6d336f13f144"><div class="ttname"><a href="class_api_client.html#a56f03263dc23dc4dc61b6d336f13f144">ApiClient::stationsReceived</a></div><div class="ttdeci">void stationsReceived(const QJsonArray &amp;stationsData)</div><div class="ttdef"><b>Definition</b> moc_apiclient.cpp:201</div></div>
+<div class="ttc" id="aclass_api_client_html_a56f03263dc23dc4dc61b6d336f13f144"><div class="ttname"><a href="class_api_client.html#a56f03263dc23dc4dc61b6d336f13f144">ApiClient::stationsReceived</a></div><div class="ttdeci">void stationsReceived(const QJsonArray &amp;stationsData)</div></div>
 <div class="ttc" id="aclass_api_client_html_a7ac17ab761c4ee56fa63802573b343e3"><div class="ttname"><a href="class_api_client.html#a7ac17ab761c4ee56fa63802573b343e3">ApiClient::ApiClient</a></div><div class="ttdeci">ApiClient(QObject *parent=nullptr)</div><div class="ttdef"><b>Definition</b> apiclient.cpp:5</div></div>
 <div class="ttc" id="aclass_api_client_html_a81fc5010e814add4fe0156bf96c32cfa"><div class="ttname"><a href="class_api_client.html#a81fc5010e814add4fe0156bf96c32cfa">ApiClient::getAirQualityIndex</a></div><div class="ttdeci">void getAirQualityIndex(int stationId)</div><div class="ttdef"><b>Definition</b> apiclient.cpp:35</div></div>
-<div class="ttc" id="aclass_api_client_html_aaf4d07fe3bbfb65d7b39019f4435f5ee"><div class="ttname"><a href="class_api_client.html#aaf4d07fe3bbfb65d7b39019f4435f5ee">ApiClient::sensorsReceived</a></div><div class="ttdeci">void sensorsReceived(const QJsonArray &amp;sensorsData)</div><div class="ttdef"><b>Definition</b> moc_apiclient.cpp:208</div></div>
+<div class="ttc" id="aclass_api_client_html_aaf4d07fe3bbfb65d7b39019f4435f5ee"><div class="ttname"><a href="class_api_client.html#aaf4d07fe3bbfb65d7b39019f4435f5ee">ApiClient::sensorsReceived</a></div><div class="ttdeci">void sensorsReceived(const QJsonArray &amp;sensorsData)</div></div>
 <div class="ttc" id="aclass_api_client_html_ab4fae42eee49854da3247d72d01c165d"><div class="ttname"><a href="class_api_client.html#ab4fae42eee49854da3247d72d01c165d">ApiClient::~ApiClient</a></div><div class="ttdeci">virtual ~ApiClient()</div><div class="ttdef"><b>Definition</b> apiclient.cpp:15</div></div>
 <div class="ttc" id="aclass_api_client_html_ac54cf5bb723d03765238565bfdef065a"><div class="ttname"><a href="class_api_client.html#ac54cf5bb723d03765238565bfdef065a">ApiClient::getAllStations</a></div><div class="ttdeci">void getAllStations()</div><div class="ttdef"><b>Definition</b> apiclient.cpp:20</div></div>
 </div><!-- fragment --></div><!-- contents -->

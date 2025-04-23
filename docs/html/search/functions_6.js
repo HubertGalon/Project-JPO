@@ -16,8 +16,5 @@ var searchData=
   ['getstationsfilepath_13',['getStationsFilePath',['../class_database_handler.html#a435a55534a1924e8d6201e4a57509964',1,'DatabaseHandler']]],
   ['getstationsforcity_14',['getStationsForCity',['../class_data_manager.html#a2b28a09ed99944ea5d52431be4a8e9d2',1,'DataManager']]],
   ['getstationsnearlocation_15',['getStationsNearLocation',['../class_data_manager.html#a6dd989ad79413fd36bce6faa14a9db3d',1,'DataManager']]],
-  ['gettestmeasurementsfilepath_16',['getTestMeasurementsFilePath',['../class_mock_database_handler.html#a0378e6f4f582c4f88346b64bf8ed2195',1,'MockDatabaseHandler']]],
-  ['gettestsensorsfilepath_17',['getTestSensorsFilePath',['../class_mock_database_handler.html#ab9eeccfae5ede4a6730dac17f7e104ad',1,'MockDatabaseHandler']]],
-  ['getteststationsfilepath_18',['getTestStationsFilePath',['../class_mock_database_handler.html#aec79bc4bfe165f02ce7c6483a0f79863',1,'MockDatabaseHandler']]],
-  ['gettrenddescription_19',['getTrendDescription',['../class_data_analyzer.html#a415d3faabdf85f60f75bd0f620337dbc',1,'DataAnalyzer']]]
+  ['gettrenddescription_16',['getTrendDescription',['../class_data_analyzer.html#a415d3faabdf85f60f75bd0f620337dbc',1,'DataAnalyzer']]]
 ];

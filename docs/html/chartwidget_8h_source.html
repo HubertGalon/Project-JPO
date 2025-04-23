@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.13.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Monitor Jakosci Powietrza: chartwidget.h Source File</title>
+<title>JPO-App: chartwidget.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -32,7 +32,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Monitor Jakosci Powietrza
+   <div id="projectname">JPO-App
    </div>
   </td>
     <td>        <div id="MSearchBox" class="MSearchBoxInactive">
@@ -122,9 +122,11 @@ $(function(){initNavTree('chartwidget_8h_source.html',''); initResizable(true); 
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &quot;<a class="code" href="measurement_8h.html">measurement.h</a>&quot;</span></div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &quot;<a class="code" href="dataanalyzer_8h.html">dataanalyzer.h</a>&quot;</span></div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <span class="keyword">namespace </span><a class="code hl_namespace" href="namespace_ui.html">Ui</a> {</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <span class="keyword">class </span><a class="code hl_class" href="class_ui_1_1_chart_widget.html">ChartWidget</a>;</div>
+<div class="foldopen" id="foldopen00018" data-start="{" data-end="}">
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="namespace_ui.html">   18</a></span>    <span class="keyword">namespace </span><a class="code hl_namespace" href="namespace_ui.html">Ui</a> {</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <span class="keyword">class </span><a class="code hl_class" href="class_chart_widget.html">ChartWidget</a>;</div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>}</div>
+</div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
 <div class="foldopen" id="foldopen00022" data-start="{" data-end="};">
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="class_chart_widget.html">   22</a></span><span class="keyword">class </span><a class="code hl_function" href="class_chart_widget.html#a20c5b4e6d58200307369b58997ec5593">ChartWidget</a> : <span class="keyword">public</span> QWidget</div>
@@ -138,7 +140,7 @@ $(function(){initNavTree('chartwidget_8h_source.html',''); initResizable(true); 
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_chart_widget.html#abd1f53699e1c7b97f13db2ab85cff3b2">setMeasurements</a>(<span class="keyword">const</span> QVector&lt;Measurement&gt;&amp; measurements);</div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>signals:</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <span class="keywordtype">void</span> <a class="code hl_signal" href="class_chart_widget.html#a7cc06493c152b5ff1d257dc348ab2320">backRequested</a>();</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="class_chart_widget.html#a7cc06493c152b5ff1d257dc348ab2320">   33</a></span>    <span class="keywordtype">void</span> <a class="code hl_signal" href="class_chart_widget.html#a7cc06493c152b5ff1d257dc348ab2320">backRequested</a>();</div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="keyword">private</span> slots:</div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <span class="keywordtype">void</span> onBackButtonClicked();</div>
@@ -149,7 +151,7 @@ $(function(){initNavTree('chartwidget_8h_source.html',''); initResizable(true); 
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <span class="keywordtype">void</span> onExportDataButtonClicked();</div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <a class="code hl_class" href="class_ui_1_1_chart_widget.html">Ui::ChartWidget</a> *ui;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    Ui::ChartWidget *ui;</div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    QVector&lt;Measurement&gt; measurements;</div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    QChart *chart;</div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    QChartView *chartView;</div>
@@ -168,15 +170,15 @@ $(function(){initNavTree('chartwidget_8h_source.html',''); initResizable(true); 
 </div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="preprocessor">#endif </span><span class="comment">// CHARTWIDGET_H</span></div>
+<div class="ttc" id="aclass_chart_widget_html"><div class="ttname"><a href="class_chart_widget.html">ChartWidget</a></div><div class="ttdef"><b>Definition</b> chartwidget.h:23</div></div>
 <div class="ttc" id="aclass_chart_widget_html_a20c5b4e6d58200307369b58997ec5593"><div class="ttname"><a href="class_chart_widget.html#a20c5b4e6d58200307369b58997ec5593">ChartWidget::ChartWidget</a></div><div class="ttdeci">ChartWidget(QWidget *parent=nullptr)</div><div class="ttdef"><b>Definition</b> chartwidget.cpp:11</div></div>
-<div class="ttc" id="aclass_chart_widget_html_a7cc06493c152b5ff1d257dc348ab2320"><div class="ttname"><a href="class_chart_widget.html#a7cc06493c152b5ff1d257dc348ab2320">ChartWidget::backRequested</a></div><div class="ttdeci">void backRequested()</div><div class="ttdef"><b>Definition</b> moc_chartwidget.cpp:181</div></div>
+<div class="ttc" id="aclass_chart_widget_html_a7cc06493c152b5ff1d257dc348ab2320"><div class="ttname"><a href="class_chart_widget.html#a7cc06493c152b5ff1d257dc348ab2320">ChartWidget::backRequested</a></div><div class="ttdeci">void backRequested()</div></div>
 <div class="ttc" id="aclass_chart_widget_html_abd1f53699e1c7b97f13db2ab85cff3b2"><div class="ttname"><a href="class_chart_widget.html#abd1f53699e1c7b97f13db2ab85cff3b2">ChartWidget::setMeasurements</a></div><div class="ttdeci">void setMeasurements(const QVector&lt; Measurement &gt; &amp;measurements)</div><div class="ttdef"><b>Definition</b> chartwidget.cpp:56</div></div>
 <div class="ttc" id="aclass_chart_widget_html_ae7e53a38b367934f700baede28c3b762"><div class="ttname"><a href="class_chart_widget.html#ae7e53a38b367934f700baede28c3b762">ChartWidget::~ChartWidget</a></div><div class="ttdeci">~ChartWidget()</div><div class="ttdef"><b>Definition</b> chartwidget.cpp:51</div></div>
 <div class="ttc" id="aclass_data_analyzer_html"><div class="ttname"><a href="class_data_analyzer.html">DataAnalyzer</a></div><div class="ttdef"><b>Definition</b> dataanalyzer.h:42</div></div>
-<div class="ttc" id="aclass_ui_1_1_chart_widget_html"><div class="ttname"><a href="class_ui_1_1_chart_widget.html">Ui::ChartWidget</a></div><div class="ttdef"><b>Definition</b> ui_chartwidget.h:160</div></div>
 <div class="ttc" id="adataanalyzer_8h_html"><div class="ttname"><a href="dataanalyzer_8h.html">dataanalyzer.h</a></div></div>
 <div class="ttc" id="ameasurement_8h_html"><div class="ttname"><a href="measurement_8h.html">measurement.h</a></div></div>
-<div class="ttc" id="anamespace_ui_html"><div class="ttname"><a href="namespace_ui.html">Ui</a></div><div class="ttdef"><b>Definition</b> ui_chartwidget.h:159</div></div>
+<div class="ttc" id="anamespace_ui_html"><div class="ttname"><a href="namespace_ui.html">Ui</a></div><div class="ttdef"><b>Definition</b> chartwidget.h:18</div></div>
 <div class="ttc" id="astruct_analysis_result_html"><div class="ttname"><a href="struct_analysis_result.html">AnalysisResult</a></div><div class="ttdef"><b>Definition</b> dataanalyzer.h:13</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
