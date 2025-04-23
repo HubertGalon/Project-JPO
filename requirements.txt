@@ -1,0 +1,10 @@
+qt>=5.15.2
+qtcore>=5.15.2
+qtgui>=5.15.2
+qtwidgets>=5.15.2
+qtnetwork>=5.15.2
+qtconcurrent>=5.15.2
+qtcharts>=5.15.2
+cmake>=3.10.0
+doxygen
+qt-test-framework
