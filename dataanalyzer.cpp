@@ -78,7 +78,7 @@ double DataAnalyzer::calculateTrend(const QVector<Measurement>& measurements)
     // Implementacja prostej regresji liniowej
     int n = sortedMeasurements.size();
 
-    // Zamieniamy daty na sekundy od epoki
+    // Zamieniamy daty na sekundy
     QVector<double> x; // czasTrwania w sekundach
     QVector<double> y; // wartości pomiarów
 

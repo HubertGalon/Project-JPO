@@ -11,6 +11,7 @@ StationListWidget::StationListWidget(QWidget *parent) :
 {
     ui->setupUi(this);
 
+
     // Inicjalizacja geocodera
     geocoder = new Geocoder(this);
 
@@ -28,9 +29,7 @@ StationListWidget::StationListWidget(QWidget *parent) :
     // Połączenia geocodera
     connect(geocoder, &Geocoder::geocodingFinished, this, &StationListWidget::onGeocodingFinished);
     connect(geocoder, &Geocoder::geocodingError, this, &StationListWidget::onGeocodingError);
-    connect(progressDialog, &QProgressDialog::canceled, [this]() {
-        // Tutaj można dodać kod do anulowania geocodowania
-    });
+
 
     // Inicjalizacja ComboBox
     ui->filterComboBox->addItem("Wszystkie stacje");
@@ -62,6 +61,7 @@ StationListWidget::StationListWidget(QWidget *parent) :
     if (mainLayout) {
         mainLayout->insertLayout(2, radiusLayout); // Wstawiamy po kontrolkach wyszukiwania
     }
+
 }
 
 StationListWidget::~StationListWidget()

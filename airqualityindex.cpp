@@ -22,26 +22,6 @@ AirQualityIndex::AirQualityIndex(const QJsonObject& json)
     sourceDataDate = QDateTime::fromString(sourceDateStr, Qt::ISODate);
 }
 
-QString AirQualityIndex::getColorizedIndexName() const
-{
-    // Zwrócenie nazwy indeksu z odpowiednim kolorem na podstawie ID
-    switch (indexLevelId) {
-    case 0:
-        return "<span style='color: #00FF00;'>Bardzo dobry</span>";
-    case 1:
-        return "<span style='color: #80FF00;'>Dobry</span>";
-    case 2:
-        return "<span style='color: #FFFF00;'>Umiarkowany</span>";
-    case 3:
-        return "<span style='color: #FF8000;'>Dostateczny</span>";
-    case 4:
-        return "<span style='color: #FF0000;'>Zły</span>";
-    case 5:
-        return "<span style='color: #800000;'>Bardzo zły</span>";
-    default:
-        return "<span style='color: #808080;'>Brak danych</span>";
-    }
-}
 
 AirQualityIndex AirQualityIndex::fromJsonObject(const QJsonObject& json)
 {

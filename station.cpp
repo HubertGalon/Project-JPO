@@ -92,7 +92,6 @@ double Station::calculateDistance(double targetLat, double targetLon) const
     double c = 2 * qAtan2(qSqrt(a), qSqrt(1 - a));
     double distance = earthRadius * c;
 
-    // Dodanie debugowania
     qDebug() << "Odległość od " << stationName << " (" << gegrLat << "," << gegrLon
              << ") do punktu (" << targetLat << "," << targetLon << "): " << distance << " km";
 
